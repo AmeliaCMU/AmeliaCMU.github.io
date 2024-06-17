@@ -14,7 +14,7 @@ theme: bulma-clean-theme
 plugins:
   - jekyll-feed
 
-favicon: assets/img/paper-plane.png
+favicon: assets/img/ac.png
 show_sidebar: false
 menubar: research_menu
 hide_footer: true
