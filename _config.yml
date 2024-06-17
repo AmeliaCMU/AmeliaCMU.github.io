@@ -1,0 +1,33 @@
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://AmeliaCMU.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  AmeliaCMU
+
+collections:
+  - publications
+
+collections:
+  publications:
+    output: true
+    
+# Build settings
+theme: bulma-clean-theme
+plugins:
+  - jekyll-feed
+
+# favicon: assets/img/paper-plane.png
+show_sidebar: false
+menubar: research_menu
+hide_footer: true
+
+exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/bootstrap/
+#   - vendor/gems/
+#   - vendor/ruby/
