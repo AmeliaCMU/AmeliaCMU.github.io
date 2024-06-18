@@ -60,7 +60,7 @@ TODO
 # Tools
 
 <h3>Amelia-<span style="color:#e06666;">SWIM</span>
-<span class="button" itemprop="github" href="https://github.com/castacks/AmeliaSWIM" target="_blank">
+<span class="button" itemprop="github" href="https://github.com/AmeliaCMU/AmeliaSWIM" target="_blank">
   <i class="fab fa-github fa-lg"></i>
 </span> 
 </h3>
@@ -97,7 +97,7 @@ events which are saved into hourly CSV files containing the following informatio
 <hr>
 
 <h3>Amelia-<span style="color:#20948b;">Maps</span>
-<span class="button" itemprop="github" href="https://github.com/castacks/AmeliaMaps" target="_blank">
+<span class="button" itemprop="github" href="https://github.com/AmeliaCMU/AmeliaMaps" target="_blank">
   <i class="fab fa-github fa-lg"></i>
 </span> 
 </h3>
@@ -118,7 +118,7 @@ data representation.
 <hr>
 
 <h3>Amelia-<span style="color:#3c78d8;">DataTools</span>
-<span class="button" itemprop="github" href="https://github.com/castacks/AmeliaDataTools" target="_blank">
+<span class="button" itemprop="github" href="https://github.com/AmeliaCMU/AmeliaDataTools" target="_blank">
   <i class="fab fa-github fa-lg"></i>
 </span> 
 </h3>
@@ -172,7 +172,7 @@ function showDivs(n) {
 <hr>
 
 <h3>Amelia-<span style="color:#e69138;">Scenes</span>
-<span class="button" itemprop="github" href="https://github.com/castacks/AmeliaScenes" target="_blank">
+<span class="button" itemprop="github" href="https://github.com/AmeliaCMU/AmeliaScenes" target="_blank">
   <i class="fab fa-github fa-lg"></i>
 </span> 
 </h3>
@@ -200,7 +200,7 @@ The resulting scenes can be used for several downstream tasks such as <b>traject
 <hr>
 
 <h3>Amelia-<span style="color:#c27ba0;">Viz</span>
-<span class="button" itemprop="github" href="https://github.com/castacks/AmeliaViz" target="_blank">
+<span class="button" itemprop="github" href="https://github.com/AmeliaCMU/AmeliaViz" target="_blank">
   <i class="fab fa-github fa-lg"></i>
 </span> 
 </h3>
@@ -218,7 +218,7 @@ for ground truth scenes and model predictions.
 <hr>
 
 <h3>Amelia-<span style="color:#8e7cc3;">TF</span>
-<span class="button" itemprop="github" href="https://github.com/castacks/AmeliaTF" target="_blank">
+<span class="button" itemprop="github" href="https://github.com/AmeliaCMU/AmeliaTF" target="_blank">
   <i class="fab fa-github fa-lg"></i>
 </span> 
 </h3>
@@ -232,7 +232,7 @@ For more details on our proposed model, check out [Amelia-TF](https://navars.xyz
 <hr>
 
 <h3>Amelia-<span style="color:#ea738d;">Inference</span>
-<span class="button" itemprop="github" href="https://github.com/castacks/AmeliaStandalone" target="_blank">
+<span class="button" itemprop="github" href="https://github.com/AmeliaCMU/AmeliaInference" target="_blank">
   <i class="fab fa-github fa-lg"></i>
 </span> 
 </h3>
