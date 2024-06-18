@@ -5,6 +5,8 @@ permalink: /amelia-model/
 title: AmeliaTF
 image: /assets/posts/2024-06-17-amelia-model/model.png
 link-new-tab: true
+hide_hero: true
+hide_footer: true
 categories: publication
 # hero_image: /assets/posts/2024-06-14-amelia-dataset/klax_header.gif
 hero_image: /assets/img/background.jpg
@@ -14,13 +16,6 @@ hero_height: is-large
 <h1> 
 AmeliaTF: A Large Airport Surface Movement Trajectory Forecasting Model
 </h1>
-
-[Ingrid Navarro](https://navars.xyz) *, [Pablo Ortega-Kral](https://paok-2001.github.io) *, [Jay Patrikar](https://www.jaypatrikar.me) *, Haichuan Wang, 
-Zelin Ye, Jong Hoon Park, [Jean Oh](https://cmubig.github.io/team/jean_oh/) and [Sebastian Scherer](https://theairlab.org/team/sebastian/) 
-
-*Denotes equal contribution 
-
-**This work is a collaboration between the Bot Intelligence Group ([BIG](https://cmubig.github.io)) and the [AirLab](https://theairlab.org) at Carnegie Mellon University!**
 
 <a class="button" itemprop="paper" href="https://arxiv.org/pdf/2309.08889" target="_blank">
   <i class="fas fa-database fa-lg"></i>    
@@ -174,8 +169,7 @@ If you find our work useful in your research, please cite us!
 @article{navarro2024amelia,
   title={Amelia: A Large Model and Dataset for Airport Surface
 Movement Forecasting},
-  author={Nasvarro, Ingrid and Ortega-Kral, Pablo and Patrikar, Jay, and Haichuan, Wang and Park, Jong Hoon and Oh, Jean and Scherer, Sebastian},
+  author={Navarro, Ingrid and Ortega-Kral, Pablo and Patrikar, Jay, and Haichuan, Wang and Park, Jong Hoon and Oh, Jean and Scherer, Sebastian},
   journal={arXiv preprint arXiv:2309.08889},
   year={2024}
 }
-```

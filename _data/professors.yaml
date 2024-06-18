@@ -1,0 +1,6 @@
+- name: "Jean Oh"
+  credentials: "BIG Lab, CMU"
+  photo: "assets/img/authors/jeanoh.jpg"
+- name: "Sebastian Scherer"
+  credentials: "AirLab, CMU"
+  photo: "assets/img/authors/sebastianscherer.jpeg"

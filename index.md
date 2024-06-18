@@ -2,7 +2,7 @@
 layout: page
 title: Amelia
 subtitle: A Large Model and Dataset for Airport Surface Movement Forecasting
-hide_footer: true
+hide_footer: false
 hide_hero: false
 hero_image: /assets/posts/2024-06-14-amelia-dataset/klax_header.gif
 hero_height: is-large
@@ -42,29 +42,22 @@ Zelin Ye, Jong Hoon Park, [Jean Oh](https://cmubig.github.io/team/jean_oh/) and 
 
 <hr>
 
-# Collaborators
+{% include authors.html %}
 
-<style>
-.grid { 
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 20px;
-  align-items: stretch;
-  }
-.grid img {
-  border: 1px solid #ccc;
-  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
-  max-width: 100%;
+{% include professors.html %}
+
+# BibTeX
+
+If you find our work useful in your research, please cite us!
+
+```
+@article{navarro2024amelia,
+  title={Amelia: A Large Model and Dataset for Airport Surface
+Movement Forecasting},
+  author={Nasvarro, Ingrid and Ortega-Kral, Pablo and Patrikar, Jay, and Haichuan, Wang and Park, Jong Hoon and Oh, Jean and Scherer, Sebastian},
+  journal={arXiv preprint arXiv:2309.08889},
+  year={2024}
 }
-</style>
-<main class="grid">
-  <img src="/assets/img/member.jpg" alt="Sample photo">
-  <img src="/assets/img/member.jpg" alt="Sample photo">
-  <img src="/assets/img/member.jpg" alt="Sample photo">
-  <img src="/assets/img/member.jpg" alt="Sample photo">
-  <img src="/assets/img/member.jpg" alt="Sample photo">
-  <img src="/assets/img/member.jpg" alt="Sample photo">
-  <img src="/assets/img/member.jpg" alt="Sample photo">
-  <img src="/assets/img/member.jpg" alt="Sample photo">
-  <img src="/assets/img/member.jpg" alt="Sample photo">
-</main>
+```
+
+<!-- {% include footer.html %} -->

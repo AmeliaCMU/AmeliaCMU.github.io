@@ -16,7 +16,6 @@ plugins:
 
 favicon: assets/img/ac.png
 show_sidebar: false
-menubar: research_menu
 hide_footer: true
 
 exclude:

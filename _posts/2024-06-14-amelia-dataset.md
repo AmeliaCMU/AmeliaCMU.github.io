@@ -7,7 +7,9 @@ image: /assets/posts/2024-06-14-amelia-dataset/klax.gif
 link-new-tab: true
 categories: publication
 hero_image: /assets/posts/2024-06-14-amelia-dataset/klax_header.gif
-hero_height: is-large
+hide_hero: true
+hide_footer: true
+hero_height: is-medium
 ---
 
 <h1> 
@@ -242,8 +244,7 @@ If you find our work useful in your research, please cite us!
 @article{navarro2024amelia,
   title={Amelia: A Large Model and Dataset for Airport Surface
 Movement Forecasting},
-  author={Nasvarro, Ingrid and Ortega-Kral, Pablo and Patrikar, Jay, and Haichuan, Wang and Park, Jong Hoon and Oh, Jean and Scherer, Sebastian},
+  author={Navarro, Ingrid and Ortega-Kral, Pablo and Patrikar, Jay, and Haichuan, Wang and Park, Jong Hoon and Oh, Jean and Scherer, Sebastian},
   journal={arXiv preprint arXiv:2309.08889},
   year={2024}
 }
-```
