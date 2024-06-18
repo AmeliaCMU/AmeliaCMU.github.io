@@ -14,19 +14,8 @@ hero_height: is-large
 Amelia-48: A Large-Scale Airport Surface Movement Dataset
 </h1>
 
-[Ingrid Navarro](https://navars.xyz) *, [Pablo Ortega-Kral](https://paok-2001.github.io) *, [Jay Patrikar](https://www.jaypatrikar.me) *, Haichuan Wang, 
-Zelin Ye, Jong Hoon Park, [Jean Oh](https://cmubig.github.io/team/jean_oh/) and [Sebastian Scherer](https://theairlab.org/team/sebastian/) 
 
-*Denotes equal contribution 
 
-**This work is a collaboration between the Bot Intelligence Group ([BIG](https://cmubig.github.io)) and the [AirLab](https://theairlab.org) at Carnegie Mellon University!**
-
-<a class="button" itemprop="paper" href="https://arxiv.org/pdf/2309.08889" target="_blank">
-  <i class="fas fa-database fa-lg"></i>    
-</a> 
-<a class="button" itemprop="paper" href="https://arxiv.org/pdf/2309.08889" target="_blank">
-  <i class="fas fa-file fa-lg"></i>    
-</a> 
 
 <hr>
 
@@ -55,14 +44,18 @@ trajectory and map data for airport surface operations.
 
 # Downloading our Dataset
 
+<a class="button" itemprop="paper" href="https://arxiv.org/pdf/2309.08889" target="_blank">
+  <i class="fas fa-database fa-lg"></i>    
+</a> 
+
 TODO
 
 # Tools
 
 <h3>Amelia-<span style="color:#e06666;">SWIM</span>
-<span class="button" itemprop="github" href="https://github.com/AmeliaCMU/AmeliaSWIM" target="_blank">
+<span> <a class="button" itemprop="github" href="https://github.com/AmeliaCMU/AmeliaSWIM" target="_blank">
   <i class="fab fa-github fa-lg"></i>
-</span> 
+</a></span> 
 </h3>
 
 <b>Amelia-<span style="color:#e06666;">SWIM</span></b> is a tool that uses the System Wide Information 
@@ -97,9 +90,9 @@ events which are saved into hourly CSV files containing the following informatio
 <hr>
 
 <h3>Amelia-<span style="color:#20948b;">Maps</span>
-<span class="button" itemprop="github" href="https://github.com/AmeliaCMU/AmeliaMaps" target="_blank">
+<span> <a class="button" itemprop="github" href="https://github.com/AmeliaCMU/AmeliaMaps" target="_blank">
   <i class="fab fa-github fa-lg"></i>
-</span> 
+</a></span> 
 </h3>
 
 We use the <b>Amelia-<span style="color:#20948b;">Maps</span></b> tool to collect and produce airport 
@@ -118,9 +111,9 @@ data representation.
 <hr>
 
 <h3>Amelia-<span style="color:#3c78d8;">DataTools</span>
-<span class="button" itemprop="github" href="https://github.com/AmeliaCMU/AmeliaDataTools" target="_blank">
+<span> <a class="button" itemprop="github" href="https://github.com/AmeliaCMU/AmeliaDataTools" target="_blank">
   <i class="fab fa-github fa-lg"></i>
-</span> 
+</a></span> 
 </h3>
 
 We provide <b>Amelia-<span style="color:#3c78d8;">DataTools</span></b> to validate and analyze our collected and pre-processed data via a set of scripts that provide visualizations and data statistics. 
@@ -172,9 +165,9 @@ function showDivs(n) {
 <hr>
 
 <h3>Amelia-<span style="color:#e69138;">Scenes</span>
-<span class="button" itemprop="github" href="https://github.com/AmeliaCMU/AmeliaScenes" target="_blank">
+<span> <a class="button" itemprop="github" href="https://github.com/AmeliaCMU/AmeliaScenes" target="_blank">
   <i class="fab fa-github fa-lg"></i>
-</span> 
+</a></span> 
 </h3>
 
 We use <b>Amelia-<span style="color:#e69138;">Scenes</span></b> to extract scenes from the raw CSV
@@ -200,9 +193,9 @@ The resulting scenes can be used for several downstream tasks such as <b>traject
 <hr>
 
 <h3>Amelia-<span style="color:#c27ba0;">Viz</span>
-<span class="button" itemprop="github" href="https://github.com/AmeliaCMU/AmeliaViz" target="_blank">
+<span> <a class="button" itemprop="github" href="https://github.com/AmeliaCMU/AmeliaViz" target="_blank">
   <i class="fab fa-github fa-lg"></i>
-</span> 
+</a></span> 
 </h3>
 
 <b>Amelia-<span style="color:#c27ba0;">Viz</span></b> provides scripts for creating visualizations 
@@ -218,9 +211,9 @@ for ground truth scenes and model predictions.
 <hr>
 
 <h3>Amelia-<span style="color:#8e7cc3;">TF</span>
-<span class="button" itemprop="github" href="https://github.com/AmeliaCMU/AmeliaTF" target="_blank">
+<span> <a class="button" itemprop="github" href="https://github.com/AmeliaCMU/AmeliaTF" target="_blank">
   <i class="fab fa-github fa-lg"></i>
-</span> 
+</a></span> 
 </h3>
 
 We provide, <b>Amelia-<span style="color:#8e7cc3;">TF</span></b>, a framework for training and 
@@ -232,9 +225,9 @@ For more details on our proposed model, check out [Amelia-TF](https://navars.xyz
 <hr>
 
 <h3>Amelia-<span style="color:#ea738d;">Inference</span>
-<span class="button" itemprop="github" href="https://github.com/AmeliaCMU/AmeliaInference" target="_blank">
+<span> <a class="button" itemprop="github" href="https://github.com/AmeliaCMU/AmeliaInference" target="_blank">
   <i class="fab fa-github fa-lg"></i>
-</span> 
+</a></span> 
 </h3>
 
 Finally, we also release an inference tool for visualizing model predictions. 

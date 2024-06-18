@@ -9,8 +9,6 @@ hero_height: is-large
 ---
 <link href="assets/css/resume.css" rel="stylesheet">
 
-{% include about.html %}
-
 [Ingrid Navarro](https://navars.xyz) *, [Pablo Ortega-Kral](https://paok-2001.github.io) *, [Jay Patrikar](https://www.jaypatrikar.me) *, Haichuan Wang, 
 Zelin Ye, Jong Hoon Park, [Jean Oh](https://cmubig.github.io/team/jean_oh/) and [Sebastian Scherer](https://theairlab.org/team/sebastian/) 
 
@@ -25,7 +23,13 @@ Zelin Ye, Jong Hoon Park, [Jean Oh](https://cmubig.github.io/team/jean_oh/) and 
   <i class="fas fa-file fa-lg"></i>    
 </a> 
 
+# Abstract
+
+{% include about.html %}
+
 <hr>
+
+# Our Model and Dataset
 
 {% assign posts = site.posts | where:"categories","publication" %}
 <div class="columns is-multiline">
@@ -35,3 +39,31 @@ Zelin Ye, Jong Hoon Park, [Jean Oh](https://cmubig.github.io/team/jean_oh/) and 
         </div>
     {% endfor %}
 </div>
+
+<hr>
+
+# Collaborators
+
+<style>
+.grid { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
+  }
+.grid img {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+  max-width: 100%;
+}
+</style>
+<main class="grid">
+  <img src="/assets/img/member.jpg" alt="Sample photo">
+  <img src="/assets/img/member.jpg" alt="Sample photo">
+  <img src="/assets/img/member.jpg" alt="Sample photo">
+  <img src="/assets/img/member.jpg" alt="Sample photo">
+  <img src="/assets/img/member.jpg" alt="Sample photo">
+  <img src="/assets/img/member.jpg" alt="Sample photo">
+  <img src="/assets/img/member.jpg" alt="Sample photo">
+  <img src="/assets/img/member.jpg" alt="Sample photo">
+</main>
