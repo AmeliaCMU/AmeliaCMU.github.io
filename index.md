@@ -5,7 +5,7 @@ subtitle: A Large Model and Dataset for Airport Surface Movement Forecasting
 hide_footer: true
 hide_hero: false
 hero_image: /assets/posts/2024-06-14-amelia-dataset/klax_header.gif
-hero_height: is-large
+hero_height: is-medium
 ---
 <link href="assets/css/resume.css" rel="stylesheet">
 
@@ -42,30 +42,7 @@ Zelin Ye, Jong Hoon Park, [Jean Oh](https://cmubig.github.io/team/jean_oh/) and 
 
 <hr>
 
-# Collaborators
+{% include authors.html %}
 
-<style>
-.grid { 
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 20px;
-  align-items: stretch;
-  }
-.grid img {
-  border: 1px solid #ccc;
-  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
-  max-width: 100%;
-}
-</style>
+{% include professors.html %}
 
-<!-- <main class="grid">
-  <img src="/assets/img/member.jpg" alt="Sample photo">
-  <img src="/assets/img/member.jpg" alt="Sample photo">
-  <img src="/assets/img/member.jpg" alt="Sample photo">
-  <img src="/assets/img/member.jpg" alt="Sample photo">
-  <img src="/assets/img/member.jpg" alt="Sample photo">
-  <img src="/assets/img/member.jpg" alt="Sample photo">
-  <img src="/assets/img/member.jpg" alt="Sample photo">
-  <img src="/assets/img/member.jpg" alt="Sample photo">
-  <img src="/assets/img/member.jpg" alt="Sample photo">
-</main> -->

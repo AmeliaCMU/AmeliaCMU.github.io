@@ -5,6 +5,7 @@ permalink: /amelia-model/
 title: AmeliaTF
 image: /assets/posts/2024-06-17-amelia-model/model.png
 link-new-tab: true
+hide_hero: true
 categories: publication
 # hero_image: /assets/posts/2024-06-14-amelia-dataset/klax_header.gif
 hero_image: /assets/img/background.jpg

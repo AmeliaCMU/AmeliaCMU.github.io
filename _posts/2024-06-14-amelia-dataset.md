@@ -7,7 +7,8 @@ image: /assets/posts/2024-06-14-amelia-dataset/klax.gif
 link-new-tab: true
 categories: publication
 hero_image: /assets/posts/2024-06-14-amelia-dataset/klax_header.gif
-hero_height: is-large
+hide_hero: true
+hero_height: is-medium
 ---
 
 <h1> 
