@@ -66,4 +66,5 @@ Zelin Ye, Jong Hoon Park, [Jean Oh](https://cmubig.github.io/team/jean_oh/) and 
   <img src="/assets/img/member.jpg" alt="Sample photo">
   <img src="/assets/img/member.jpg" alt="Sample photo">
   <img src="/assets/img/member.jpg" alt="Sample photo">
+  <img src="/assets/img/member.jpg" alt="Sample photo">
 </main>

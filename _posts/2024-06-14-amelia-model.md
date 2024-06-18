@@ -114,6 +114,12 @@ This would eventually reduce the requirement for more training data and/or adapt
 
 #### Quantitative Results
 
+<div align="center">
+<video width="1000" autoplay loop muted>
+  <source src="/assets/posts/2024-06-17-amelia-model/gen_results.webm" type="video/mp4" />
+</video>
+</div>
+
 #### Qualitative Results
 
 <style>
