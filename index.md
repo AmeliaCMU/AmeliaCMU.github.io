@@ -57,7 +57,8 @@ Zelin Ye, Jong Hoon Park, [Jean Oh](https://cmubig.github.io/team/jean_oh/) and 
   max-width: 100%;
 }
 </style>
-<main class="grid">
+
+<!-- <main class="grid">
   <img src="/assets/img/member.jpg" alt="Sample photo">
   <img src="/assets/img/member.jpg" alt="Sample photo">
   <img src="/assets/img/member.jpg" alt="Sample photo">
@@ -67,4 +68,4 @@ Zelin Ye, Jong Hoon Park, [Jean Oh](https://cmubig.github.io/team/jean_oh/) and 
   <img src="/assets/img/member.jpg" alt="Sample photo">
   <img src="/assets/img/member.jpg" alt="Sample photo">
   <img src="/assets/img/member.jpg" alt="Sample photo">
-</main>
+</main> -->
