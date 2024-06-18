@@ -2,10 +2,10 @@
 layout: page
 title: Amelia
 subtitle: A Large Model and Dataset for Airport Surface Movement Forecasting
-hide_footer: true
+hide_footer: false
 hide_hero: false
 hero_image: /assets/posts/2024-06-14-amelia-dataset/klax_header.gif
-hero_height: is-medium
+hero_height: is-large
 ---
 <link href="assets/css/resume.css" rel="stylesheet">
 
@@ -46,3 +46,18 @@ Zelin Ye, Jong Hoon Park, [Jean Oh](https://cmubig.github.io/team/jean_oh/) and 
 
 {% include professors.html %}
 
+# BibTeX
+
+If you find our work useful in your research, please cite us!
+
+```
+@article{navarro2024amelia,
+  title={Amelia: A Large Model and Dataset for Airport Surface
+Movement Forecasting},
+  author={Nasvarro, Ingrid and Ortega-Kral, Pablo and Patrikar, Jay, and Haichuan, Wang and Park, Jong Hoon and Oh, Jean and Scherer, Sebastian},
+  journal={arXiv preprint arXiv:2309.08889},
+  year={2024}
+}
+```
+
+<!-- {% include footer.html %} -->
