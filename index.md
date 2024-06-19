@@ -23,7 +23,7 @@ The growing demand for air travel along with the planned introduction of Advance
 ### A near miss...
 
 <div align="center">
-  <video width="1000" playsinline autoplay loop muted>
+  <video width="1000" autoplay loop muted playsinline>
     <source src="/assets/video/sfo_incursion_red.webm" type="video/mp4" />
   </video>
   <h4>A triple runway incursion at San Francisco International Airport (3x speed) </h4>
