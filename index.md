@@ -10,7 +10,8 @@ hero_height: is-large
 
 <div align="center"><h1 class="title">Our Motivation</h1></div>
 
-The growing demand for air travel along with the planned introduction of Advanced Aerial Mobility (AAM) concepts like eVTOLs require technological advancements in air traffic management, including mechanisms for monitoring and ensuring **safe** and **efficient** operations.  
+The growing demand for air travel requires technological advancements in air traffic management and 
+mechanisms for monitoring and ensuring **safe** and **efficient** operations.  
 
 #### Some trends...
 
@@ -26,7 +27,7 @@ The growing demand for air travel along with the planned introduction of Advance
   <video width="1000" autoplay loop muted playsinline>
     <source src="/assets/video/sfo_incursion_red.webm" type="video/mp4" />
   </video>
-  <h4>A triple runway incursion at San Francisco International Airport (3x speed) </h4>
+  <h4>A triple runway incursion at San Francisco International Airport (4x speed) </h4>
   <h6>July 11th, 2023 </h6>
 </div>
 
