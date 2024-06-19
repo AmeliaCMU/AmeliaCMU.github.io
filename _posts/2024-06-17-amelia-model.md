@@ -51,7 +51,8 @@ area operations. To do so, our model comprises three main submodules:
 
 <div align="center">
 <video width="1000" autoplay loop muted>
-  <source src="/assets/posts/2024-06-17-amelia-model/amelia_overview.webm" type="video/mp4" />
+  <source src="/assets/posts/2024-06-17-amelia-model/amelia_overview.mp4" type="video/mp4" />
+  <source src="/assets/posts/2024-06-17-amelia-model/amelia_overview.webm" type="video/webm" />
 </video>
 </div>
 
@@ -71,7 +72,8 @@ To do so we compare our proposed idea against a *random* agent selection strateg
 
 <div align="center">
 <video width="1000" autoplay loop muted>
-  <source src="/assets/posts/2024-06-17-amelia-model/ego_results.webm" type="video/mp4" />
+  <source src="/assets/posts/2024-06-17-amelia-model/ego_results.mp4" type="video/mp4" />
+  <source src="/assets/posts/2024-06-17-amelia-model/ego_results.webm" type="video/webm" />
 </video>
 </div>
 
@@ -111,7 +113,8 @@ This would eventually reduce the requirement for more training data and/or adapt
 
 <div align="center">
 <video width="1000" autoplay loop muted>
-  <source src="/assets/posts/2024-06-17-amelia-model/gen_results.webm" type="video/mp4" />
+  <source src="/assets/posts/2024-06-17-amelia-model/gen_results.mp4" type="video/mp4" />
+  <source src="/assets/posts/2024-06-17-amelia-model/gen_results.webm" type="video/webm" />
 </video>
 </div>
 
