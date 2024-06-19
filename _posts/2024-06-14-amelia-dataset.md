@@ -2,7 +2,8 @@
 layout: post
 author: Ingrid Navarro
 permalink: /amelia-dataset/
-title: Amelia Dataset
+title: Amelia-48
+subtitle: An airport surface movement dataset and framework
 image: /assets/posts/2024-06-14-amelia-dataset/klax.gif
 link-new-tab: true
 categories: publication
@@ -15,9 +16,6 @@ hero_height: is-medium
 <h1> 
 Amelia-48: A Large-Scale Airport Surface Movement Dataset
 </h1>
-
-
-
 
 <hr>
 
@@ -235,6 +233,7 @@ For more details on our proposed model, check out [Amelia-TF](https://navars.xyz
 Finally, we also release an inference tool for visualizing model predictions. 
 
 <hr>
+
 
 # BibTeX
 

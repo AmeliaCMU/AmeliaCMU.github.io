@@ -3,18 +3,18 @@ layout: post
 author: Ingrid Navarro
 permalink: /amelia-model/
 title: AmeliaTF
+subtitle: A large model for airport surface movement forecasting.
 image: /assets/posts/2024-06-17-amelia-model/model.png
 link-new-tab: true
 hide_hero: true
 hide_footer: true
 categories: publication
-# hero_image: /assets/posts/2024-06-14-amelia-dataset/klax_header.gif
 hero_image: /assets/img/background.jpg
 hero_height: is-large
 ---
 
 <h1> 
-AmeliaTF: A Large Airport Surface Movement Trajectory Forecasting Model
+AmeliaTF: A Large Model for Airport Surface Movement Forecasting
 </h1>
 
 <a class="button" itemprop="paper" href="https://arxiv.org/pdf/2309.08889" target="_blank">

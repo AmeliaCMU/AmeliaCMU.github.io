@@ -1,6 +1,4 @@
-- name: Amelia Dataset
+- name: Amelia-48
   link: /amelia-dataset/
-- name: Amelia Model
+- name: AmeliaTF
   link: /amelia-model/
-- name: Our Code
-  link: /code/

@@ -10,13 +10,13 @@ hero_height: is-large
 
 <div align="center"><h1 class="title">Our Motivation</h1></div>
 
-The growing demand for air travel requires technological advancements in air traffic management and 
-mechanisms for monitoring and ensuring **safe** and **efficient** operations.  
+The growing demand for air travel requires technological advancements in air traffic management as well as mechanisms for monitoring and ensuring **safe** and **efficient** operations.  
 
 #### Some trends...
 <div align="center">
   <video width="800" autoplay loop muted>
-    <source src="/assets/video/trends.webm" type="video/mp4" />
+    <source src="/assets/video/trends.mp4" type="video/mp4" />
+    <source src="/assets/video/trends.webm" type="video/webm" />
   </video>
 </div>
 
@@ -24,7 +24,8 @@ mechanisms for monitoring and ensuring **safe** and **efficient** operations.
 
 <div align="center">
   <video width="1000" autoplay loop muted playsinline>
-    <source src="/assets/video/sfo_incursion_red.webm" type="video/mp4" />
+    <source src="/assets/video/sfo_incursion_red.mp4" type="video/mp4" />
+    <source src="/assets/video/sfo_incursion_red.webm" type="video/webm" />
   </video>
   <h5>A triple runway incursion at San Francisco International Airport (4x speed) </h5>
   <h7>July 11th, 2023 </h7>
@@ -32,12 +33,11 @@ mechanisms for monitoring and ensuring **safe** and **efficient** operations.
 
 <br>
 
-
-**TODO**: Our work, **Amelia**, aims to contribute toward improving airport safety and efficiency and encourage further research in this direction. 
+To improve airport safety and efficiency and encourage further research in this direction we introduce **Amelia**, a large-scale dataset of airport surface movement and a toolkit for data analysis, visualization, benchmarking, and behavior modeling. 
 
 <hr>
 
-<div align="center"><h1 class="title">Our Model and Dataset</h1></div>
+<div align="center"><h1 class="title">Our Framework </h1></div>
 
 {% assign posts = site.posts | where:"categories","publication" %}
 <div class="columns is-multiline">
