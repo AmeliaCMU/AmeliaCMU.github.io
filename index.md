@@ -8,7 +8,7 @@ hero_image: /assets/posts/2024-06-14-amelia-dataset/klax_header.gif
 hero_height: is-large
 ---
 
-# Our Motivation
+<div align="center"><h1 class="title">Our Motivation</h1></div>
 
 The growing demand for air travel along with the planned introduction of Advanced Aerial Mobility (AAM) concepts like eVTOLs require technological advancements in air traffic management, including mechanisms for monitoring and ensuring **safe** and **efficient** operations.  
 
@@ -24,7 +24,7 @@ The growing demand for air travel along with the planned introduction of Advance
 
 <div align="center">
   <video width="1000" autoplay loop muted>
-    <source src="/assets/video/sfo_incursion.webm" type="video/mp4" />
+    <source src="/assets/video/sfo_incursion_red.webm" type="video/mp4" />
   </video>
   <h4>A triple runway incursion at San Francisco International Airport </h4>
   <h6>July 11th, 2023 </h6>
@@ -37,7 +37,7 @@ The growing demand for air travel along with the planned introduction of Advance
 
 <hr>
 
-# Our Model and Dataset
+<div align="center"><h1 class="title">Our Model and Dataset</h1></div>
 
 {% assign posts = site.posts | where:"categories","publication" %}
 <div class="columns is-multiline">
