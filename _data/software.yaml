@@ -1,0 +1,36 @@
+- name: "SWIM"
+  desc: "Airport surface movement data collection and pre-preprocessing tools"
+  photo: "assets/img/software/swim.png"
+  color: "#e06666"
+  url: https://github.com/AmeliaCMU/AmeliaSWIM
+- name: "Maps"
+  desc: "Airport map data collection and processing tools"
+  photo: "assets/img/software/maps.png"
+  color: "#20948b"
+  url: https://github.com/AmeliaCMU/AmeliaMaps
+- name: "DataTools"
+  desc: "rajectory and map data analysis and verification tools "
+  photo: "assets/img/software/data_tools.png"
+  color: "#3c78d8"
+  url: https://github.com/AmeliaCMU/AmeliaDataTools
+- name: "Scenes"
+  desc: "Scene post-processing and characterization tool"
+  photo: "assets/img/software/scenes.png"
+  color: "#e69138"
+  url: https://github.com/AmeliaCMU/AmeliaScenes
+- name: "Viz"
+  desc: "Scene visualization tools"
+  photo: "assets/img/software/viz.png"
+  color: "#c27ba0"
+  url: https://github.com/AmeliaCMU/AmeliaViz
+- name: "TF"
+  desc: "Trajectory forecasting model"
+  photo: "assets/img/software/tf.png"
+  color: "#8e7cc3"
+  url: https://github.com/AmeliaCMU/AmeliaTF
+- name: "Inference"
+  desc: "Standalone trajectory prediction tool"
+  photo: "assets/img/software/inference.png"
+  color: "#ea738d"
+  url: https://github.com/AmeliaCMU/AmeliaInference
+
