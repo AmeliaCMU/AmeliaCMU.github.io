@@ -10,7 +10,17 @@ hero_height: is-large
 
 # Our Motivation
 
-Within the US National Airspace System (NAS), the first two months of 2023 saw more aircraft close-calls than they had during all of the previous five years combined.
+The growing demand for air travel along with the planned introduction of Advanced Aerial Mobility (AAM) concepts like eVTOLs require technological advancements in air traffic management, including mechanisms for monitoring and ensuring **safe** and **efficient** operations.  
+
+#### Some trends...
+
+<div align="center">
+  <video width="1000" autoplay loop muted>
+    <source src="/assets/video/trends.webm" type="video/mp4" />
+  </video>
+</div>
+
+### A near miss...
 
 <div align="center">
   <video width="1000" autoplay loop muted>
@@ -22,9 +32,8 @@ Within the US National Airspace System (NAS), the first two months of 2023 saw m
 
 <br>
 
-The year of 2023 also broke the record for the most number of travelers processed by TSA by screening 2.9 million passengers in a single day. This growing demand for air travel along with the planned introduction of Advanced Aerial Mobility (AAM) concepts like eVTOLs require technological advancements in air traffic management, including mechanisms for monitoring and ensuring **safe** and **efficient** operations.  
 
-Our work, **Amelia**, aims to contribute toward improving airport safety and efficiency and encourage further research in this direction. 
+**TODO**: Our work, **Amelia**, aims to contribute toward improving airport safety and efficiency and encourage further research in this direction. 
 
 <hr>
 
