@@ -9,7 +9,7 @@
   color: "#20948b"
   url: https://github.com/AmeliaCMU/AmeliaMaps
 - name: "DataTools"
-  desc: "rajectory and map data analysis and verification tools "
+  desc: "Trajectory and map data analysis and verification tools "
   photo: "assets/img/software/data_tools.png"
   color: "#3c78d8"
   url: https://github.com/AmeliaCMU/AmeliaDataTools
