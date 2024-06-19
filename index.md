@@ -14,21 +14,20 @@ The growing demand for air travel requires technological advancements in air tra
 mechanisms for monitoring and ensuring **safe** and **efficient** operations.  
 
 #### Some trends...
-
 <div align="center">
-  <video width="1000" autoplay loop muted>
+  <video width="800" autoplay loop muted>
     <source src="/assets/video/trends.webm" type="video/mp4" />
   </video>
 </div>
 
-### A near miss...
+#### A near miss...
 
 <div align="center">
   <video width="1000" autoplay loop muted playsinline>
     <source src="/assets/video/sfo_incursion_red.webm" type="video/mp4" />
   </video>
-  <h4>A triple runway incursion at San Francisco International Airport (4x speed) </h4>
-  <h6>July 11th, 2023 </h6>
+  <h5>A triple runway incursion at San Francisco International Airport (4x speed) </h5>
+  <h7>July 11th, 2023 </h7>
 </div>
 
 <br>
