@@ -13,13 +13,8 @@
 - name: "Haichuan (Jack) Wang"
   credentials: "The Airlab, CMU"
   photo: "assets/img/authors/jack.jpeg"
+  url: https://www.linkedin.com/in/hcwang1/
 - name: "Zelin Ye"
   credentials: "The Airlab, CMU"
-  photo: "assets/img/authors/empty.png"
-- name: "Jong Hoon Park"
-  credentials: "The Airlab, CMU"
-  photo: "assets/img/authors/empty.png"
-- name: "Avi Amalanshu"
-  credentials: "The Airlab, CMU"
-  photo: "assets/img/authors/empty.png"
-
+  photo: "assets/img/authors/zelin.jpg"
+  url: "https://zeliny0109.github.io/"

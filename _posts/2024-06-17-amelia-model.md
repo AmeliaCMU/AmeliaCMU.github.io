@@ -7,7 +7,7 @@ subtitle: A large model for airport surface movement forecasting.
 image: /assets/posts/2024-06-17-amelia-model/model.png
 link-new-tab: true
 hide_hero: true
-hide_footer: true
+hide_footer: false
 categories: publication
 hero_image: /assets/img/background.jpg
 hero_height: is-large
@@ -65,6 +65,11 @@ studies the benefit of our proposed scene representation strategy. The second ex
 
 We want to assess if our ego-selection strategy produces complex and interesting scene 
 representations since it prioritizes more critical agent-to-agent relationships and more dynamic agent motion profiles within a scene. 
+
+<div align="center">
+  <img src="/assets/img/KSFO_188_1694113200_critical_ego.gif" alt="ego_selection" style="width:650px;">
+  <h5>Critical ego-selection applied to a scene in KSFO</h5>
+</div>
 
 To do so we compare our proposed idea against a *random* agent selection strategy. 
 

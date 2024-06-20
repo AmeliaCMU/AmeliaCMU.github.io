@@ -1,0 +1,32 @@
+<link href="assets/css/card.css" rel="stylesheet">
+
+<div align="center">
+  <h1 class="title">Collaborators</h1>
+  <div class="section">
+    <div class="container">
+      <div class="columns is-multiline">
+        {% for author in site.data.collaborators %}
+        <div class="column is-one-third">
+          {% if author.url != "" %}
+          <a href="{{ site.baseurl }}{{ author.url }}">
+          {% endif %}
+          <div class="card">
+            <div class="card-image has-text-centered">
+              <figure class="image is-128x128" style="border-radius: 50%; overflow: hidden; margin: 0 auto;">
+                <img src="{{ author.photo }}" alt="{{ author.name }}">
+              </figure>
+            </div>
+            <div class="card-content has-text-centered">
+              <p class="title is-4">{{ author.name }}</p>
+              <p class="subtitle is-6">{{ author.credentials }}</p>
+            </div>
+          </div>
+          {% if author.url != "" %}
+          </a>
+          {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+</div>

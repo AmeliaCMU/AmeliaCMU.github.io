@@ -35,6 +35,10 @@ The growing demand for air travel requires technological advancements in air tra
 
 To improve airport safety and efficiency and encourage further research in this direction we introduce **Amelia**, a large-scale dataset of airport surface movement and a toolkit for data analysis, visualization, benchmarking, and behavior modeling. 
 
+Our dataset, **Amelia-48** comprises s a **year’s worth of data collection across 48 airports** and TRACON facilities within the US National Airspace System, totaling **∼30TB** of raw data. 
+
+Aditionally, inspired by the success of motion prediction models in the AV domain for safety monitoring and multi-agent coordination, we introduce **Amelia-TF**, a transformer-based large multi-agent multi-airport trajectory forecasting model **trained on 300 days or 11.36 billion tokens** of position data encompassing 10 different airports with varying topology.
+
 <hr>
 
 <div align="center"><h1 class="title">Our Framework </h1></div>
@@ -54,9 +58,12 @@ To improve airport safety and efficiency and encourage further research in this 
 
 <hr>
 
+{% include professors.html %}
+
 {% include authors.html %}
 
-{% include professors.html %}
+{% include collaborators.html %}
+
 
 <hr>
 
