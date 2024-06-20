@@ -1,6 +1,7 @@
 <style>
     footer {
         background-color: #f8f9fa;
+        overflow: hidden;
         padding: 40px 25px; 
       }
       
@@ -20,6 +21,19 @@
         padding-top: 0px;
         padding-bottom: 0px;
       }
+
+      @media (max-width: 768px) {
+        .footer-logos img {
+          max-width: 120px; /* Adjust max width for medium screens */
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .footer-logos img {
+          max-width: 75px; /* Adjust max width for small screens */
+        }
+      }
+      
       
 </style>
 
