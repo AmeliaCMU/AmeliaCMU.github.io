@@ -2,7 +2,7 @@
 layout: post
 author: Ingrid Navarro
 permalink: /amelia-model/
-title: AmeliaTF
+title: Amelia-TF
 subtitle: A large model for airport surface movement forecasting.
 image: /assets/posts/2024-06-17-amelia-model/model.png
 link-new-tab: true
@@ -14,7 +14,7 @@ hero_height: is-large
 ---
 
 <h1> 
-AmeliaTF: A Large Model for Airport Surface Movement Forecasting
+Amelia-TF: A Large Model for Airport Surface Movement Forecasting
 </h1>
 
 <a class="button" itemprop="paper" href="https://arxiv.org/pdf/2309.08889" target="_blank">
@@ -26,7 +26,7 @@ AmeliaTF: A Large Model for Airport Surface Movement Forecasting
 
 <hr>
 
-# AmeliaTF
+# Amelia-TF
 
 Predictive models for airport surface operations can be used for various downstream tasks like 
 collision risk assessment, taxi-out time prediction, departure metering, and emission estimations. 
@@ -34,7 +34,7 @@ While data-driven methods have showcased marked improvements in predictive perfo
 years, prior works have not addressed the lack of large-scale curated surface movement datasets 
 within the public domain and the development of generalizable trajectory forecasting models. 
 
-In response to this, we introduce **AmeliaTF** is a large transformer-based airport surface movement 
+In response to this, we introduce **Amelia-TF** is a large transformer-based airport surface movement 
 trajectory forecasting model trained on the **[Amelia-48](https://navars.xyz/amelia-dataset)** 
 dataset. We explore different scene representation and training strategies for our model varying from 
 single-airport to multi-airport settings in which we assess our model's generalization capabilities.
@@ -43,7 +43,7 @@ Below, we provide an overview of our model and experiments. For more details, pl
 
 ## Model Overview
 
-AmeliaTF is an end-to-end motion prediction model that aims to characterize *relevant* surface
+Amelia-TF is an end-to-end motion prediction model that aims to characterize *relevant* surface
 area operations. To do so, our model comprises three main submodules: 
 1. A **scene representation** module that determines the agents of interest in the scene using a scoring strategy, and encodes per-agent features, 
 2. A transformer-based **scene encoder**, which hierarchically encodes the *temporal*, *agent-to-agent* and *agent-to-context* relationships within a scene, and; 
@@ -58,7 +58,7 @@ area operations. To do so, our model comprises three main submodules:
 
 # Experiments and Results
 
-We explored two main experiments to assess the performance of **AmeliaTF**. The first experiment 
+We explored two main experiments to assess the performance of **Amelia-TF**. The first experiment 
 studies the benefit of our proposed scene representation strategy. The second experiment explores the generalization of our model across airports. 
 
 ### Ego-selection strategy
@@ -106,7 +106,7 @@ To do so we compare our proposed idea against a *random* agent selection strateg
 
 We also explore our model's generalization capabilities as we cover a wider variety of training data. We hypothesize that as we do so, our model will learn richer representations that would generalize better to unseen airport layouts and interactions. 
 
-This would eventually reduce the requirement for more training data and/or adaptation techniques, such as fine-tuning. Thus, we propose a *multi-airport* ablation to assess **AmeliaTF**'s performance in *unseen* airports as we vary the number of *seen* ones during training. 
+This would eventually reduce the requirement for more training data and/or adaptation techniques, such as fine-tuning. Thus, we propose a *multi-airport* ablation to assess **Amelia-TF**'s performance in *unseen* airports as we vary the number of *seen* ones during training. 
 
 
 #### Quantitative Results
