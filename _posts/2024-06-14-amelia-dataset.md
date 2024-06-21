@@ -29,7 +29,7 @@ and TRACON facilities within the US National Airspace System.
 We release this dataset along with its toolkit to encourage research in this domain! 
 
 Below we provide an overview of our dataset and data processing toolkit. For details on our 
-trajectory forecasting model, go to [Amelia-TF](https://navars.xyz/amelia-model).
+trajectory forecasting model, go to [Amelia-TF](https://ameliacmu.github.io/amelia-model/).
 
 And for even more details, please check out our paper! 
 
