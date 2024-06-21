@@ -1,6 +1,6 @@
 ---
 layout: post
-author: Ingrid Navarro
+author: Ingrid Navarro and Pablo Ortega-Kral
 permalink: /amelia-model/
 title: Amelia-TF
 subtitle: A large model for airport surface movement forecasting.
@@ -35,9 +35,16 @@ years, prior works have not addressed the lack of large-scale curated surface mo
 within the public domain and the development of generalizable trajectory forecasting models. 
 
 In response to this, we introduce **Amelia-TF** is a large transformer-based airport surface movement 
-trajectory forecasting model trained on the **[Amelia-48](https://navars.xyz/amelia-dataset)** 
+trajectory forecasting model trained on the **[Amelia-48](https://ameliacmu.github.io/amelia-dataset/)** 
 dataset. We explore different scene representation and training strategies for our model varying from 
 single-airport to multi-airport settings in which we assess our model's generalization capabilities.
+
+<div align="center">
+  <img src="/assets/posts/2024-06-17-amelia-model/ksfo_results.gif" alt="ego_selection" style="width:800px;">
+  <h5>Amelia-TF predicting aircraft future motions at San Francisco International Airport </h5>
+</div>
+
+<br>
 
 Below, we provide an overview of our model and experiments. For more details, please check out our paper! 
 
@@ -66,10 +73,6 @@ studies the benefit of our proposed scene representation strategy. The second ex
 We want to assess if our ego-selection strategy produces complex and interesting scene 
 representations since it prioritizes more critical agent-to-agent relationships and more dynamic agent motion profiles within a scene. 
 
-<div align="center">
-  <img src="/assets/img/KSFO_188_1694113200_critical_ego.gif" alt="ego_selection" style="width:650px;">
-  <h5>Critical ego-selection applied to a scene in KSFO</h5>
-</div>
 
 To do so we compare our proposed idea against a *random* agent selection strategy. 
 

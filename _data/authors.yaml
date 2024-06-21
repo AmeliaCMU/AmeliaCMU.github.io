@@ -1,20 +1,20 @@
 - name: "Ingrid Navarro"
   credentials: "Bot Intelligence Group (BIG), CMU"
-  photo: "assets/img/authors/Ingrid.jpg"
+  photo: "assets/img/authors/ingrid_navarro.jpg"
   url: https://navars.xyz
 - name: "Pablo Ortega-Kral"
   credentials: "Bot Intelligence Group (BIG), CMU"
-  photo: "assets/img/authors/Pablo.jpg"
+  photo: "assets/img/authors/pablo_ortega.jpg"
   url: https://paok-2001.github.io
 - name: "Jay Patrikar"
   credentials: "The Airlab, CMU"
-  photo: "assets/img/authors/Jay.webp"
+  photo: "assets/img/authors/jay_patrikar.webp"
   url: https://www.jaypatrikar.me
 - name: "Haichuan (Jack) Wang"
   credentials: "The Airlab, CMU"
-  photo: "assets/img/authors/jack.jpeg"
+  photo: "assets/img/authors/jack_wang.jpeg"
   url: https://www.linkedin.com/in/hcwang1/
 - name: "Zelin Ye"
   credentials: "The Airlab, CMU"
-  photo: "assets/img/authors/zelin.jpg"
+  photo: "assets/img/authors/zelin_ye.jpg"
   url: "https://zeliny0109.github.io/"

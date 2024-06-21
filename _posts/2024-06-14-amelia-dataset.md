@@ -1,6 +1,6 @@
 ---
 layout: post
-author: Ingrid Navarro
+author: Ingrid Navarro and Pablo Ortega-Kral
 permalink: /amelia-dataset/
 title: Amelia-48
 subtitle: An airport surface movement dataset and framework

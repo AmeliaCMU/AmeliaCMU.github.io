@@ -20,7 +20,7 @@ The growing demand for air travel requires technological advancements in air tra
   </video>
 </div>
 
-#### A near miss...
+#### A close call...
 
 <div align="center">
   <video width="1000" autoplay loop muted playsinline>
@@ -41,6 +41,19 @@ Aditionally, inspired by the success of motion prediction models in the AV domai
 
 <hr>
 
+<div align="center"><h1 class="title">Keywords</h1>
+<h3 class="title" style="color:#A1A4A8"> 
+  Aviation | Machine Learning | Deep Learning | Data Science
+</h3>
+<h5 class="title" style="color:#BDBFC2"> 
+  Trajectory Prediction | Anomaly Detection | Safety 
+</h5>
+</div>
+
+
+
+<hr>
+
 <div align="center"><h1 class="title">Our Framework </h1></div>
 
 {% assign posts = site.posts | where:"categories","publication" %}
@@ -51,6 +64,8 @@ Aditionally, inspired by the success of motion prediction models in the AV domai
         </div>
     {% endfor %}
 </div>
+
+<br>
 
 <hr>
 
