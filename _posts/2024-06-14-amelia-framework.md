@@ -1,37 +1,40 @@
 ---
 layout: post
 author: Ingrid Navarro and Pablo Ortega-Kral
-permalink: /amelia-dataset/
-title: Amelia-48
-subtitle: An airport surface movement dataset and framework
-image: /assets/posts/2024-06-14-amelia-dataset/klax.gif
+permalink: /amelia-framework/
+title: Amelia Framework
+subtitle: A framework for airport surface movement 
+image: /assets/posts/2024-06-14-amelia-framework/klax.gif
 link-new-tab: true
 categories: publication
-hero_image: /assets/posts/2024-06-14-amelia-dataset/klax_header.gif
+hero_image: /assets/posts/2024-06-14-amelia-framework/klax_header.gif
 hide_hero: true
 hide_footer: false
 hero_height: is-medium
 ---
 
 <h1> 
-Amelia-48: A Large-Scale Airport Surface Movement Dataset
+Amelia: A framework for airport surface movement
 </h1>
+
+<a class="button" itemprop="paper" href="https://arxiv.org/pdf/2309.08889" target="_blank">
+  <i class="fas fa-database fa-lg"></i>    
+</a> 
+<a class="button" itemprop="paper" href="https://arxiv.org/pdf/2309.08889" target="_blank">
+  <i class="fas fa-file fa-lg"></i>    
+</a> 
 
 <hr>
 
-# Amelia-48
+**Amelia** is a framework for airport surface movement consisting of toolkit for collecting an processing our large-scale dataset, and for building and training motion forecasting models. 
 
-**Amelia-48** is a large-scale airport surface movement dataset collected using the System Wide 
-Information Management (SWIM) Surface Movement Event Service (SMES). With data collection beginning 
-in December 2022, the ~30TB dataset currently provides a year's worth of data and covers 48 airports 
-and TRACON facilities within the US National Airspace System. 
+We release this toolkit to encourage research in this domain! Below we provide an overview of our **toolkit**. 
 
-We release this dataset along with its toolkit to encourage research in this domain! 
+**Notes:**
+* For more details on how to download and use our **dataset**, go to [Amelia-48](https://ameliacmu.github.io/amelia-dataset/)
+* For more details on our trajectory forecasting **model**, go to [Amelia-TF](https://ameliacmu.github.io/amelia-model/)
+* For even more details, please check out our **paper**!
 
-Below we provide an overview of our dataset and data processing toolkit. For details on our 
-trajectory forecasting model, go to [Amelia-TF](https://ameliacmu.github.io/amelia-model/).
-
-And for even more details, please check out our paper! 
 
 # Overview of Our Framework
 
@@ -39,16 +42,9 @@ Our framework consists of 7 tools for processing, analyzing, visualizing and cha
 trajectory and map data for airport surface operations.  
 
 <p align="center">
-  <img width="1280" src="/assets/posts/2024-06-14-amelia-dataset/amelia_framework.png" >
+  <img width="1280" src="/assets/posts/2024-06-14-amelia-framework/amelia_framework.png" >
 </p>
 
-# Downloading our Dataset
-
-<a class="button" itemprop="paper" href="https://arxiv.org/pdf/2309.08889" target="_blank">
-  <i class="fas fa-database fa-lg"></i>    
-</a> 
-
-TODO
 
 # Tools
 
@@ -105,7 +101,7 @@ regions of interest, <b>d)</b> supersampling for obtaining a finer granularity, 
 data representation. 
 
 <p align="center">
-  <img width="1280" src="/assets/posts/2024-06-14-amelia-dataset/map_processing.gif" >
+  <img width="1280" src="/assets/posts/2024-06-14-amelia-framework/map_processing.gif" >
 </p>
 
 <hr>
@@ -125,16 +121,16 @@ As an initial step, we validate and analyze the trajectory and map data for **10
 </style>
 
 <div align="center">
-  <img class="mySlides" src="/assets/posts/2024-06-14-amelia-dataset/data_panc.png" style="width:90%">
-  <img class="mySlides" src="/assets/posts/2024-06-14-amelia-dataset/data_kbos.png" style="width:90%">
-  <img class="mySlides" src="/assets/posts/2024-06-14-amelia-dataset/data_kdca.png" style="width:90%">
-  <img class="mySlides" src="/assets/posts/2024-06-14-amelia-dataset/data_kewr.png" style="width:90%">
-  <img class="mySlides" src="/assets/posts/2024-06-14-amelia-dataset/data_kjfk.png" style="width:90%">
-  <img class="mySlides" src="/assets/posts/2024-06-14-amelia-dataset/data_klax.png" style="width:90%">
-  <img class="mySlides" src="/assets/posts/2024-06-14-amelia-dataset/data_kmdw.png" style="width:90%">
-  <img class="mySlides" src="/assets/posts/2024-06-14-amelia-dataset/data_kmsy.png" style="width:90%">
-  <img class="mySlides" src="/assets/posts/2024-06-14-amelia-dataset/data_ksea.png" style="width:90%">
-  <img class="mySlides" src="/assets/posts/2024-06-14-amelia-dataset/data_ksfo.png" style="width:90%">
+  <img class="mySlides" src="/assets/posts/2024-06-14-amelia-framework/data_panc.png" style="width:90%">
+  <img class="mySlides" src="/assets/posts/2024-06-14-amelia-framework/data_kbos.png" style="width:90%">
+  <img class="mySlides" src="/assets/posts/2024-06-14-amelia-framework/data_kdca.png" style="width:90%">
+  <img class="mySlides" src="/assets/posts/2024-06-14-amelia-framework/data_kewr.png" style="width:90%">
+  <img class="mySlides" src="/assets/posts/2024-06-14-amelia-framework/data_kjfk.png" style="width:90%">
+  <img class="mySlides" src="/assets/posts/2024-06-14-amelia-framework/data_klax.png" style="width:90%">
+  <img class="mySlides" src="/assets/posts/2024-06-14-amelia-framework/data_kmdw.png" style="width:90%">
+  <img class="mySlides" src="/assets/posts/2024-06-14-amelia-framework/data_kmsy.png" style="width:90%">
+  <img class="mySlides" src="/assets/posts/2024-06-14-amelia-framework/data_ksea.png" style="width:90%">
+  <img class="mySlides" src="/assets/posts/2024-06-14-amelia-framework/data_ksfo.png" style="width:90%">
 
   <div align="center">
     <button class="button-slide" onclick="plusDivs(-1)">&#10094;</button>
@@ -183,8 +179,8 @@ kinematic profiles, as well as level of agent-to-agent interactivity and crowded
     <td><b>Boston Logan International Airport (KBOS)</b></td>
     <td><b>John F. Kennedy International Airport (KJFK)</b></td>
   </tr>
-    <td><img src="/assets/posts/2024-06-14-amelia-dataset/kbos.gif" width=565 ></td>
-    <td><img src="/assets/posts/2024-06-14-amelia-dataset/kjfk.gif" width=700 ></td>
+    <td><img src="/assets/posts/2024-06-14-amelia-framework/kbos.gif" width=565 ></td>
+    <td><img src="/assets/posts/2024-06-14-amelia-framework/kjfk.gif" width=700 ></td>
   </tr>
 </table>
 
@@ -203,8 +199,8 @@ for ground truth scenes and model predictions.
 
 <table align="center">
   <tr>
-    <td><img src="/assets/posts/2024-06-14-amelia-dataset/predictions-1.gif" width=650 ></td>
-    <td><img src="/assets/posts/2024-06-14-amelia-dataset/predictions-2.gif" width=650 ></td>
+    <td><img src="/assets/posts/2024-06-14-amelia-framework/predictions-1.gif" width=650 ></td>
+    <td><img src="/assets/posts/2024-06-14-amelia-framework/predictions-2.gif" width=650 ></td>
   </tr>
 </table>
 

@@ -26,8 +26,6 @@ Amelia-TF: A Large Model for Airport Surface Movement Forecasting
 
 <hr>
 
-# Amelia-TF
-
 Predictive models for airport surface operations can be used for various downstream tasks like 
 collision risk assessment, taxi-out time prediction, departure metering, and emission estimations. 
 While data-driven methods have showcased marked improvements in predictive performance in recent 
