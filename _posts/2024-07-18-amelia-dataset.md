@@ -34,17 +34,14 @@ Below we provide instructions on how to get access to our dataset and provide a 
 
 # Downloading our Dataset
 
-<a class="button" itemprop="paper" href="https://arxiv.org/pdf/2309.08889" target="_blank">
+<a class="button" itemprop="paper" href="https://arxiv.org/pdf/2309.08889" target="https://airlab-share-01.andrew.cmu.edu:9000/amelia-processed/amelia-10.zip">
   <i class="fas fa-database fa-lg"></i>
 </a>
 
-TODO
-
 # Data Tracker
 
-
 | Airport Code | Limits File | Raster Image | Semantic Graph | Fence |
-|--------------|-------------|--------------|----------------|-------|
+|:------------:|:-----------:|:------------:|:--------------:|:-----:|
 |  ksea        |             |              |                |       |
 |  kewr        |             |              |                |       |
 |  klax        |             |              |                |       |
@@ -93,7 +90,6 @@ TODO
 |  ksjc        |             |              |                |       |
 |  koak        |             |              |                |       |
 |  kbna        |             |              |                |       |
-
 
 # BibTeX
 
