@@ -4,13 +4,13 @@ title: Amelia
 subtitle: A Large Model and Dataset for Airport Surface Movement Forecasting
 hide_footer: false
 hide_hero: false
-hero_image: /assets/posts/2024-06-14-amelia-dataset/klax_header.gif
+hero_image: /assets/posts/2024-06-14-amelia-framework/klax_header.gif
 hero_height: is-large
 ---
 
 <div align="center"><h1 class="title">Our Motivation</h1></div>
 
-The growing demand for air travel requires technological advancements in air traffic management as well as mechanisms for monitoring and ensuring **safe** and **efficient** operations.  
+The growing demand for air travel requires technological advancements in air traffic management as well as mechanisms for monitoring and ensuring **safe** and **efficient** operations.
 
 #### Some trends...
 <div align="center">
@@ -33,20 +33,20 @@ The growing demand for air travel requires technological advancements in air tra
 
 <br>
 
-To improve airport safety and efficiency and encourage further research in this direction we introduce **Amelia**, a large-scale dataset of airport surface movement and a toolkit for data analysis, visualization, benchmarking, and behavior modeling. 
+To improve airport safety and efficiency and encourage further research in this direction we introduce **Amelia**, a large-scale dataset of airport surface movement and a toolkit for data analysis, visualization, benchmarking, and behavior modeling.
 
-Our dataset, **Amelia-48** comprises s a **year’s worth of data collection across 48 airports** and TRACON facilities within the US National Airspace System, totaling **∼30TB** of raw data. 
+Our dataset, **Amelia-48** comprises s a **year’s worth of data collection across 48 airports** and TRACON facilities within the US National Airspace System, totaling **∼30TB** of raw data.
 
 Aditionally, inspired by the success of motion prediction models in the AV domain for safety monitoring and multi-agent coordination, we introduce **Amelia-TF**, a transformer-based large multi-agent multi-airport trajectory forecasting model **trained on 300 days or 11.36 billion tokens** of position data encompassing 10 different airports with varying topology.
 
 <hr>
 
 <div align="center"><h1 class="title">Keywords</h1>
-<h3 class="title" style="color:#A1A4A8"> 
+<h3 class="title" style="color:#A1A4A8">
   Aviation | Machine Learning | Deep Learning | Data Science
 </h3>
-<h5 class="title" style="color:#BDBFC2"> 
-  Trajectory Prediction | Anomaly Detection | Safety 
+<h5 class="title" style="color:#BDBFC2">
+  Trajectory Prediction | Anomaly Detection | Safety
 </h5>
 </div>
 
@@ -88,17 +88,17 @@ Aditionally, inspired by the success of motion prediction models in the AV domai
 
 #### &#128746; Amelia: A Large Model and Dataset for Airport Surface Movement Forecasting
 
-[Ingrid Navarro](https://navars.xyz) *, [Pablo Ortega-Kral](https://paok-2001.github.io) *, [Jay Patrikar](https://www.jaypatrikar.me) *, Haichuan Wang, 
-Zelin Ye, Jong Hoon Park, [Jean Oh](https://cmubig.github.io/team/jean_oh/) and [Sebastian Scherer](https://theairlab.org/team/sebastian/) 
+[Ingrid Navarro](https://navars.xyz) *, [Pablo Ortega-Kral](https://paok-2001.github.io) *, [Jay Patrikar](https://www.jaypatrikar.me) *, Haichuan Wang,
+Zelin Ye, Jong Hoon Park, [Jean Oh](https://cmubig.github.io/team/jean_oh/) and [Sebastian Scherer](https://theairlab.org/team/sebastian/)
 
-*Denotes equal contribution 
+*Denotes equal contribution
 
 <a class="button" itemprop="code" href="https://github.com/AmeliaCMU" target="_blank">
-  <i class="fas fa-code fa-lg"></i>    
-</a> 
+  <i class="fas fa-code fa-lg"></i>
+</a>
 <a class="button" itemprop="paper" href="https://arxiv.org/pdf/2309.08889" target="_blank">
-  <i class="fas fa-file fa-lg"></i>    
-</a> 
+  <i class="fas fa-file fa-lg"></i>
+</a>
 
 ```
 @article{navarro2024amelia,
