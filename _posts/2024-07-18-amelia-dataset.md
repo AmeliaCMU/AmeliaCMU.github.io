@@ -13,42 +13,93 @@ hide_footer: false
 hero_height: is-medium
 ---
 
-<h1> 
+<h1>
 Amelia-48: An airport surface movement dataset
 </h1>
 
 <a class="button" itemprop="paper" href="https://arxiv.org/pdf/2309.08889" target="_blank">
-  <i class="fas fa-database fa-lg"></i>    
-</a> 
+  <i class="fas fa-database fa-lg"></i>
+</a>
 <a class="button" itemprop="paper" href="https://arxiv.org/pdf/2309.08889" target="_blank">
-  <i class="fas fa-file fa-lg"></i>    
-</a> 
+  <i class="fas fa-file fa-lg"></i>
+</a>
 
 <hr>
 
-**Amelia-48** is a large-scale airport surface movement dataset collected using the System Wide 
-Information Management (SWIM) Surface Movement Event Service (SMES). With data collection beginning 
-in December 2022, the ~30TB dataset currently provides a year's worth of data and covers 48 airports and TRACON facilities within the US National Airspace System. 
+**Amelia-48** is a large-scale airport surface movement dataset collected using the System Wide
+Information Management (SWIM) Surface Movement Event Service (SMES). With data collection beginning
+in December 2022, the ~30TB dataset currently provides a year's worth of data and covers 48 airports and TRACON facilities within the US National Airspace System.
 
-Below we provide instructions on how to get access to our dataset and provide a dataset tracker summarizing the available data for each airport. 
+Below we provide instructions on how to get access to our dataset and provide a dataset tracker summarizing the available data for each airport.
 
 # Downloading our Dataset
 
 <a class="button" itemprop="paper" href="https://arxiv.org/pdf/2309.08889" target="_blank">
-  <i class="fas fa-database fa-lg"></i>    
-</a> 
+  <i class="fas fa-database fa-lg"></i>
+</a>
 
 TODO
 
 # Data Tracker
 
-TODO
+
+| Airport Code | Limits File | Raster Image | Semantic Graph | Fence |
+|--------------|-------------|--------------|----------------|-------|
+|  ksea        |             |              |                |       |
+|  kewr        |             |              |                |       |
+|  klax        |             |              |                |       |
+|  panc        |             |              |                |       |
+|  kbos        |             |              |                |       |
+|  kdca        |             |              |                |       |
+|  ksfo        |             |              |                |       |
+|  kmdw        |             |              |                |       |
+|  kjfj        |             |              |                |       |
+|  kmsy        |             |              |                |       |
+|  klas        |             |              |                |       |
+|  kmke        |             |              |                |       |
+|  kmem        |             |              |                |       |
+|  kiah        |             |              |                |       |
+|  kiad        |             |              |                |       |
+|  kphx        |             |              |                |       |
+|  kslc        |             |              |                |       |
+|  kden        |             |              |                |       |
+|  kmci        |             |              |                |       |
+|  kc          |             |              |                |       |
+|  kcle        |             |              |                |       |
+|  kclt        |             |              |                |       |
+|  ksan        |             |              |                |       |
+|  kmco        |             |              |                |       |
+|  kHOU        |             |              |                |       |
+|  kdfw        |             |              |                |       |
+|  kdtw        |             |              |                |       |
+|  ksdf        |             |              |                |       |
+|  kord        |             |              |                |       |
+|  ksna        |             |              |                |       |
+|  kpdx        |             |              |                |       |
+|  kbwi        |             |              |                |       |
+|  kphl        |             |              |                |       |
+|  kfll        |             |              |                |       |
+|  kmsp        |             |              |                |       |
+|  phnl        |             |              |                |       |
+|  kdab        |             |              |                |       |
+|  kmia        |             |              |                |       |
+|  katl        |             |              |                |       |
+|  kpit        |             |              |                |       |
+|  kbdl        |             |              |                |       |
+|  kpvd        |             |              |                |       |
+|  kstl        |             |              |                |       |
+|  klga        |             |              |                |       |
+|  kaus        |             |              |                |       |
+|  ksjc        |             |              |                |       |
+|  koak        |             |              |                |       |
+|  kbna        |             |              |                |       |
+
 
 # BibTeX
 
 If you find our work useful in your research, please cite us!
 
-```
+```bash
 @article{navarro2024amelia,
   title={Amelia: A Large Model and Dataset for Airport Surface
 Movement Forecasting},
