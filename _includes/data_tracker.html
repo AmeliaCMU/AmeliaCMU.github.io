@@ -23,32 +23,32 @@
       <tr>
         <td>{{ airport.airport }}</td>
         <td style="text-align:center;">{{ airport.icao }}</td>
-        {% if airport.raw_data != "" %}
+        {% if airport.raw_data != null %}
             <td style="text-align:center;">X</td>
         {% else %}
             <td style="text-align:center;"></td>
         {% endif %}
-        {% if airport.processed_data != "" %}
+        {% if airport.processed_data != null %}
             <td style="text-align:center;">X</td>
         {% else %}
             <td style="text-align:center;"></td>
         {% endif %}
-        {% if airport.raster_map != "" %}
+        {% if airport.raster_map != null %}
             <td style="text-align:center;">X</td>
         {% else %}
             <td style="text-align:center;"></td>
         {% endif %}
-        {% if airport.semantic_graph != "" %}
+        {% if airport.semantic_graph != null %}
             <td style="text-align:center;">X</td>
         {% else %}
             <td style="text-align:center;"></td>
         {% endif %}
-        {% if airport.fence != "" %}
+        {% if airport.fence != null %}
             <td style="text-align:center;">X</td>
         {% else %}
             <td style="text-align:center;"></td>
         {% endif %}
-        {% if airport.limits != "" %}
+        {% if airport.limits != null %}
             <td style="text-align:center;">X</td>
         {% else %}
             <td style="text-align:center;"></td>
