@@ -13,28 +13,25 @@ hero_image: /assets/img/background.jpg
 hero_height: is-large
 ---
 
-<h1> 
+<h1>
 Amelia-TF: A Large Model for Airport Surface Movement Forecasting
 </h1>
 
 <a class="button" itemprop="paper" href="https://arxiv.org/pdf/2309.08889" target="_blank">
-  <i class="fas fa-database fa-lg"></i>    
-</a> 
-<a class="button" itemprop="paper" href="https://arxiv.org/pdf/2309.08889" target="_blank">
-  <i class="fas fa-file fa-lg"></i>    
-</a> 
+  <i class="fas fa-file fa-lg"></i>
+</a>
 
 <hr>
 
-Predictive models for airport surface operations can be used for various downstream tasks like 
-collision risk assessment, taxi-out time prediction, departure metering, and emission estimations. 
-While data-driven methods have showcased marked improvements in predictive performance in recent 
-years, prior works have not addressed the lack of large-scale curated surface movement datasets 
-within the public domain and the development of generalizable trajectory forecasting models. 
+Predictive models for airport surface operations can be used for various downstream tasks like
+collision risk assessment, taxi-out time prediction, departure metering, and emission estimations.
+While data-driven methods have showcased marked improvements in predictive performance in recent
+years, prior works have not addressed the lack of large-scale curated surface movement datasets
+within the public domain and the development of generalizable trajectory forecasting models.
 
-In response to this, we introduce **Amelia-TF** is a large transformer-based airport surface movement 
-trajectory forecasting model trained on the **[Amelia-48](https://ameliacmu.github.io/amelia-dataset/)** 
-dataset. We explore different scene representation and training strategies for our model varying from 
+In response to this, we introduce **Amelia-TF** is a large transformer-based airport surface movement
+trajectory forecasting model trained on the **[Amelia-48](https://ameliacmu.github.io/amelia-dataset/)**
+dataset. We explore different scene representation and training strategies for our model varying from
 single-airport to multi-airport settings in which we assess our model's generalization capabilities.
 
 <div align="center">
@@ -44,15 +41,15 @@ single-airport to multi-airport settings in which we assess our model's generali
 
 <br>
 
-Below, we provide an overview of our model and experiments. For more details, please check out our paper! 
+Below, we provide an overview of our model and experiments. For more details, please check out our paper!
 
 ## Model Overview
 
 Amelia-TF is an end-to-end motion prediction model that aims to characterize *relevant* surface
-area operations. To do so, our model comprises three main submodules: 
-1. A **scene representation** module that determines the agents of interest in the scene using a scoring strategy, and encodes per-agent features, 
-2. A transformer-based **scene encoder**, which hierarchically encodes the *temporal*, *agent-to-agent* and *agent-to-context* relationships within a scene, and; 
-3. A **trajectory decoder** that models the set of possible futures with associated confidence scores using a Gaussian Mixture Model. 
+area operations. To do so, our model comprises three main submodules:
+1. A **scene representation** module that determines the agents of interest in the scene using a scoring strategy, and encodes per-agent features,
+2. A transformer-based **scene encoder**, which hierarchically encodes the *temporal*, *agent-to-agent* and *agent-to-context* relationships within a scene, and;
+3. A **trajectory decoder** that models the set of possible futures with associated confidence scores using a Gaussian Mixture Model.
 
 <div align="center">
 <video width="1000" autoplay loop muted>
@@ -63,16 +60,16 @@ area operations. To do so, our model comprises three main submodules:
 
 # Experiments and Results
 
-We explored two main experiments to assess the performance of **Amelia-TF**. The first experiment 
-studies the benefit of our proposed scene representation strategy. The second experiment explores the generalization of our model across airports. 
+We explored two main experiments to assess the performance of **Amelia-TF**. The first experiment
+studies the benefit of our proposed scene representation strategy. The second experiment explores the generalization of our model across airports.
 
 ### Ego-selection strategy
 
-We want to assess if our ego-selection strategy produces complex and interesting scene 
-representations since it prioritizes more critical agent-to-agent relationships and more dynamic agent motion profiles within a scene. 
+We want to assess if our ego-selection strategy produces complex and interesting scene
+representations since it prioritizes more critical agent-to-agent relationships and more dynamic agent motion profiles within a scene.
 
 
-To do so we compare our proposed idea against a *random* agent selection strategy. 
+To do so we compare our proposed idea against a *random* agent selection strategy.
 
 #### Quantitative Results
 
@@ -101,7 +98,7 @@ To do so we compare our proposed idea against a *random* agent selection strateg
   <img class="egoSlides" src="/assets/posts/2024-06-17-amelia-model/ego_results_3.png" style="width:100%">
   <img class="egoSlides" src="/assets/posts/2024-06-17-amelia-model/ego_results_4.png" style="width:100%">
   <img class="egoSlides" src="/assets/posts/2024-06-17-amelia-model/ego_results_5.png" style="width:100%">
-  
+
   <div align="center">
     <button class="button-slide" onclick="plusDivs(-1, 'egoSlides')">&#10094;</button>
     <button class="button-slide" onclick="plusDivs(1, 'egoSlides')">&#10095;</button>
@@ -110,9 +107,9 @@ To do so we compare our proposed idea against a *random* agent selection strateg
 
 ### Multi-Airport generalization
 
-We also explore our model's generalization capabilities as we cover a wider variety of training data. We hypothesize that as we do so, our model will learn richer representations that would generalize better to unseen airport layouts and interactions. 
+We also explore our model's generalization capabilities as we cover a wider variety of training data. We hypothesize that as we do so, our model will learn richer representations that would generalize better to unseen airport layouts and interactions.
 
-This would eventually reduce the requirement for more training data and/or adaptation techniques, such as fine-tuning. Thus, we propose a *multi-airport* ablation to assess **Amelia-TF**'s performance in *unseen* airports as we vary the number of *seen* ones during training. 
+This would eventually reduce the requirement for more training data and/or adaptation techniques, such as fine-tuning. Thus, we propose a *multi-airport* ablation to assess **Amelia-TF**'s performance in *unseen* airports as we vary the number of *seen* ones during training.
 
 
 #### Quantitative Results
@@ -142,7 +139,7 @@ This would eventually reduce the requirement for more training data and/or adapt
   <img class="genSlides" src="/assets/posts/2024-06-17-amelia-model/ego_results_3.png" style="width:100%">
   <img class="genSlides" src="/assets/posts/2024-06-17-amelia-model/ego_results_4.png" style="width:100%">
   <img class="genSlides" src="/assets/posts/2024-06-17-amelia-model/ego_results_5.png" style="width:100%">
-  <br> 
+  <br>
   <div align="center">
     <button class="button-slide" onclick="plusDivs(-1, 'genSlides')">&#10094;</button>
     <button class="button-slide" onclick="plusDivs(1, 'genSlides')">&#10095;</button>
@@ -164,9 +161,9 @@ function showDivs(n, class_name) {
   if (n > x.length) {slideIndex = 1}
   if (n < 1) {slideIndex = x.length}
   for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
+    x[i].style.display = "none";
   }
-  x[slideIndex-1].style.display = "block";  
+  x[slideIndex-1].style.display = "block";
 }
 </script>
 
