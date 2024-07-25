@@ -17,13 +17,6 @@ hero_height: is-medium
 Amelia-48: An airport surface movement dataset
 </h1>
 
-<a class="button" itemprop="paper" href="https://arxiv.org/pdf/2309.08889" target="_blank">
-  <i class="fas fa-database fa-lg"></i>
-</a>
-<a class="button" itemprop="paper" href="https://arxiv.org/pdf/2309.08889" target="_blank">
-  <i class="fas fa-file fa-lg"></i>
-</a>
-
 <hr>
 
 **Amelia-48** is a large-scale airport surface movement dataset collected using the System Wide
@@ -40,56 +33,8 @@ Below we provide instructions on how to get access to our dataset and provide a 
 
 # Data Tracker
 
-| Airport Code | Limits File | Raster Image | Semantic Graph | Fence |
-|:------------:|:-----------:|:------------:|:--------------:|:-----:|
-|  ksea        |             |              |                |       |
-|  kewr        |             |              |                |       |
-|  klax        |             |              |                |       |
-|  panc        |             |              |                |       |
-|  kbos        |             |              |                |       |
-|  kdca        |             |              |                |       |
-|  ksfo        |             |              |                |       |
-|  kmdw        |             |              |                |       |
-|  kjfj        |             |              |                |       |
-|  kmsy        |             |              |                |       |
-|  klas        |             |              |                |       |
-|  kmke        |             |              |                |       |
-|  kmem        |             |              |                |       |
-|  kiah        |             |              |                |       |
-|  kiad        |             |              |                |       |
-|  kphx        |             |              |                |       |
-|  kslc        |             |              |                |       |
-|  kden        |             |              |                |       |
-|  kmci        |             |              |                |       |
-|  kc          |             |              |                |       |
-|  kcle        |             |              |                |       |
-|  kclt        |             |              |                |       |
-|  ksan        |             |              |                |       |
-|  kmco        |             |              |                |       |
-|  kHOU        |             |              |                |       |
-|  kdfw        |             |              |                |       |
-|  kdtw        |             |              |                |       |
-|  ksdf        |             |              |                |       |
-|  kord        |             |              |                |       |
-|  ksna        |             |              |                |       |
-|  kpdx        |             |              |                |       |
-|  kbwi        |             |              |                |       |
-|  kphl        |             |              |                |       |
-|  kfll        |             |              |                |       |
-|  kmsp        |             |              |                |       |
-|  phnl        |             |              |                |       |
-|  kdab        |             |              |                |       |
-|  kmia        |             |              |                |       |
-|  katl        |             |              |                |       |
-|  kpit        |             |              |                |       |
-|  kbdl        |             |              |                |       |
-|  kpvd        |             |              |                |       |
-|  kstl        |             |              |                |       |
-|  klga        |             |              |                |       |
-|  kaus        |             |              |                |       |
-|  ksjc        |             |              |                |       |
-|  koak        |             |              |                |       |
-|  kbna        |             |              |                |       |
+{% include data_tracker.html %}
+
 
 # BibTeX
 

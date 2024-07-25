@@ -1,0 +1,59 @@
+<table>
+    <caption>
+      Data tracker for Amelia-48
+    </caption>
+    <thead>
+      <tr>
+        <th scope="col" rowspan="2" style="text-align:center;">Airport</th>
+        <th scope="col" rowspan="2" style="text-align:center;">Airport ICAO</th>
+        <th scope="col" colspan="2" style="text-align:center;">Trajectory</th>
+        <th scope="col" colspan="4" style="text-align:center;">Map</th>
+      </tr>
+      <tr>
+        <td style="text-align:center;">Raw Data</td>
+        <td style="text-align:center;">Processed Data</td>
+        <td style="text-align:center;">Airport Raster Map</td>
+        <td style="text-align:center;">Semantic Graph</td>
+        <td style="text-align:center;">Fence</td>
+        <td style="text-align:center;">Limits File</td>
+      </tr>
+    </thead>
+    <tbody>
+      {% for airport in site.data.data_tracker %}
+      <tr>
+        <td>{{ airport.airport }}</td>
+        <td style="text-align:center;">{{ airport.icao }}</td>
+        {% if airport.raw_data != "" %}
+            <td style="text-align:center;">X</td>
+        {% else %}
+            <td style="text-align:center;"></td>
+        {% endif %}
+        {% if airport.processed_data != "" %}
+            <td style="text-align:center;">X</td>
+        {% else %}
+            <td style="text-align:center;"></td>
+        {% endif %}
+        {% if airport.raster_map != "" %}
+            <td style="text-align:center;">X</td>
+        {% else %}
+            <td style="text-align:center;"></td>
+        {% endif %}
+        {% if airport.semantic_graph != "" %}
+            <td style="text-align:center;">X</td>
+        {% else %}
+            <td style="text-align:center;"></td>
+        {% endif %}
+        {% if airport.fence != "" %}
+            <td style="text-align:center;">X</td>
+        {% else %}
+            <td style="text-align:center;"></td>
+        {% endif %}
+        {% if airport.limits != "" %}
+            <td style="text-align:center;">X</td>
+        {% else %}
+            <td style="text-align:center;"></td>
+        {% endif %}
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>

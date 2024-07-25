@@ -1,0 +1,377 @@
+
+- airport: "Newark Liberty Intl. Airport"
+  icao: "KEWR"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "Los Angeles Intl. Airport"
+  icao: "KLAX"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "Ted Stevens Anchorage Intl. Airport"
+  icao: "PANC"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "Boston-Logan Intl. Airport"
+  icao: "KBOS"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "Ronald Reagan Washington Natl. Airport"
+  icao: "KDCA"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "San Francisco Intl. Airport"
+  icao: "KSFO"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "Chicago-Midway Intl. Airport"
+  icao: "KMDW"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "John F. Kennedy Intl. Airport"
+  icao: "KJFJ"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "Louis Armstrong New Orleans Intl. Airport"
+  icao: "KMSY"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "McCarran Intl. Airport"
+  icao: "KLAS"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "Milwaukee Mitchell Intl. Airport"
+  icao: "KMKE"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "Memphis Intl. Airport"
+  icao: "KMEM"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "George Bush Intercontinental Airport"
+  icao: "KIAH"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "Washington Dulles Intl. Airport"
+  icao: "KIAD"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "Phoenix Sky Harbor Intl. Airport"
+  icao: "KPHX"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "Salt Lake City Intl. Airport"
+  icao: "KSLC"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "Denver Intl. Airport"
+  icao: "KDEN"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "Kansas City Intl. Airport"
+  icao: "KMCI"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "Cincinnati/Northern Kentucky Intl. Airport"
+  icao: "KCVG"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "Cleveland Hopkins Intl. Airport"
+  icao: "KCLE"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "Charlotte Douglas Intl. Airport"
+  icao: "KCLT"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "San Diego Intl. Airport"
+  icao: "KSAN"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "Orlando Intl. Airport"
+  icao: "KMCO"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "William P. Hobby Airport"
+  icao: "KHOU"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "Dallas/Fort Worth Intl. Airport"
+  icao: "KDFW"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "Detroit Metropolitan Wayne County Airport"
+  icao: "KDTW"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "Louisville Muhammad Ali Intl. Airport"
+  icao: "KSDF"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "O'Hare Intl. Airport"
+  icao: "KORD"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "John Wayne Airport"
+  icao: "KSNA"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "Portland Intl. Airport"
+  icao: "KPDX"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "Baltimore/Washington Intl. Thurgood Marshall Airport"
+  icao: "KBWI"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "Philadelphia Intl. Airport"
+  icao: "KPHL"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "Fort Lauderdale-Hollywood Intl. Airport"
+  icao: "KFLL"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "Minneapolis-Saint Paul Intl. Airport"
+  icao: "KMSP"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "Daniel K. Inouye Intl. Airport"
+  icao: "KHNL"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "Daytona Beach Intl. Airport"
+  icao: "KDAB"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "Miami Intl. Airport"
+  icao: "KMIA"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "Hartsfield-Jackson Atlanta Intl. Airport"
+  icao: "KATL"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "Pittsburgh Intl. Airport"
+  icao: "KPIT"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "Bradley Intl. Airport"
+  icao: "KBDL"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "T.F. Green Airport"
+  icao: "KPVD"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "St. Louis Lambert Intl. Airport"
+  icao: "KSTL"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "LaGuardia Airport"
+  icao: "KLGA"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "Austin-Bergstrom Intl. Airport"
+  icao: "KAUS"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "Norman Y. Mineta San Jose Intl. Airport"
+  icao: "KSJC"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "Oakland Intl. Airport"
+  icao: "KOAK"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
+- airport: "Nashville Intl. Airport"
+  icao: "KBNA"
+  raw_data:
+  processed_data:
+  raster_map:
+  semantic_graph:
+  fence:
+  limits:
