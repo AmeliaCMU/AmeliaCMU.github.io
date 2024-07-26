@@ -22,13 +22,21 @@ The growing demand for air travel requires technological advancements in air tra
 
 #### A close call...
 
-<div align="center">
+<!-- <div align="center">
   <video width="1000" autoplay loop muted playsinline>
-    <source src="/assets/video/sfo_incursion_red.mp4" type="video/mp4" />
-    <source src="/assets/video/sfo_incursion_red.webm" type="video/webm" />
+  "/assets/video/sfo_incursion_red.webm"
+  "/assets/video/sfo_incursion_red.mp4"
+    <source src="" type="video/mp4" />
+    <source src="" type="video/webm" />
   </video>
   <h5>A triple runway incursion at San Francisco International Airport (4x speed) </h5>
   <h7>July 11th, 2023 </h7>
+</div> -->
+
+<div align="center">
+  <img src="/assets/video/bos_incursion_red.gif" alt="BOS Incursion" width="100%">
+  <h5>A runway incursion at Boston-Logan Intl. Airport (2x speed) </h5>
+  <h7>February 27, 2023</h7>
 </div>
 
 <br>
@@ -49,8 +57,6 @@ Aditionally, inspired by the success of motion prediction models in the AV domai
   Trajectory Prediction | Anomaly Detection | Safety
 </h5>
 </div>
-
-
 
 <hr>
 

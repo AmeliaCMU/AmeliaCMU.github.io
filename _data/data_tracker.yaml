@@ -1,377 +1,433 @@
 
-- airport: "Newark Liberty Intl. Airport"
+- index: 1
+  airport: "Seattle-Tacoma Intl. Airport"
+  icao: "KSEA"
+  raw_data: true
+  processed_data: true
+  raster_map: true
+  semantic_graph: true
+  fence: true
+  limits: true
+- index: 2
+  airport: "Newark Liberty Intl. Airport"
   icao: "KEWR"
-  raw_data:
-  processed_data:
-  raster_map:
-  semantic_graph:
-  fence:
-  limits:
-- airport: "Los Angeles Intl. Airport"
+  raw_data: true
+  processed_data: true
+  raster_map: true
+  semantic_graph: true
+  fence: true
+  limits: true
+- index: 3
+  airport: "Los Angeles Intl. Airport"
   icao: "KLAX"
-  raw_data:
-  processed_data:
-  raster_map:
-  semantic_graph:
-  fence:
-  limits:
-- airport: "Ted Stevens Anchorage Intl. Airport"
+  raw_data: true
+  processed_data: true
+  raster_map: true
+  semantic_graph: true
+  fence: true
+  limits: true
+- index: 4
+  airport: "Ted Stevens Anchorage Intl. Airport"
   icao: "PANC"
-  raw_data:
-  processed_data:
-  raster_map:
-  semantic_graph:
-  fence:
-  limits:
-- airport: "Boston-Logan Intl. Airport"
+  raw_data: true
+  processed_data: true
+  raster_map: true
+  semantic_graph: true
+  fence: true
+  limits: true
+- index: 5
+  airport: "Boston-Logan Intl. Airport"
   icao: "KBOS"
-  raw_data:
-  processed_data:
-  raster_map:
-  semantic_graph:
-  fence:
-  limits:
-- airport: "Ronald Reagan Washington Natl. Airport"
+  raw_data: true
+  processed_data: true
+  raster_map: true
+  semantic_graph: true
+  fence: true
+  limits: true
+- index: 6
+  airport: "Ronald Reagan Washington Natl. Airport"
   icao: "KDCA"
-  raw_data:
-  processed_data:
-  raster_map:
-  semantic_graph:
-  fence:
-  limits:
-- airport: "San Francisco Intl. Airport"
+  raw_data: true
+  processed_data: true
+  raster_map: true
+  semantic_graph: true
+  fence: true
+  limits: true
+- index: 7
+  airport: "San Francisco Intl. Airport"
   icao: "KSFO"
-  raw_data:
-  processed_data:
-  raster_map:
-  semantic_graph:
-  fence:
-  limits:
-- airport: "Chicago-Midway Intl. Airport"
+  raw_data: true
+  processed_data: true
+  raster_map: true
+  semantic_graph: true
+  fence: true
+  limits: true
+- index: 8
+  airport: "Chicago-Midway Intl. Airport"
   icao: "KMDW"
-  raw_data:
-  processed_data:
-  raster_map:
-  semantic_graph:
-  fence:
-  limits:
-- airport: "John F. Kennedy Intl. Airport"
+  raw_data: true
+  processed_data: true
+  raster_map: true
+  semantic_graph: true
+  fence: true
+  limits: true
+- index: 9
+  airport: "John F. Kennedy Intl. Airport"
   icao: "KJFJ"
-  raw_data:
-  processed_data:
-  raster_map:
-  semantic_graph:
-  fence:
-  limits:
-- airport: "Louis Armstrong New Orleans Intl. Airport"
+  raw_data: true
+  processed_data: true
+  raster_map: true
+  semantic_graph: true
+  fence: true
+  limits: true
+- index: 10
+  airport: "Louis Armstrong New Orleans Intl. Airport"
   icao: "KMSY"
-  raw_data:
-  processed_data:
-  raster_map:
-  semantic_graph:
-  fence:
-  limits:
-- airport: "McCarran Intl. Airport"
+  raw_data: true
+  processed_data: true
+  raster_map: true
+  semantic_graph: true
+  fence: true
+  limits: true
+- index: 11
+  airport: "McCarran Intl. Airport"
   icao: "KLAS"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "Milwaukee Mitchell Intl. Airport"
+  limits: true
+- index: 12
+  airport: "Milwaukee Mitchell Intl. Airport"
   icao: "KMKE"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "Memphis Intl. Airport"
+  limits: true
+- index: 13
+  airport: "Memphis Intl. Airport"
   icao: "KMEM"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "George Bush Intercontinental Airport"
+  limits: true
+- index: 14
+  airport: "George Bush Intercontinental Airport"
   icao: "KIAH"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "Washington Dulles Intl. Airport"
+  limits: true
+- index: 15
+  airport: "Washington Dulles Intl. Airport"
   icao: "KIAD"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "Phoenix Sky Harbor Intl. Airport"
+  limits: true
+- index: 16
+  airport: "Phoenix Sky Harbor Intl. Airport"
   icao: "KPHX"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "Salt Lake City Intl. Airport"
+  limits: true
+- index: 17
+  airport: "Salt Lake City Intl. Airport"
   icao: "KSLC"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "Denver Intl. Airport"
+  limits: true
+- index: 18
+  airport: "Denver Intl. Airport"
   icao: "KDEN"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "Kansas City Intl. Airport"
+  limits: true
+- index: 19
+  airport: "Kansas City Intl. Airport"
   icao: "KMCI"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "Cincinnati/Northern Kentucky Intl. Airport"
+  limits: true
+- index: 20
+  airport: "Cincinnati/Northern Kentucky Intl. Airport"
   icao: "KCVG"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "Cleveland Hopkins Intl. Airport"
+  limits: true
+- index: 21
+  airport: "Cleveland Hopkins Intl. Airport"
   icao: "KCLE"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "Charlotte Douglas Intl. Airport"
+  limits: true
+- index: 22
+  airport: "Charlotte Douglas Intl. Airport"
   icao: "KCLT"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "San Diego Intl. Airport"
+  limits: true
+- index: 23
+  airport: "San Diego Intl. Airport"
   icao: "KSAN"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "Orlando Intl. Airport"
+  limits: true
+- index: 24
+  airport: "Orlando Intl. Airport"
   icao: "KMCO"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "William P. Hobby Airport"
+  limits: true
+- index: 25
+  airport: "William P. Hobby Airport"
   icao: "KHOU"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "Dallas/Fort Worth Intl. Airport"
+  limits: true
+- index: 26
+  airport: "Dallas/Fort Worth Intl. Airport"
   icao: "KDFW"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "Detroit Metropolitan Wayne County Airport"
+  limits: true
+- index: 27
+  airport: "Detroit Metropolitan Wayne County Airport"
   icao: "KDTW"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "Louisville Muhammad Ali Intl. Airport"
+  limits: true
+- index: 28
+  airport: "Louisville Muhammad Ali Intl. Airport"
   icao: "KSDF"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "O'Hare Intl. Airport"
+  limits: true
+- index: 29
+  airport: "O'Hare Intl. Airport"
   icao: "KORD"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "John Wayne Airport"
+  limits: true
+- index: 30
+  airport: "John Wayne Airport"
   icao: "KSNA"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "Portland Intl. Airport"
+  limits: true
+- index: 31
+  airport: "Portland Intl. Airport"
   icao: "KPDX"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "Baltimore/Washington Intl. Thurgood Marshall Airport"
+  limits: true
+- index: 32
+  airport: "Baltimore/Washington Intl. Thurgood Marshall Airport"
   icao: "KBWI"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "Philadelphia Intl. Airport"
+  limits: true
+- index: 33
+  airport: "Philadelphia Intl. Airport"
   icao: "KPHL"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "Fort Lauderdale-Hollywood Intl. Airport"
+  limits: true
+- index: 34
+  airport: "Fort Lauderdale-Hollywood Intl. Airport"
   icao: "KFLL"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "Minneapolis-Saint Paul Intl. Airport"
+  limits: true
+- index: 35
+  airport: "Minneapolis-Saint Paul Intl. Airport"
   icao: "KMSP"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "Daniel K. Inouye Intl. Airport"
+  limits: true
+- index: 36
+  airport: "Daniel K. Inouye Intl. Airport"
   icao: "KHNL"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "Daytona Beach Intl. Airport"
+  limits: true
+- index: 37
+  airport: "Daytona Beach Intl. Airport"
   icao: "KDAB"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "Miami Intl. Airport"
+  limits: true
+- index: 38
+  airport: "Miami Intl. Airport"
   icao: "KMIA"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "Hartsfield-Jackson Atlanta Intl. Airport"
+  limits: true
+- index: 39
+  airport: "Hartsfield-Jackson Atlanta Intl. Airport"
   icao: "KATL"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "Pittsburgh Intl. Airport"
+  limits: true
+- index: 40
+  airport: "Pittsburgh Intl. Airport"
   icao: "KPIT"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "Bradley Intl. Airport"
+  limits: true
+- index: 41
+  airport: "Bradley Intl. Airport"
   icao: "KBDL"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "T.F. Green Airport"
+  limits: true
+- index: 42
+  airport: "T.F. Green Airport"
   icao: "KPVD"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "St. Louis Lambert Intl. Airport"
+  limits: true
+- index: 43
+  airport: "St. Louis Lambert Intl. Airport"
   icao: "KSTL"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "LaGuardia Airport"
+  limits: true
+- index: 44
+  airport: "LaGuardia Airport"
   icao: "KLGA"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "Austin-Bergstrom Intl. Airport"
+  limits: true
+- index: 45
+  airport: "Austin-Bergstrom Intl. Airport"
   icao: "KAUS"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "Norman Y. Mineta San Jose Intl. Airport"
+  limits: true
+- index: 46
+  airport: "Norman Y. Mineta San Jose Intl. Airport"
   icao: "KSJC"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "Oakland Intl. Airport"
+  limits: true
+- index: 47
+  airport: "Oakland Intl. Airport"
   icao: "KOAK"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
-- airport: "Nashville Intl. Airport"
+  limits: true
+- index: 48
+  airport: "Nashville Intl. Airport"
   icao: "KBNA"
-  raw_data:
+  raw_data: true
   processed_data:
-  raster_map:
+  raster_map: true
   semantic_graph:
   fence:
-  limits:
+  limits: true
