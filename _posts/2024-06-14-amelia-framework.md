@@ -4,7 +4,7 @@ author: Ingrid Navarro and Pablo Ortega-Kral
 permalink: /amelia-framework/
 title: Amelia Framework
 subtitle: A framework for airport surface movement
-image: /assets/posts/2024-06-14-amelia-framework/klax.gif
+image: /assets/posts/2024-06-14-amelia-framework/amelia_framework.png
 link-new-tab: true
 categories: publication
 hero_image: /assets/posts/2024-06-14-amelia-framework/klax_header.gif
