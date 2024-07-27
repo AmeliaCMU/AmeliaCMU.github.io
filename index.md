@@ -60,7 +60,8 @@ Aditionally, inspired by the success of motion prediction models in the AV domai
 
 <hr>
 
-<div align="center"><h1 class="title">Our Framework </h1></div>
+<div align="center"><img class="center" src="assets/img/logos/amelia.png" width="30%" alt=""></div>
+<br>
 
 {% assign posts = site.posts | where:"categories","publication" %}
 <div class="columns is-multiline">
