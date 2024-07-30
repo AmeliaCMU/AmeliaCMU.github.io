@@ -107,13 +107,16 @@ Zelin Ye, Jong Hoon Park, [Jean Oh](https://cmubig.github.io/team/jean_oh/) and 
   <i class="fas fa-file fa-lg"></i>
 </a>
 
-```
-@article{navarro2024amelia,
-  title={Amelia: A Large Model and Dataset for Airport Surface
-Movement Forecasting},
-  author={Navarro, Ingrid and Ortega-Kral, Pablo and Patrikar, Jay, and Haichuan, Wang and Park, Jong Hoon and Oh, Jean and Scherer, Sebastian},
-  journal={arXiv preprint arXiv:2309.08889},
-  year={2024}
+```bash
+@inbook{navarro2024amelia,
+  author = {Ingrid Navarro and Pablo Ortega and Jay Patrikar and Haichuan Wang and Zelin Ye and Jong Hoon Park and Jean Oh and Sebastian Scherer},
+  title = {AmeliaTF: A Large Model and Dataset for Airport Surface Movement Forecasting},
+  booktitle = {AIAA AVIATION FORUM AND ASCEND 2024},
+  chapter = {},
+  pages = {},
+  doi = {10.2514/6.2024-4251},
+  URL = {https://arc.aiaa.org/doi/abs/10.2514/6.2024-4251},
+  eprint = {https://arc.aiaa.org/doi/pdf/10.2514/6.2024-4251},
 }
 ```
 
