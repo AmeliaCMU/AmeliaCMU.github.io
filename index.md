@@ -107,7 +107,7 @@ Zelin Ye, Jong Hoon Park, [Jean Oh](https://cmubig.github.io/team/jean_oh/) and 
   <i class="fas fa-file fa-lg"></i>
 </a>
 
-```bash
+```bibtex
 @inbook{navarro2024amelia,
   author = {Ingrid Navarro and Pablo Ortega and Jay Patrikar and Haichuan Wang and Zelin Ye and Jong Hoon Park and Jean Oh and Sebastian Scherer},
   title = {AmeliaTF: A Large Model and Dataset for Airport Surface Movement Forecasting},
