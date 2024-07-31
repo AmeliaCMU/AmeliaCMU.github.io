@@ -59,28 +59,6 @@ The tool produces clean, interpolated data in formats accepted by most recent ML
 forecasting dataloaders. The collected position reports cover both, approaching and ground movement
 events which are saved into hourly CSV files containing the following information:
 
-<table align="center">
-  <tr>
-  <tr>
-    <td><b>Field</b></td>
-    <td><b>Unit</b></td>
-    <td><b>Description</b></td>
-  </tr><td>Frame</td><td>#</td><td>Timestamp</td></tr>
-  <tr><td>ID</td><td>#</td><td>STDDS Agent ID</td></tr>
-  <tr><td>Range</td><td>km</td><td>Distance from airport datum</td></tr>
-  <tr><td>Bearing</td><td>rads</td><td>Bearing angle w.r.t North</td></tr>
-  <tr><td>Altitude</td><td>feet</td><td>Agent altitude (Mean Sea Level)</td></tr>
-  <tr><td>Speed</td><td>knots</td><td>Agent speed</td></tr>
-  <tr><td>Heading</td><td>degrees</td><td>Agent heading</td></tr>
-  <tr><td>Type</td><td>int</td><td>Agent type: {0: aircraft 1: vehicle, 2: unknown}</td></tr>
-  <tr><td>Lat</td><td>decimal degrees</td><td>Agent's latitude</td></tr>
-  <tr><td>Lon</td><td>decimal degrees</td><td>Agent's longitude</td></tr>
-  <tr><td>x</td><td>km</td><td>Agent's local x Cartesian position</td></tr>
-  <tr><td>y</td><td>km</td><td>Agent's local y Cartesian position</td></tr>
-  <tr><td>Interp</td><td>boolean</td><td>Interpolated data point flag</td></tr>
-</table>
-
-<hr>
 
 <h3>Amelia-<span style="color:#20948b;">Maps</span>
 <span> <a class="button" itemprop="github" href="https://github.com/AmeliaCMU/AmeliaMaps" target="_blank">

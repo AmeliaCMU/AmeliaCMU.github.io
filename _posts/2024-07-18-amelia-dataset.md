@@ -25,11 +25,63 @@ in December 2022, the ~30TB dataset currently provides a year's worth of data an
 
 Below we provide instructions on how to get access to our dataset and provide a dataset tracker summarizing the available data for each airport.
 
-# Downloading our Dataset
+The dataset consists of both RAW and processed data. In addition, we provide scripts to process data for any of the 48 airports for any time duration after 1 Dec 2022.
 
-<a class="button" itemprop="paper" href="https://arxiv.org/pdf/2309.08889" target="https://airlab-share-01.andrew.cmu.edu:9000/amelia-processed/amelia-10.zip">
-  <i class="fas fa-database fa-lg"></i>
+# Processed Data  
+<a class="button" itemprop="paper" href="https://airlab-share-01.andrew.cmu.edu:9000/amelia-processed/amelia-10.zip" target="_blank">
+  <i class="fas fa-file fa-lg"></i>
 </a>
+
+The processed data for 10 aiports can be downloaded using the [link](https://airlab-share-01.andrew.cmu.edu:9000/amelia-processed/amelia-10.zip).
+
+The processed data contains **1 month of data for each of the 10 airports**. The airports are as follows:
+
+- Boston-Logan Intl. Airport	- Jan 2023
+- Newark Liberty Intl. Airport	- Mar 2023
+- Ronald Reagan Washington Natl. Airport - April 2023
+- John F. Kennedy Intl. Airport	- April 2023	
+- Los Angeles Intl. Airport - May 2023	
+- Chicago-Midway Intl. Airport - June 2023	
+- Louis Armstrong New Orleans Intl. Airport - July 2023	
+- Seattle-Tacoma Intl. Airport - Aug 2023
+- San Francisco Intl. Airport - Sept 2023
+- Ted Stevens Anchorage Intl. Airport	-	Nov 2023
+
+
+The processed data follows the format
+
+<table align="center">
+  <tr>
+  <tr>
+    <td><b>Field</b></td>
+    <td><b>Unit</b></td>
+    <td><b>Description</b></td>
+  </tr><td>Frame</td><td>#</td><td>Timestamp</td></tr>
+  <tr><td>ID</td><td>#</td><td>STDDS Agent ID</td></tr>
+  <tr><td>Range</td><td>km</td><td>Distance from airport datum</td></tr>
+  <tr><td>Bearing</td><td>rads</td><td>Bearing angle w.r.t North</td></tr>
+  <tr><td>Altitude</td><td>feet</td><td>Agent altitude (Mean Sea Level)</td></tr>
+  <tr><td>Speed</td><td>knots</td><td>Agent speed</td></tr>
+  <tr><td>Heading</td><td>degrees</td><td>Agent heading</td></tr>
+  <tr><td>Type</td><td>int</td><td>Agent type: {0: aircraft 1: vehicle, 2: unknown}</td></tr>
+  <tr><td>Lat</td><td>decimal degrees</td><td>Agent's latitude</td></tr>
+  <tr><td>Lon</td><td>decimal degrees</td><td>Agent's longitude</td></tr>
+  <tr><td>x</td><td>km</td><td>Agent's local x Cartesian position</td></tr>
+  <tr><td>y</td><td>km</td><td>Agent's local y Cartesian position</td></tr>
+  <tr><td>Interp</td><td>boolean</td><td>Interpolated data point flag</td></tr>
+</table>
+
+<hr>
+
+# Downloading and Processing Raw Dataset
+
+In order to download and process data for the other airports, please follow instructions in the dataset [repository](https://github.com/AmeliaCMU/AmeliaSWIM).
+
+<span> <a class="button" itemprop="github" href="https://github.com/AmeliaCMU/AmeliaSWIM" target="_blank">
+  <i class="fab fa-github fa-lg"></i>
+</a></span>
+
+
 
 # Data Tracker
 
