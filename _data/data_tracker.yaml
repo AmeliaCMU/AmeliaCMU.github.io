@@ -6,7 +6,7 @@
   processed_data: true
   raster_map: true
   semantic_graph: true
-  fence: true
+  fence: true 
   limits: true
 - index: 2
   airport: "Newark Liberty Intl. Airport"
@@ -15,7 +15,7 @@
   processed_data: true
   raster_map: true
   semantic_graph: true
-  fence: true
+  fence: true 
   limits: true
 - index: 3
   airport: "Los Angeles Intl. Airport"
@@ -24,7 +24,7 @@
   processed_data: true
   raster_map: true
   semantic_graph: true
-  fence: true
+  fence: true 
   limits: true
 - index: 4
   airport: "Ted Stevens Anchorage Intl. Airport"
@@ -33,7 +33,7 @@
   processed_data: true
   raster_map: true
   semantic_graph: true
-  fence: true
+  fence: true 
   limits: true
 - index: 5
   airport: "Boston-Logan Intl. Airport"
@@ -42,7 +42,7 @@
   processed_data: true
   raster_map: true
   semantic_graph: true
-  fence: true
+  fence: true 
   limits: true
 - index: 6
   airport: "Ronald Reagan Washington Natl. Airport"
@@ -51,7 +51,7 @@
   processed_data: true
   raster_map: true
   semantic_graph: true
-  fence: true
+  fence: true 
   limits: true
 - index: 7
   airport: "San Francisco Intl. Airport"
@@ -60,7 +60,7 @@
   processed_data: true
   raster_map: true
   semantic_graph: true
-  fence: true
+  fence: true 
   limits: true
 - index: 8
   airport: "Chicago-Midway Intl. Airport"
@@ -69,7 +69,7 @@
   processed_data: true
   raster_map: true
   semantic_graph: true
-  fence: true
+  fence: true 
   limits: true
 - index: 9
   airport: "John F. Kennedy Intl. Airport"
@@ -78,7 +78,7 @@
   processed_data: true
   raster_map: true
   semantic_graph: true
-  fence: true
+  fence: true 
   limits: true
 - index: 10
   airport: "Louis Armstrong New Orleans Intl. Airport"
@@ -95,8 +95,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 12
   airport: "Milwaukee Mitchell Intl. Airport"
@@ -104,8 +104,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 13
   airport: "Memphis Intl. Airport"
@@ -113,8 +113,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 14
   airport: "George Bush Intercontinental Airport"
@@ -122,8 +122,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 15
   airport: "Washington Dulles Intl. Airport"
@@ -131,8 +131,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 16
   airport: "Phoenix Sky Harbor Intl. Airport"
@@ -140,8 +140,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 17
   airport: "Salt Lake City Intl. Airport"
@@ -149,8 +149,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 18
   airport: "Denver Intl. Airport"
@@ -158,8 +158,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 19
   airport: "Kansas City Intl. Airport"
@@ -167,8 +167,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 20
   airport: "Cincinnati/Northern Kentucky Intl. Airport"
@@ -176,8 +176,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 21
   airport: "Cleveland Hopkins Intl. Airport"
@@ -185,8 +185,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 22
   airport: "Charlotte Douglas Intl. Airport"
@@ -194,8 +194,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 23
   airport: "San Diego Intl. Airport"
@@ -203,8 +203,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 24
   airport: "Orlando Intl. Airport"
@@ -212,8 +212,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 25
   airport: "William P. Hobby Airport"
@@ -221,8 +221,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 26
   airport: "Dallas/Fort Worth Intl. Airport"
@@ -230,8 +230,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 27
   airport: "Detroit Metropolitan Wayne County Airport"
@@ -239,8 +239,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 28
   airport: "Louisville Muhammad Ali Intl. Airport"
@@ -248,8 +248,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 29
   airport: "O'Hare Intl. Airport"
@@ -257,8 +257,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 30
   airport: "John Wayne Airport"
@@ -266,8 +266,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 31
   airport: "Portland Intl. Airport"
@@ -275,8 +275,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 32
   airport: "Baltimore/Washington Intl. Thurgood Marshall Airport"
@@ -284,8 +284,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 33
   airport: "Philadelphia Intl. Airport"
@@ -293,8 +293,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 34
   airport: "Fort Lauderdale-Hollywood Intl. Airport"
@@ -302,8 +302,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 35
   airport: "Minneapolis-Saint Paul Intl. Airport"
@@ -311,8 +311,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 36
   airport: "Daniel K. Inouye Intl. Airport"
@@ -320,8 +320,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 37
   airport: "Daytona Beach Intl. Airport"
@@ -329,8 +329,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 38
   airport: "Miami Intl. Airport"
@@ -338,8 +338,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 39
   airport: "Hartsfield-Jackson Atlanta Intl. Airport"
@@ -347,8 +347,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 40
   airport: "Pittsburgh Intl. Airport"
@@ -356,8 +356,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 41
   airport: "Bradley Intl. Airport"
@@ -365,8 +365,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 42
   airport: "T.F. Green Airport"
@@ -374,8 +374,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 43
   airport: "St. Louis Lambert Intl. Airport"
@@ -383,8 +383,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 44
   airport: "LaGuardia Airport"
@@ -392,8 +392,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 45
   airport: "Austin-Bergstrom Intl. Airport"
@@ -401,8 +401,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 46
   airport: "Norman Y. Mineta San Jose Intl. Airport"
@@ -410,8 +410,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 47
   airport: "Oakland Intl. Airport"
@@ -419,8 +419,8 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
 - index: 48
   airport: "Nashville Intl. Airport"
@@ -428,6 +428,6 @@
   raw_data: true
   processed_data:
   raster_map: true
-  semantic_graph:
-  fence:
+  semantic_graph: true
+  fence: true
   limits: true
