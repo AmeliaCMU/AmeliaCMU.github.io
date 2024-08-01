@@ -1,3 +1,7 @@
+- name: "Zelin Ye"
+  credentials: "The Airlab, CMU"
+  photo: "assets/img/authors/zelin_ye.jpg"
+  url: "https://zeliny0109.github.io/"
 - name: "Jong Hoon Park"
   credentials: "Bot Intelligence Group (BIG), CMU"
   photo: "assets/img/authors/sam_park.png"
@@ -7,7 +11,6 @@
   photo: "assets/img/authors/avi_avalanshu.png"
   url: https://avi-amalanshu.github.io/
 - name: "Alonso Cano"
-  credentials: "Bot Intelligence Group (BIG)"
+  credentials: "Bot Intelligence Group (BIG), CMU"
   photo: "assets/img/authors/alonso_cano.jpeg"
   url: https://acanvil.com
-

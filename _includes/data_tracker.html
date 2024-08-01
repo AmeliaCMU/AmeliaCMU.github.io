@@ -1,0 +1,76 @@
+
+<link href="/assets/css/card.css" rel="stylesheet">
+
+
+In the following table, you can find the status of the data processing for each airport. The table includes the following columns:
+<ul>
+    <li><b>Airport</b>: Airport's Full Name.</li>
+    <li><b>Airport ICAO</b> : Airport's code.</li>
+    <li><b>Raw Data</b>: Indicates if raw trajectory data is available for the airport.</li>
+    <li><b>Processed Data</b>: Indicates if we provide processed data for this airport (i.e., in the format listed in the table above).</li>
+    <li><b>Airport Map</b>: Indicates if we provide an image representation of the airport's map.</li>
+    <li><b>Semantic Graph</b>: Indicates if we provide a semantic graph representation of the airport's map.</li>
+    <li><b>Fence</b>: Indicates if we provide a GeoFence of the airport's map. GeoFence is used for capturing data within a region of interest.</li>
+    <li><b>Limits</b>: Indicates if we provide the airport's extent information.</li>
+</ul>
+
+
+
+<table>
+    <thead>
+      <tr>
+        <th scope="col" rowspan="2" style="text-align:center;">#</th>
+        <th scope="col" rowspan="2" style="text-align:center;">Airport</th>
+        <th scope="col" rowspan="2" style="text-align:center;">Airport ICAO</th>
+        <th scope="col" colspan="2" style="text-align:center;">Trajectory</th>
+        <th scope="col" colspan="4" style="text-align:center;">Map</th>
+      </tr>
+      <tr>
+        <td style="text-align:center;">Raw Data</td>
+        <td style="text-align:center;">Processed Data</td>
+        <td style="text-align:center;">Airport Map</td>
+        <td style="text-align:center;">Semantic Graph</td>
+        <td style="text-align:center;">Fence</td>
+        <td style="text-align:center;">Limits File</td>
+      </tr>
+    </thead>
+    <tbody>
+      {% for airport in site.data.data_tracker %}
+      <tr>
+        <td style="text-align:center;">{{ airport.index }}</td>
+        <td>{{ airport.airport }}</td>
+        <td style="text-align:center;">{{ airport.icao }}</td>
+        {% if airport.raw_data != null %}
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="30px"></td>
+        {% else %}
+            <td style="text-align:center;"></td>
+        {% endif %}
+        {% if airport.processed_data != null %}
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="30px"></td>
+        {% else %}
+            <td style="text-align:center;"></td>
+        {% endif %}
+        {% if airport.raster_map != null %}
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="30px"></td>
+        {% else %}
+            <td style="text-align:center;"></td>
+        {% endif %}
+        {% if airport.semantic_graph != null %}
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="30px"></td>
+        {% else %}
+            <td style="text-align:center;"></td>
+        {% endif %}
+        {% if airport.fence != null %}
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="30px"></td>
+        {% else %}
+            <td style="text-align:center;"></td>
+        {% endif %}
+        {% if airport.limits != null %}
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="30px"></td>
+        {% else %}
+            <td style="text-align:center;"></td>
+        {% endif %}
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
