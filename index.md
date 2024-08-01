@@ -103,7 +103,7 @@ Zelin Ye, Jong Hoon Park, [Jean Oh](https://cmubig.github.io/team/jean_oh/) and 
 <a class="button" itemprop="code" href="https://github.com/AmeliaCMU" target="_blank">
   <i class="fas fa-code fa-lg"></i>
 </a>
-<a class="button" itemprop="paper" href="http://arxiv.org/pdf/2407.21185" target="_blank">
+<a class="button" itemprop="paper" href="https://arxiv.org/pdf/2407.21185" target="_blank">
   <i class="fas fa-file fa-lg"></i>
 </a>
 
