@@ -102,7 +102,7 @@ Additionally, inspired by the success of motion prediction models in the AV doma
 
 <br>
 
-#### &#128746; Amelia: A Large Model and Dataset for Airport Surface Movement Forecasting
+#### <img title="plane" alt="plane" src="/assets/img/ac.png" width="20px"> Amelia: A Large Model and Dataset for Airport Surface Movement Forecasting
 
 [Ingrid Navarro](https://navars.xyz) *, [Pablo Ortega-Kral](https://paok-2001.github.io) *, [Jay Patrikar](https://www.jaypatrikar.me) *, Haichuan Wang,
 Zelin Ye, Jong Hoon Park, [Jean Oh](https://cmubig.github.io/team/jean_oh/) and [Sebastian Scherer](https://theairlab.org/team/sebastian/)
