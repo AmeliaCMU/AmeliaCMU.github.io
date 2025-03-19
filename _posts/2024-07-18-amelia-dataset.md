@@ -19,25 +19,78 @@ Amelia-48: An airport surface movement dataset
 
 <hr>
 
-**Amelia-48** is a large-scale airport surface movement dataset collected using the System Wide Information Management (SWIM) Surface Movement Event Service (SMES). With data collection beginning in December 2022, the ~30TB dataset currently provides a year's worth of data and covers 48 airports and TRACON facilities within the US National Airspace System.
+**Amelia-48** is a large-scale airport surface movement dataset collected using the System Wide Information Management (SWIM) Surface Movement Event Service (SMES). With data collection beginning in December 2022, the dataset is continuously expanding, with ~30TB of new data added annually. It covers surface movement events across 48 airports and TRACON facilities within the US National Airspace System.
 
 <p style="color:red"> 
-<b>NOTE:</b> Below we provide instructions on how to access the <b>pre-processed</b> trajectory data which was used for trajectory forecasting. This data corresponds to the 10 airports we used for our experiments in the paper.
+<b>NOTE:</b> Below we provide instructions on how to download and convert the <b>raw</b> dataset, which contains everything captured by the SWIM system for 48 airports in the United States.
 </p>
 
 <p style="color:red"> 
-Additionally, we provide instructions on how to download the general <b>raw</b> dataset, which contains the full 48 airport data. 
+Additionally, we provide instructions on how to access the <b>processed</b> trajectory data which was used for trajectory forecasting. This data corresponds to the 10 airports we used for our experiments in the paper.
 </p>
 
 Finally, we also provide a dataset tracker which summarizes the available assets for each airport.
 
 <hr>
 
-# Pre-processed Data
+# Raw Data
 
-We provide the pre-processed trajectory data used for our trajectory forecasting experiments. 
+The raw data contains everything captured by the SWIM system for 48 airports in the United States. A complete list of the airports is provided in **Table 2**.
 
-Click the link below to download our dataset:
+In order to download and convert raw data into CSV files, please follow instructions below:
+
+#### Downloading and Converting raw data
+
+* To **download** the raw data, please follow the instructions in [AmeliaSWIM](https://github.com/AmeliaCMU/AmeliaSWIM) on how to use the `download_raw.py` script.  
+
+* To **convert** the raw data into CSV files, please follow the instructions in [AmeliaSWIM](https://github.com/AmeliaCMU/AmeliaSWIM) on how to use the `process.py` script. The resulting CSV files will contain the following information: 
+
+<table align="center" style="width:70%">
+  <caption><b>Table 1. </b>Trajectory Data Fields</caption>
+  <tr>
+  <tr>
+    <td><b>Field</b></td>
+    <td><b>Unit</b></td>
+    <td><b>Description</b></td>
+  </tr><td>Frame</td><td>#</td><td>Timestamp</td></tr>
+  <tr><td>ID</td><td>#</td><td>STDDS Agent ID</td></tr>
+  <tr><td>Range</td><td>km</td><td>Distance from airport datum</td></tr>
+  <tr><td>Bearing</td><td>rads</td><td>Bearing angle w.r.t North</td></tr>
+  <tr><td>Altitude</td><td>feet</td><td>Agent altitude (Mean Sea Level)</td></tr>
+  <tr><td>Speed</td><td>knots</td><td>Agent speed</td></tr>
+  <tr><td>Heading</td><td>degrees</td><td>Agent heading</td></tr>
+  <tr><td>Type</td><td>int</td><td>Agent type: {0: aircraft 1: vehicle, 2: unknown}</td></tr>
+  <tr><td>Lat</td><td>decimal degrees</td><td>Agent's latitude</td></tr>
+  <tr><td>Lon</td><td>decimal degrees</td><td>Agent's longitude</td></tr>
+  <tr><td>x</td><td>km</td><td>Agent's local x Cartesian position</td></tr>
+  <tr><td>y</td><td>km</td><td>Agent's local y Cartesian position</td></tr>
+  <tr><td>Interp</td><td>boolean</td><td>Interpolated data point flag</td></tr>
+</table>
+
+#### Downloading and Processing map data
+
+* To **download** and **process** the map data, please follow the instructions in [AmeliaMaps](https://github.com/AmeliaCMU/AmeliaMaps) on how to use the processing scripts. 
+
+<hr>
+
+# Processed Data
+
+We provide the processed trajectory data used for our trajectory forecasting experiments, which contains **1 month of data for each of the 10 airports**:
+
+NOTE: The full dataset is significantly larger as described in the raw data section. The following 10 airports are selected to represent a diverse range of traffic levels and map topologies.
+
+- Boston-Logan Intl. Airport	- Jan 2023
+- Newark Liberty Intl. Airport	- Mar 2023
+- Ronald Reagan Washington Natl. Airport - April 2023
+- John F. Kennedy Intl. Airport	- April 2023	
+- Los Angeles Intl. Airport - May 2023	
+- Chicago-Midway Intl. Airport - June 2023	
+- Louis Armstrong New Orleans Intl. Airport - July 2023	
+- Seattle-Tacoma Intl. Airport - Aug 2023
+- San Francisco Intl. Airport - Sept 2023
+- Ted Stevens Anchorage Intl. Airport	-	Nov 2023
+
+Click the link below to download the processed dataset:
 
 <a class="button" itemprop="paper" href="https://airlab-share-01.andrew.cmu.edu:9000/amelia-processed/amelia-10.zip" target="_blank"> <i class="fas fa-database fa-lg"></i></a>
 
@@ -92,60 +145,8 @@ The `graph_data_a10v01os` folder has a subfolder for each airport containing sem
 
 The `traj_data_a10v08` folder has a subfolder for each airport containing the trajectory data in CSV format. Each file within an airport's subfolder represents an hour of data.
 
-The files are named following the format ```AIRPORT_ICAO_<unix_timestamp>.csv```. Each contains trajectory information in the following format: 
+The files are named following the format ```AIRPORT_ICAO_<unix_timestamp>.csv```. Each contains trajectory information in **Table 1**.
 <br>
-
-<table align="center" style="width:70%">
-  <caption><b>Table 1. </b> Processed Trajectory Data Fields</caption>
-  <tr>
-  <tr>
-    <td><b>Field</b></td>
-    <td><b>Unit</b></td>
-    <td><b>Description</b></td>
-  </tr><td>Frame</td><td>#</td><td>Timestamp</td></tr>
-  <tr><td>ID</td><td>#</td><td>STDDS Agent ID</td></tr>
-  <tr><td>Range</td><td>km</td><td>Distance from airport datum</td></tr>
-  <tr><td>Bearing</td><td>rads</td><td>Bearing angle w.r.t North</td></tr>
-  <tr><td>Altitude</td><td>feet</td><td>Agent altitude (Mean Sea Level)</td></tr>
-  <tr><td>Speed</td><td>knots</td><td>Agent speed</td></tr>
-  <tr><td>Heading</td><td>degrees</td><td>Agent heading</td></tr>
-  <tr><td>Type</td><td>int</td><td>Agent type: {0: aircraft 1: vehicle, 2: unknown}</td></tr>
-  <tr><td>Lat</td><td>decimal degrees</td><td>Agent's latitude</td></tr>
-  <tr><td>Lon</td><td>decimal degrees</td><td>Agent's longitude</td></tr>
-  <tr><td>x</td><td>km</td><td>Agent's local x Cartesian position</td></tr>
-  <tr><td>y</td><td>km</td><td>Agent's local y Cartesian position</td></tr>
-  <tr><td>Interp</td><td>boolean</td><td>Interpolated data point flag</td></tr>
-</table>
-
-The processed data contains **1 month of data for each of the 10 airports**. The airports are as follows:
-
-- Boston-Logan Intl. Airport	- Jan 2023
-- Newark Liberty Intl. Airport	- Mar 2023
-- Ronald Reagan Washington Natl. Airport - April 2023
-- John F. Kennedy Intl. Airport	- April 2023	
-- Los Angeles Intl. Airport - May 2023	
-- Chicago-Midway Intl. Airport - June 2023	
-- Louis Armstrong New Orleans Intl. Airport - July 2023	
-- Seattle-Tacoma Intl. Airport - Aug 2023
-- San Francisco Intl. Airport - Sept 2023
-- Ted Stevens Anchorage Intl. Airport	-	Nov 2023
-
-
-<hr>
-
-# Raw Data
-
-In order to download and process data for the other airports, please follow instructions below:
-
-#### Downloading and processing raw trajectory data
-
-* To **download** the raw data, please follow the instructions in [AmeliaSWIM](https://github.com/AmeliaCMU/AmeliaSWIM) on how to use the `download_raw.py` script.  
-
-* To **process** the raw data, please follow the instructions in [AmeliaSWIM](https://github.com/AmeliaCMU/AmeliaSWIM) on how to use the `process.py` script. The resulting data will be saved as CSV files containing the information in **Table 1**.
-
-#### Downloading and processing map data
-
-* To **download** and **process** the map data, please follow the instructions in [AmeliaMaps](https://github.com/AmeliaCMU/AmeliaMaps) on how to use the processing scripts. 
 
 <hr>
 
