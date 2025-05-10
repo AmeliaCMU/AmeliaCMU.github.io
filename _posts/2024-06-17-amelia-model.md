@@ -30,7 +30,7 @@ years, prior works have not addressed the lack of large-scale curated surface mo
 within the public domain and the development of generalizable trajectory forecasting models.
 
 In response to this, we introduce **Amelia-TF** is a large transformer-based airport surface movement
-trajectory forecasting model trained on the **[Amelia-48](https://ameliacmu.github.io/amelia-dataset/)**
+trajectory forecasting model trained on the **[Amelia-42](https://ameliacmu.github.io/amelia-dataset/)**
 dataset. We explore different scene representation and training strategies for our model varying from
 single-airport to multi-airport settings in which we assess our model's generalization capabilities.
 

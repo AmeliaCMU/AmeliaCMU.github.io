@@ -28,7 +28,7 @@ Amelia: A framework for airport surface movement
 We release this toolkit to encourage research in this domain! Below we provide an overview of our **toolkit**.
 
 **Notes:**
-* For more details on how to download and use our **dataset**, go to [Amelia-48](https://ameliacmu.github.io/amelia-dataset/)
+* For more details on how to download and use our **dataset**, go to [Amelia-42](https://ameliacmu.github.io/amelia-dataset/)
 * For more details on our trajectory forecasting **model**, go to [Amelia-TF](https://ameliacmu.github.io/amelia-model/)
 * For even more details, please check out our **paper**!
 
@@ -52,7 +52,7 @@ trajectory and map data for airport surface operations.
 </h3>
 
 <b>Amelia-<span style="color:#e06666;">SWIM</span></b> is a tool that uses the System Wide Information
-Management (SWIM) program to collect position reports for aircraft and vehicles operating within 48
+Management (SWIM) program to collect position reports for aircraft and vehicles operating within 42
 US airports.
 
 The tool produces clean, interpolated data in formats accepted by most recent ML-based trajectory

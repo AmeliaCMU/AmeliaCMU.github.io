@@ -10,6 +10,10 @@
   credentials: "The Airlab, CMU"
   photo: "assets/img/authors/jay_patrikar.webp"
   url: https://www.jaypatrikar.me
+- name: "Alonso Cano"
+  credentials: "Bot Intelligence Group (BIG), CMU"
+  photo: "assets/img/authors/alonso_cano.jpeg"
+  url: https://acanvil.com
 - name: "Haichuan (Jack) Wang"
   credentials: "The Airlab, CMU"
   photo: "assets/img/authors/jack_wang.jpeg"
