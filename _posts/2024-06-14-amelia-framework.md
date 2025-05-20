@@ -159,18 +159,12 @@ kinematic profiles, as well as level of agent-to-agent interactivity and crowded
   </tr>
 </table>
 
-The resulting scenes can be used for several downstream tasks such as <b>trajectory forecasting</b>.
+The resulting scenes can be used for several downstream tasks such as <b>trajectory forecasting</b> For example:
 
-<hr>
-
-<h3>Amelia-<span style="color:#c27ba0;">Viz</span>
-<span> <a class="button" itemprop="github" href="https://github.com/AmeliaCMU/AmeliaViz" target="_blank">
-  <i class="fab fa-github fa-lg"></i>
-</a></span>
-</h3>
-
-<b>Amelia-<span style="color:#c27ba0;">Viz</span></b> provides scripts for creating visualizations
+We provide scripts for creating visualizations
 for ground truth scenes and model predictions.
+
+
 
 <table align="center">
   <tr>

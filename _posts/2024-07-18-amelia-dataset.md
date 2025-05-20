@@ -19,21 +19,21 @@ Amelia-42: An airport surface movement dataset
 
 <br>
 
+<a class="button" itemprop="paper" href="https://huggingface.co/datasets/AmeliaCMU/Amelia42-Mini" target="_blank">
+  <img src="/assets/img/logos/huggingface-color.png" alt="Hugging Face" style="height:1.5em; vertical-align:middle; margin-right:0.5em;">
+  Amelia42-Mini
+</a>
+<a class="button" itemprop="paper" href="https://huggingface.co/datasets/AmeliaCMU/Amelia-10" target="_blank">
+  <img src="/assets/img/logos/huggingface-color.png" alt="Hugging Face" style="height:1.5em; vertical-align:middle; margin-right:0.5em;">
+  Amelia10-Bench
+</a>
+
 <hr>
 
 **Amelia-42** is a large-scale airport surface movement dataset collected using the System Wide Information Management (SWIM) Surface Movement Event Service (SMES). With data collection beginning in December 2022, the dataset is continuously expanding. It covers surface movement events across 42 airports and TRACON facilities within the US National Airspace System.
 
-<p style="color:red">
-<b>NOTE:</b> Below we provide instructions on how to download and convert the <b>raw</b> dataset, which contains everything captured by the SWIM system for 42 airports in the United States.
-</p>
+<b>NOTE:</b> We provide instructions on how to access the <b>processed</b> trajectory data. Additionally, Below we provide instructions on how to download and convert the <b>raw</b> dataset, which contains everything captured by the SWIM system for 42 airports in the United States.
 
-<p style="color:red">
-Additionally, we provide instructions on how to access the <b>processed</b> trajectory data which was used for trajectory forecasting. This data corresponds to the 10 airports we used for our experiments in the paper.
-</p>
-
-Finally, we also provide a dataset tracker which summarizes the available assets for each airport.
-
-<hr>
 
 <div align="center">
   <img src="/assets/img/dataset.png" alt="The Amelia pipeline" width="70%">
@@ -70,7 +70,10 @@ NOTE: The full dataset is significantly larger as described in the raw data sect
 
 Click on the link below to go to the processed dataset:
 
-<a class="button" itemprop="paper" href="https://huggingface.co/datasets/AmeliaCMU/Amelia-10" target="_blank"> <i class="fas fa-database fa-lg"></i></a>
+<a class="button" itemprop="paper" href="https://huggingface.co/datasets/AmeliaCMU/Amelia-10" target="_blank">
+  <img src="/assets/img/logos/huggingface-color.png" alt="Hugging Face" style="height:1.5em; vertical-align:middle; margin-right:0.5em;">
+  Amelia10-Bench
+</a>
 
 ## Amelia42-Mini
 
@@ -83,7 +86,10 @@ NOTE: The full dataset is significantly larger as described in the raw data sect
 
 Click on the link below to go to the processed dataset:
 
-<a class="button" itemprop="paper" href="https://huggingface.co/datasets/AmeliaCMU/Amelia42-Mini" target="_blank"> <i class="fas fa-database fa-lg"></i></a>
+<a class="button" itemprop="paper" href="https://huggingface.co/datasets/AmeliaCMU/Amelia42-Mini" target="_blank">
+  <img src="/assets/img/logos/huggingface-color.png" alt="Hugging Face" style="height:1.5em; vertical-align:middle; margin-right:0.5em;">
+  Amelia42-Mini
+</a>
 
 The dataset follows this structure:
 

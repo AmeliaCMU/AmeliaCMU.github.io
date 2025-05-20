@@ -18,11 +18,11 @@
   photo: "assets/img/software/scenes.png"
   color: "#e69138"
   url: https://github.com/AmeliaCMU/AmeliaScenes
-- name: "Viz"
-  desc: "Scene visualization tools"
-  photo: "assets/img/software/viz.png"
-  color: "#c27ba0"
-  url: https://github.com/AmeliaCMU/AmeliaViz
+# - name: "Viz"
+#   desc: "Scene visualization tools"
+#   photo: "assets/img/software/viz.png"
+#   color: "#c27ba0"
+#   url: https://github.com/AmeliaCMU/AmeliaViz
 - name: "TF"
   desc: "Trajectory forecasting model"
   photo: "assets/img/software/tf.png"
@@ -33,4 +33,3 @@
   photo: "assets/img/software/inference.png"
   color: "#ea738d"
   url: https://github.com/AmeliaCMU/AmeliaInference
-

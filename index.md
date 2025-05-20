@@ -1,7 +1,7 @@
 ---
 layout: page
-# title: Amelia
-subtitle: A Large Model and Dataset for Airport Surface Movement Forecasting
+title: Amelia
+subtitle:  A Large-Scale Dataset and Benchmark for Airport Surface Movement Forecasting
 hide_footer: false
 hide_hero: false
 hero_image: /assets/posts/2024-06-14-amelia-framework/klax_header.gif
@@ -61,7 +61,7 @@ Additionally, inspired by the success of motion prediction models in the AV doma
   Aviation | Machine Learning | Deep Learning | Data Science
 </h3>
 <h5 class="title" style="color:#BDBFC2">
-  Trajectory Prediction | Anomaly Detection | Safety
+  Trajectory Prediction | Anomaly Detection | And More…
 </h5>
 </div>
 
@@ -103,12 +103,14 @@ Additionally, inspired by the success of motion prediction models in the AV doma
 
 <br>
 
-#### <img title="plane" alt="plane" src="/assets/img/ac.png" width="20px"> Amelia: A Large Model and Dataset for Airport Surface Movement Forecasting
+#### <img title="plane" alt="plane" src="/assets/img/ac.png" width="20px"> Amelia: A Large Model and Dataset for Airport Surface Movement Forecasting (non archival)
 
 [Ingrid Navarro](https://navars.xyz) *, [Pablo Ortega-Kral](https://paok-2001.github.io) *, [Jay Patrikar](https://www.jaypatrikar.me) *, Haichuan Wang,
 Zelin Ye, Jong Hoon Park, [Jean Oh](https://cmubig.github.io/team/jean_oh/) and [Sebastian Scherer](https://theairlab.org/team/sebastian/)
 
 *Denotes equal contribution
+
+<span style="background: #ffe066; color: #222; padding: 0.3em 0.7em; border-radius: 0.5em; font-weight: bold; font-size: 1.1em; margin-right: 0.5em;">🏆 Best Student Paper Award</span>
 
 <a class="button" itemprop="code" href="https://github.com/AmeliaCMU" target="_blank">
   <i class="fas fa-code fa-lg"></i>
