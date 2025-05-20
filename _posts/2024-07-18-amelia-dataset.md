@@ -46,10 +46,26 @@ Amelia-42: An airport surface movement dataset
   <b>D)</b> As additional context, semantic routing graphs are created for each airport.<br>
   </div>
 
+<hr>
 
 # Processed Data
 
+<div align="center" style="margin: 2em 0;">
+  <img src="/assets/img/logos/huggingface-color.png" alt="Hugging Face" style="height:2.5em; vertical-align:middle; margin-right:0.5em;">
+  <span style="font-size:1.5em; font-weight:bold; color:#ffb300;">
+    We are on <a href="https://huggingface.co/AmeliaCMU" target="_blank" style="color:#ffb300; text-decoration:underline;">HuggingFace</a> now!
+  </span>
+</div>
+
 ## Amelia10-Bench
+
+
+Click on the link below to go to the processed dataset:
+
+<a class="button" itemprop="paper" href="https://huggingface.co/datasets/AmeliaCMU/Amelia-10" target="_blank">
+  <img src="/assets/img/logos/huggingface-color.png" alt="Hugging Face" style="height:1.5em; vertical-align:middle; margin-right:0.5em;">
+  Amelia10-Bench
+</a>
 
 We provide the processed trajectory data used for our trajectory forecasting experiments, which contains **1 month of data for each of the 10 airports**:
 
@@ -66,14 +82,7 @@ NOTE: The full dataset is significantly larger as described in the raw data sect
 - San Francisco Intl. Airport - Sept 2023
 - Ted Stevens Anchorage Intl. Airport - Nov 2023
 
-**We are on HuggingFace now!**
 
-Click on the link below to go to the processed dataset:
-
-<a class="button" itemprop="paper" href="https://huggingface.co/datasets/AmeliaCMU/Amelia-10" target="_blank">
-  <img src="/assets/img/logos/huggingface-color.png" alt="Hugging Face" style="height:1.5em; vertical-align:middle; margin-right:0.5em;">
-  Amelia10-Bench
-</a>
 
 ## Amelia42-Mini
 
@@ -81,15 +90,17 @@ We provide the processed trajectory data for **15 days chosen randomly** for eac
 
 NOTE: The full dataset is significantly larger as described in the raw data section.
 
-
-**We are on HuggingFace now!**
-
 Click on the link below to go to the processed dataset:
 
 <a class="button" itemprop="paper" href="https://huggingface.co/datasets/AmeliaCMU/Amelia42-Mini" target="_blank">
   <img src="/assets/img/logos/huggingface-color.png" alt="Hugging Face" style="height:1.5em; vertical-align:middle; margin-right:0.5em;">
   Amelia42-Mini
 </a>
+
+<hr>
+
+
+## Dataset Structure
 
 The dataset follows this structure:
 
@@ -140,20 +151,6 @@ The `traj_data_axxvxx` folder has a subfolder for each airport containing the tr
 The files are named following the format ```AIRPORT_ICAO_<unix_timestamp>.csv```. Each contains trajectory information in **Table 1**.
 <br>
 
-<hr>
-
-# Raw Data
-
-The raw data contains everything captured by the SWIM system for 42 airports in the United States. A complete list of the airports is provided in **Table 2**.
-
-In order to download and convert raw data into CSV files, please follow instructions below:
-
-#### Downloading and Converting raw data
-
-* To **download** the raw data, please follow the instructions in [AmeliaSWIM](https://github.com/AmeliaCMU/AmeliaSWIM) on how to use the `download_raw.py` script.
-
-* To **convert** the raw data into CSV files, please follow the instructions in [AmeliaSWIM](https://github.com/AmeliaCMU/AmeliaSWIM) on how to use the `process.py` script. The resulting CSV files will contain the following information:
-
 <table align="center" style="width:70%">
   <caption><b>Table 1. </b>Trajectory Data Fields</caption>
   <tr>
@@ -175,6 +172,50 @@ In order to download and convert raw data into CSV files, please follow instruct
   <tr><td>y</td><td>km</td><td>Agent's local y Cartesian position</td></tr>
   <tr><td>Interp</td><td>boolean</td><td>Interpolated data point flag</td></tr>
 </table>
+
+<hr>
+
+## Downloading the Dataset from Hugging Face
+
+You can easily download the Amelia datasets using the [Hugging Face Hub](https://huggingface.co/docs/hub/how-to-download-files) and the `datasets` library.
+
+First, install the required package:
+
+```bash
+pip install datasets
+```
+
+Then, load the dataset in Python:
+
+```python
+from datasets import load_dataset
+
+# For Amelia42-Mini
+ds = load_dataset("AmeliaCMU/Amelia42-Mini")
+
+# For Amelia10-Bench
+ds = load_dataset("AmeliaCMU/Amelia-10")
+```
+
+Alternatively, you can download files directly from the Hugging Face website.
+
+Click the "Download" button or use the "Files and versions" tab to access specific files.
+
+<hr>
+
+# Raw Data
+
+The raw data contains everything captured by the SWIM system for 42 airports in the United States. A complete list of the airports is provided in **Table 2**.
+
+In order to download and convert raw data into CSV files, please follow instructions below:
+
+#### Downloading and Converting raw data
+
+* To **download** the raw data, please follow the instructions in [AmeliaSWIM](https://github.com/AmeliaCMU/AmeliaSWIM) on how to use the `download_raw.py` script.
+
+* To **convert** the raw data into CSV files, please follow the instructions in [AmeliaSWIM](https://github.com/AmeliaCMU/AmeliaSWIM) on how to use the `process.py` script. The resulting CSV files will contain the following information:
+
+
 
 #### Downloading and Processing map data
 
