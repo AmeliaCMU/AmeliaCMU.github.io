@@ -2,7 +2,7 @@
 layout: post
 author: Ingrid Navarro and Pablo Ortega-Kral
 permalink: /amelia-dataset/
-title: Amelia-48
+title: Amelia-42
 subtitle: A Large-Scale Dataset for Airport Surface Movement
 image: /assets/posts/2024-06-14-amelia-framework/klax.gif
 link-new-tab: true
@@ -14,18 +14,18 @@ hero_height: is-medium
 ---
 
 <h1>
-Amelia-48: An airport surface movement dataset
+Amelia-42: An airport surface movement dataset
 </h1>
 
 <hr>
 
-**Amelia-48** is a large-scale airport surface movement dataset collected using the System Wide Information Management (SWIM) Surface Movement Event Service (SMES). With data collection beginning in December 2022, the dataset is continuously expanding, with ~30TB of new data added annually. It covers surface movement events across 48 airports and TRACON facilities within the US National Airspace System.
+**Amelia-42** is a large-scale airport surface movement dataset collected using the System Wide Information Management (SWIM) Surface Movement Event Service (SMES). With data collection beginning in December 2022, the dataset is continuously expanding, with ~30TB of new data added annually. It covers surface movement events across 42 airports and TRACON facilities within the US National Airspace System.
 
-<p style="color:red"> 
-<b>NOTE:</b> Below we provide instructions on how to download and convert the <b>raw</b> dataset, which contains everything captured by the SWIM system for 48 airports in the United States.
+<p style="color:red">
+<b>NOTE:</b> Below we provide instructions on how to download and convert the <b>raw</b> dataset, which contains everything captured by the SWIM system for 42 airports in the United States.
 </p>
 
-<p style="color:red"> 
+<p style="color:red">
 Additionally, we provide instructions on how to access the <b>processed</b> trajectory data which was used for trajectory forecasting. This data corresponds to the 10 airports we used for our experiments in the paper.
 </p>
 
@@ -33,17 +33,122 @@ Finally, we also provide a dataset tracker which summarizes the available assets
 
 <hr>
 
+# Processed Data
+
+## Amelia-10
+
+We provide the processed trajectory data used for our trajectory forecasting experiments, which contains **1 month of data for each of the 10 airports**:
+
+NOTE: The full dataset is significantly larger as described in the raw data section. The following 10 airports are selected to represent a diverse range of traffic levels and map topologies.
+
+- Boston-Logan Intl. Airport - Jan 2023
+- Newark Liberty Intl. Airport - Mar 2023
+- Ronald Reagan Washington Natl. Airport - April 2023
+- John F. Kennedy Intl. Airport - April 2023
+- Los Angeles Intl. Airport - May 2023
+- Chicago-Midway Intl. Airport - June 2023
+- Louis Armstrong New Orleans Intl. Airport - July 2023
+- Seattle-Tacoma Intl. Airport - Aug 2023
+- San Francisco Intl. Airport - Sept 2023
+- Ted Stevens Anchorage Intl. Airport - Nov 2023
+
+**We are on HuggingFace now!**
+
+Click on the link below to go to the processed dataset:
+
+<a class="button" itemprop="paper" href="https://huggingface.co/datasets/AmeliaCMU/Amelia-10" target="_blank"> <i class="fas fa-database fa-lg"></i></a>
+
+## Amelia-42
+
+We provide the processed trajectory data used for our trajectory forecasting experiments, which contains **1 month of data for each of the 42 airports**:
+
+NOTE: The full dataset is significantly larger as described in the raw data section. The following 42 airports are selected to represent a diverse range of traffic levels and map topologies.
+
+<!-- - Boston-Logan Intl. Airport - Jan 2023
+- Newark Liberty Intl. Airport - Mar 2023
+- Ronald Reagan Washington Natl. Airport - April 2023
+- John F. Kennedy Intl. Airport - April 2023
+- Los Angeles Intl. Airport - May 2023
+- Chicago-Midway Intl. Airport - June 2023
+- Louis Armstrong New Orleans Intl. Airport - July 2023
+- Seattle-Tacoma Intl. Airport - Aug 2023
+- San Francisco Intl. Airport - Sept 2023
+- Ted Stevens Anchorage Intl. Airport - Nov 2023 -->
+
+**We are on HuggingFace now!**
+
+Click on the link below to go to the processed dataset:
+
+<a class="button" itemprop="paper" href="https://huggingface.co/datasets/AmeliaCMU/Amelia-42" target="_blank"> <i class="fas fa-database fa-lg"></i></a>
+
+<!-- The downloaded dataset follows this structure:
+
+```bash
+|-- amelia
+    |-- assets
+    |    | -- airport_icao
+    |    |    | -- bkg_map.png
+    |    |    | -- limits.json
+    |    |    | -- airport_code_from_net.osm
+    |    | ...
+    |-- graph_data_a10v01os
+    |    | -- airport_icao
+    |    |    | -- semantic_graph.pkl
+    |    |    | -- semantic_airport_icao.osm
+    |    |    | -- semantic_graph.png
+    |    | ...
+    |-- graph_data_a42v01os
+    |    | -- airport_icao
+    |    |    | -- semantic_graph.pkl
+    |    |    | -- semantic_airport_icao.osm
+    |    |    | -- semantic_graph.png
+    |    | ...
+    |-- traj_data_a10v08
+    |    | -- airport_icao
+    |    |    | -- AIRPORT_ICAO_<unix_timestamp>.csv
+    |    |    | ...
+    |    |    | ...
+    |    | ...
+``` -->
+
+### Assets
+
+The `assets` folder has a subfolder for each airport (uses the airport's [ICAO](https://en.wikipedia.org/wiki/ICAO_airport_code)) containing the following:
+* `bkg_map.png`: visual representation of the map, obtained using OpenStreetMap (OSM).
+* `limits.json`: JSON file containing the Airport's extents.
+* `airport_icao.osm`: the airport's map in OSM format.
+
+### Graph Data (Processed Map Information)
+
+To generate the processed map information, we used [AmeliaMaps](https://github.com/AmeliaCMU/AmeliaMaps).
+
+The `graph_data_a10v01os` folder has a subfolder for each airport containing semantic graphs representation obtained using [AmeliaMaps](https://github.com/AmeliaCMU/AmeliaMaps). Each sub-folder contains the following files:
+* `semantic_graph.pkl`: contains the vectorized map graph with semantic attributes.
+* `semantic_airport_icao.osm`: the semantic representation of the graph in OSM format
+* `semantic_graph.png`: visual representation of the graph. Just shown for reference.
+
+**NOTE** this folder contains the graphs for the 10 airports used in our training experiments. The full set of 42 maps is in the folder `graph_data_a42v01os`.
+
+### Trajectory Data
+
+The `traj_data_a10v08` folder has a subfolder for each airport containing the trajectory data in CSV format. Each file within an airport's subfolder represents an hour of data.
+
+The files are named following the format ```AIRPORT_ICAO_<unix_timestamp>.csv```. Each contains trajectory information in **Table 1**.
+<br>
+
+<hr>
+
 # Raw Data
 
-The raw data contains everything captured by the SWIM system for 48 airports in the United States. A complete list of the airports is provided in **Table 2**.
+The raw data contains everything captured by the SWIM system for 42 airports in the United States. A complete list of the airports is provided in **Table 2**.
 
 In order to download and convert raw data into CSV files, please follow instructions below:
 
 #### Downloading and Converting raw data
 
-* To **download** the raw data, please follow the instructions in [AmeliaSWIM](https://github.com/AmeliaCMU/AmeliaSWIM) on how to use the `download_raw.py` script.  
+* To **download** the raw data, please follow the instructions in [AmeliaSWIM](https://github.com/AmeliaCMU/AmeliaSWIM) on how to use the `download_raw.py` script.
 
-* To **convert** the raw data into CSV files, please follow the instructions in [AmeliaSWIM](https://github.com/AmeliaCMU/AmeliaSWIM) on how to use the `process.py` script. The resulting CSV files will contain the following information: 
+* To **convert** the raw data into CSV files, please follow the instructions in [AmeliaSWIM](https://github.com/AmeliaCMU/AmeliaSWIM) on how to use the `process.py` script. The resulting CSV files will contain the following information:
 
 <table align="center" style="width:70%">
   <caption><b>Table 1. </b>Trajectory Data Fields</caption>
@@ -69,84 +174,7 @@ In order to download and convert raw data into CSV files, please follow instruct
 
 #### Downloading and Processing map data
 
-* To **download** and **process** the map data, please follow the instructions in [AmeliaMaps](https://github.com/AmeliaCMU/AmeliaMaps) on how to use the processing scripts. 
-
-<hr>
-
-# Processed Data
-
-We provide the processed trajectory data used for our trajectory forecasting experiments, which contains **1 month of data for each of the 10 airports**:
-
-NOTE: The full dataset is significantly larger as described in the raw data section. The following 10 airports are selected to represent a diverse range of traffic levels and map topologies.
-
-- Boston-Logan Intl. Airport	- Jan 2023
-- Newark Liberty Intl. Airport	- Mar 2023
-- Ronald Reagan Washington Natl. Airport - April 2023
-- John F. Kennedy Intl. Airport	- April 2023	
-- Los Angeles Intl. Airport - May 2023	
-- Chicago-Midway Intl. Airport - June 2023	
-- Louis Armstrong New Orleans Intl. Airport - July 2023	
-- Seattle-Tacoma Intl. Airport - Aug 2023
-- San Francisco Intl. Airport - Sept 2023
-- Ted Stevens Anchorage Intl. Airport	-	Nov 2023
-
-Click the link below to download the processed dataset:
-
-<a class="button" itemprop="paper" href="https://airlab-share-01.andrew.cmu.edu:9000/amelia-processed/amelia-10.zip" target="_blank"> <i class="fas fa-database fa-lg"></i></a>
-
-The downloaded dataset follows this structure:
-```bash
-|-- amelia
-    |-- assets
-    |    | -- airport_icao
-    |    |    | -- bkg_map.png
-    |    |    | -- limits.json
-    |    |    | -- airport_code_from_net.osm
-    |    | ...
-    |-- graph_data_a10v01os
-    |    | -- airport_icao
-    |    |    | -- semantic_graph.pkl
-    |    |    | -- semantic_airport_icao.osm
-    |    |    | -- semantic_graph.png
-    |    | ...
-    |-- graph_data_a48v01os
-    |    | -- airport_icao
-    |    |    | -- semantic_graph.pkl
-    |    |    | -- semantic_airport_icao.osm
-    |    |    | -- semantic_graph.png
-    |    | ...
-    |-- traj_data_a10v08
-    |    | -- airport_icao
-    |    |    | -- AIRPORT_ICAO_<unix_timestamp>.csv
-    |    |    | ...
-    |    |    | ...
-    |    | ...
-```
-
-### Assets
-
-The `assets` folder has a subfolder for each airport (uses the airport's [ICAO](https://en.wikipedia.org/wiki/ICAO_airport_code)) containing the following:
-* `bkg_map.png`: visual representation of the map, obtained using OpenStreetMap (OSM).
-* `limits.json`: JSON file containing the Airport's extents.
-* `airport_icao.osm`: the airport's map in OSM format.
-
-### Graph Data (Processed Map Information)
-
-To generate the processed map information, we used [AmeliaMaps](https://github.com/AmeliaCMU/AmeliaMaps).
-
-The `graph_data_a10v01os` folder has a subfolder for each airport containing semantic graphs representation obtained using [AmeliaMaps](https://github.com/AmeliaCMU/AmeliaMaps). Each sub-folder contains the following files:
-* `semantic_graph.pkl`: contains the vectorized map graph with semantic attributes.
-* `semantic_airport_icao.osm`: the semantic representation of the graph in OSM format
-* `semantic_graph.png`: visual representation of the graph. Just shown for reference.
-
-**NOTE** this folder contains the graphs for the 10 airports used in our training experiments. The full set of 48 maps is in the folder `graph_data_a48v01os`.
-
-### Trajectory Data
-
-The `traj_data_a10v08` folder has a subfolder for each airport containing the trajectory data in CSV format. Each file within an airport's subfolder represents an hour of data.
-
-The files are named following the format ```AIRPORT_ICAO_<unix_timestamp>.csv```. Each contains trajectory information in **Table 1**.
-<br>
+* To **download** and **process** the map data, please follow the instructions in [AmeliaMaps](https://github.com/AmeliaCMU/AmeliaMaps) on how to use the processing scripts.
 
 <hr>
 
