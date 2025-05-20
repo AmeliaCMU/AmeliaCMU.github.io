@@ -2,38 +2,36 @@
 <link href="/assets/css/card.css" rel="stylesheet">
 
 
-In the following table, you can find the status of the data processing for each airport. The table includes the following columns:
+For each of the following airports you can get the following data:
 <ul>
-    <li><b>Airport</b>: Airport's Full Name.</li>
-    <li><b>Airport ICAO</b> : Airport's code.</li>
-    <li><b>Raw Data</b>: Indicates if raw trajectory data is available for the airport.</li>
-    <li><b>Processed Data</b>: Indicates if we provide processed data for this airport (i.e., in the format listed in the table above).</li>
-    <li><b>Airport Map</b>: Indicates if we provide an image representation of the airport's map.</li>
-    <li><b>Semantic Graph</b>: Indicates if we provide a semantic graph representation of the airport's map.</li>
-    <li><b>Fence</b>: Indicates if we provide a GeoFence of the airport's map. GeoFence is used for capturing data within a region of interest.</li>
-    <li><b>Limits</b>: Indicates if we provide the airport's extent information.</li>
+    <li><b>Raw Data</b>: Raw trajectory data.</li>
+    <li><b>Processed Data</b>: Processed trajectory data.</li>
+    <li><b>Airport Map</b>: Raster image of the airport's map.</li>
+    <li><b>Semantic Graph</b>: Semantic graph representation of the airport's map.</li>
+    <li><b>Fence</b>: GeoFence of the airport's map. GeoFence is used for capturing data within a region of interest.</li>
+    <li><b>Limits File</b>: Airport's extent information.</li>
 </ul>
 
 <br>
 
 <table>
-    <caption><b>Table 2.</b> Data tracker. The airplane icon (<img title="plane" alt="plane" src="/assets/img/ac.png" width="15px">) indicates the type of data is available for the airport.</caption>
+    <caption><b>Table 2.</b> Airport tracker</caption>
     <thead>
       <tr>
         <th scope="col" rowspan="2" style="text-align:center;"> </th>
         <th scope="col" rowspan="2" style="text-align:center;">Airport</th>
         <th scope="col" rowspan="2" style="text-align:center;">Airport ICAO</th>
-        <th scope="col" colspan="2" style="text-align:center;">Trajectory</th>
-        <th scope="col" colspan="4" style="text-align:center;">Map</th>
+        <!-- <th scope="col" colspan="2" style="text-align:center;">Trajectory</th>
+        <th scope="col" colspan="4" style="text-align:center;">Map</th> -->
       </tr>
-      <tr>
+      <!-- <tr>
         <td style="text-align:center;">Raw Data</td>
         <td style="text-align:center;">Processed Data</td>
         <td style="text-align:center;">Airport Map</td>
         <td style="text-align:center;">Semantic Graph</td>
         <td style="text-align:center;">Fence</td>
         <td style="text-align:center;">Limits File</td>
-      </tr>
+      </tr> -->
     </thead>
     <tbody>
       {% for airport in site.data.data_tracker %}
@@ -41,7 +39,7 @@ In the following table, you can find the status of the data processing for each 
         <td style="text-align:center;">{{ airport.index }}</td>
         <td>{{ airport.airport }}</td>
         <td style="text-align:center;">{{ airport.icao }}</td>
-        {% if airport.raw_data != null %}
+        <!-- {% if airport.raw_data != null %}
             <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
         {% else %}
             <td style="text-align:center;"></td>
@@ -70,7 +68,7 @@ In the following table, you can find the status of the data processing for each 
             <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
         {% else %}
             <td style="text-align:center;"></td>
-        {% endif %}
+        {% endif %} -->
       </tr>
       {% endfor %}
     </tbody>

@@ -17,9 +17,11 @@ hero_height: is-medium
 Amelia-42: An airport surface movement dataset
 </h1>
 
+<br>
+
 <hr>
 
-**Amelia-42** is a large-scale airport surface movement dataset collected using the System Wide Information Management (SWIM) Surface Movement Event Service (SMES). With data collection beginning in December 2022, the dataset is continuously expanding, with ~30TB of new data added annually. It covers surface movement events across 42 airports and TRACON facilities within the US National Airspace System.
+**Amelia-42** is a large-scale airport surface movement dataset collected using the System Wide Information Management (SWIM) Surface Movement Event Service (SMES). With data collection beginning in December 2022, the dataset is continuously expanding. It covers surface movement events across 42 airports and TRACON facilities within the US National Airspace System.
 
 <p style="color:red">
 <b>NOTE:</b> Below we provide instructions on how to download and convert the <b>raw</b> dataset, which contains everything captured by the SWIM system for 42 airports in the United States.
@@ -32,6 +34,18 @@ Additionally, we provide instructions on how to access the <b>processed</b> traj
 Finally, we also provide a dataset tracker which summarizes the available assets for each airport.
 
 <hr>
+
+<div align="center">
+  <img src="/assets/img/dataset.png" alt="The Amelia pipeline" width="70%">
+  <h6>The Amelia data pipeline. </h6>
+</div>
+  <div align="left">
+  <b>A)</b> Raw position reports from the FAA’s SWIM Terminal Data Distribution System are continuously logged and released as Amelia-42, from December 2nd, 2022, to the present.<br>
+  <b>B)</b> Airport-specific geofences are defined to delimit movement areas as well as take-off and landing extensions to runways.<br>
+  <b>C)</b> Data within the geo-fence is processed into clean tabular 1-Hz position reports.<br>
+  <b>D)</b> As additional context, semantic routing graphs are created for each airport.<br>
+  </div>
+
 
 # Processed Data
 
@@ -60,28 +74,18 @@ Click on the link below to go to the processed dataset:
 
 ## Amelia-42
 
-We provide the processed trajectory data used for our trajectory forecasting experiments, which contains **1 month of data for each of the 42 airports**:
+We provide the processed trajectory data for **15 days chosen randomly** for each of the **42 airports**:
 
-NOTE: The full dataset is significantly larger as described in the raw data section. The following 42 airports are selected to represent a diverse range of traffic levels and map topologies.
+NOTE: The full dataset is significantly larger as described in the raw data section.
 
-<!-- - Boston-Logan Intl. Airport - Jan 2023
-- Newark Liberty Intl. Airport - Mar 2023
-- Ronald Reagan Washington Natl. Airport - April 2023
-- John F. Kennedy Intl. Airport - April 2023
-- Los Angeles Intl. Airport - May 2023
-- Chicago-Midway Intl. Airport - June 2023
-- Louis Armstrong New Orleans Intl. Airport - July 2023
-- Seattle-Tacoma Intl. Airport - Aug 2023
-- San Francisco Intl. Airport - Sept 2023
-- Ted Stevens Anchorage Intl. Airport - Nov 2023 -->
 
 **We are on HuggingFace now!**
 
 Click on the link below to go to the processed dataset:
 
-<a class="button" itemprop="paper" href="https://huggingface.co/datasets/AmeliaCMU/Amelia-42" target="_blank"> <i class="fas fa-database fa-lg"></i></a>
+<a class="button" itemprop="paper" href="https://huggingface.co/datasets/AmeliaCMU/Amelia42-Mini" target="_blank"> <i class="fas fa-database fa-lg"></i></a>
 
-<!-- The downloaded dataset follows this structure:
+The dataset follows this structure:
 
 ```bash
 |-- amelia
@@ -91,25 +95,19 @@ Click on the link below to go to the processed dataset:
     |    |    | -- limits.json
     |    |    | -- airport_code_from_net.osm
     |    | ...
-    |-- graph_data_a10v01os
+    |-- graph_data_axxvxxos
     |    | -- airport_icao
     |    |    | -- semantic_graph.pkl
     |    |    | -- semantic_airport_icao.osm
     |    |    | -- semantic_graph.png
     |    | ...
-    |-- graph_data_a42v01os
-    |    | -- airport_icao
-    |    |    | -- semantic_graph.pkl
-    |    |    | -- semantic_airport_icao.osm
-    |    |    | -- semantic_graph.png
-    |    | ...
-    |-- traj_data_a10v08
+    |-- traj_data_axxvxx
     |    | -- airport_icao
     |    |    | -- AIRPORT_ICAO_<unix_timestamp>.csv
     |    |    | ...
     |    |    | ...
     |    | ...
-``` -->
+```
 
 ### Assets
 
@@ -122,16 +120,16 @@ The `assets` folder has a subfolder for each airport (uses the airport's [ICAO](
 
 To generate the processed map information, we used [AmeliaMaps](https://github.com/AmeliaCMU/AmeliaMaps).
 
-The `graph_data_a10v01os` folder has a subfolder for each airport containing semantic graphs representation obtained using [AmeliaMaps](https://github.com/AmeliaCMU/AmeliaMaps). Each sub-folder contains the following files:
+The `graph_data_axxvxxos` folder has a subfolder for each airport containing semantic graphs representation obtained using [AmeliaMaps](https://github.com/AmeliaCMU/AmeliaMaps). Each sub-folder contains the following files:
 * `semantic_graph.pkl`: contains the vectorized map graph with semantic attributes.
 * `semantic_airport_icao.osm`: the semantic representation of the graph in OSM format
 * `semantic_graph.png`: visual representation of the graph. Just shown for reference.
 
-**NOTE** this folder contains the graphs for the 10 airports used in our training experiments. The full set of 42 maps is in the folder `graph_data_a42v01os`.
+**NOTE** this folder contains the graphs for the 10 airports used in our training experiments. The full set of 42 maps is in the folder `graph_data_axxvxxos`.
 
 ### Trajectory Data
 
-The `traj_data_a10v08` folder has a subfolder for each airport containing the trajectory data in CSV format. Each file within an airport's subfolder represents an hour of data.
+The `traj_data_axxvxx` folder has a subfolder for each airport containing the trajectory data in CSV format. Each file within an airport's subfolder represents an hour of data.
 
 The files are named following the format ```AIRPORT_ICAO_<unix_timestamp>.csv```. Each contains trajectory information in **Table 1**.
 <br>
