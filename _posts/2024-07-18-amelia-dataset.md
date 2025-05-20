@@ -49,7 +49,7 @@ Finally, we also provide a dataset tracker which summarizes the available assets
 
 # Processed Data
 
-## Amelia-10
+## Amelia10-Bench
 
 We provide the processed trajectory data used for our trajectory forecasting experiments, which contains **1 month of data for each of the 10 airports**:
 
@@ -72,7 +72,7 @@ Click on the link below to go to the processed dataset:
 
 <a class="button" itemprop="paper" href="https://huggingface.co/datasets/AmeliaCMU/Amelia-10" target="_blank"> <i class="fas fa-database fa-lg"></i></a>
 
-## Amelia-42
+## Amelia42-Mini
 
 We provide the processed trajectory data for **15 days chosen randomly** for each of the **42 airports**:
 
