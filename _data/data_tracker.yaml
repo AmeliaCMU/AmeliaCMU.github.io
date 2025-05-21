@@ -1,6 +1,7 @@
 - index: 1
   airport: "Hartsfield-Jackson Atlanta Intl. Airport"
   icao: "KATL"
+  heatmap_src: "/assets/img/heatmap_airports/katl_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data:
   raster_map: true
@@ -10,6 +11,7 @@
 - index: 2
   airport: "Bradley Intl. Airport"
   icao: "KBDL"
+  heatmap_src: "/assets/img/heatmap_airports/kbdl_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data:
   raster_map: true
@@ -19,6 +21,7 @@
 - index: 3
   airport: "Boston-Logan Intl. Airport"
   icao: "KBOS"
+  heatmap_src: "/assets/img/heatmap_airports/kbos_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data: true
   raster_map: true
@@ -28,6 +31,7 @@
 - index: 4
   airport: "Baltimore/Washington Intl. Thurgood Marshall Airport"
   icao: "KBWI"
+  heatmap_src: "/assets/img/heatmap_airports/kbwi_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data:
   raster_map: true
@@ -37,6 +41,7 @@
 - index: 5
   airport: "Cleveland Hopkins Intl. Airport"
   icao: "KCLE"
+  heatmap_src: "/assets/img/heatmap_airports/kcle_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data:
   raster_map: true
@@ -46,6 +51,7 @@
 - index: 6
   airport: "Charlotte Douglas Intl. Airport"
   icao: "KCLT"
+  heatmap_src: "/assets/img/heatmap_airports/kclt_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data:
   raster_map: true
@@ -55,6 +61,7 @@
 - index: 7
   airport: "Ronald Reagan Washington Natl. Airport"
   icao: "KDCA"
+  heatmap_src: "/assets/img/heatmap_airports/kdca_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data: true
   raster_map: true
@@ -64,6 +71,7 @@
 - index: 8
   airport: "Denver Intl. Airport"
   icao: "KDEN"
+  heatmap_src: "/assets/img/heatmap_airports/kden_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data:
   raster_map: true
@@ -73,6 +81,7 @@
 - index: 9
   airport: "Dallas/Fort Worth Intl. Airport"
   icao: "KDFW"
+  heatmap_src: "/assets/img/heatmap_airports/kdfw_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data:
   raster_map: true
@@ -82,6 +91,7 @@
 - index: 10
   airport: "Detroit Metropolitan Wayne County Airport"
   icao: "KDTW"
+  heatmap_src: "/assets/img/heatmap_airports/kdtw_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data:
   raster_map: true
@@ -91,6 +101,7 @@
 - index: 11
   airport: "Newark Liberty Intl. Airport"
   icao: "KEWR"
+  heatmap_src: "/assets/img/heatmap_airports/kewr_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data: true
   raster_map: true
@@ -100,6 +111,7 @@
 - index: 12
   airport: "Fort Lauderdale-Hollywood Intl. Airport"
   icao: "KFLL"
+  heatmap_src: "/assets/img/heatmap_airports/kfll_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data:
   raster_map: true
@@ -109,6 +121,7 @@
 - index: 13
   airport: "William P. Hobby Airport"
   icao: "KHOU"
+  heatmap_src: "/assets/img/heatmap_airports/khou_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data:
   raster_map: true
@@ -118,6 +131,7 @@
 - index: 14
   airport: "Washington Dulles Intl. Airport"
   icao: "KIAD"
+  heatmap_src: "/assets/img/heatmap_airports/kiad_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data:
   raster_map: true
@@ -127,6 +141,7 @@
 - index: 15
   airport: "George Bush Intercontinental Airport"
   icao: "KIAH"
+  heatmap_src: "/assets/img/heatmap_airports/kiah_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data:
   raster_map: true
@@ -136,6 +151,7 @@
 - index: 16
   airport: "John F. Kennedy Intl. Airport"
   icao: "KJFK"
+  heatmap_src: "/assets/img/heatmap_airports/kjfk_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data: true
   raster_map: true
@@ -145,6 +161,7 @@
 - index: 17
   airport: "McCarran Intl. Airport"
   icao: "KLAS"
+  heatmap_src: "/assets/img/heatmap_airports/klas_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data:
   raster_map: true
@@ -154,6 +171,7 @@
 - index: 18
   airport: "Los Angeles Intl. Airport"
   icao: "KLAX"
+  heatmap_src: "/assets/img/heatmap_airports/klax_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data: true
   raster_map: true
@@ -163,6 +181,7 @@
 - index: 19
   airport: "LaGuardia Airport"
   icao: "KLGA"
+  heatmap_src: "/assets/img/heatmap_airports/klga_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data:
   raster_map: true
@@ -172,6 +191,7 @@
 - index: 20
   airport: "Kansas City Intl. Airport"
   icao: "KMCI"
+  heatmap_src: "/assets/img/heatmap_airports/kmci_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data:
   raster_map: true
@@ -181,6 +201,7 @@
 - index: 21
   airport: "Orlando Intl. Airport"
   icao: "KMCO"
+  heatmap_src: "/assets/img/heatmap_airports/kmco_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data:
   raster_map: true
@@ -190,6 +211,7 @@
 - index: 22
   airport: "Chicago-Midway Intl. Airport"
   icao: "KMDW"
+  heatmap_src: "/assets/img/heatmap_airports/kmdw_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data: true
   raster_map: true
@@ -199,6 +221,7 @@
 - index: 23
   airport: "Memphis Intl. Airport"
   icao: "KMEM"
+  heatmap_src: "/assets/img/heatmap_airports/kmem_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data:
   raster_map: true
@@ -208,6 +231,7 @@
 - index: 24
   airport: "Miami Intl. Airport"
   icao: "KMIA"
+  heatmap_src: "/assets/img/heatmap_airports/kmia_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data:
   raster_map: true
@@ -217,6 +241,7 @@
 - index: 25
   airport: "Milwaukee Mitchell Intl. Airport"
   icao: "KMKE"
+  heatmap_src: "/assets/img/heatmap_airports/kmke_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data:
   raster_map: true
@@ -226,6 +251,7 @@
 - index: 26
   airport: "Minneapolis-Saint Paul Intl. Airport"
   icao: "KMSP"
+  heatmap_src: "/assets/img/heatmap_airports/kmsp_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data:
   raster_map: true
@@ -235,6 +261,7 @@
 - index: 27
   airport: "Louis Armstrong New Orleans Intl. Airport"
   icao: "KMSY"
+  heatmap_src: "/assets/img/heatmap_airports/kmsy_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data: true
   raster_map: true
@@ -244,6 +271,7 @@
 - index: 28
   airport: "O'Hare Intl. Airport"
   icao: "KORD"
+  heatmap_src: "/assets/img/heatmap_airports/kord_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data:
   raster_map: true
@@ -253,6 +281,7 @@
 - index: 29
   airport: "Portland Intl. Airport"
   icao: "KPDX"
+  heatmap_src: "/assets/img/heatmap_airports/kpdx_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data:
   raster_map: true
@@ -262,6 +291,7 @@
 - index: 30
   airport: "Philadelphia Intl. Airport"
   icao: "KPHL"
+  heatmap_src: "/assets/img/heatmap_airports/kphl_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data:
   raster_map: true
@@ -271,6 +301,7 @@
 - index: 31
   airport: "Phoenix Sky Harbor Intl. Airport"
   icao: "KPHX"
+  heatmap_src: "/assets/img/heatmap_airports/kphx_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data:
   raster_map: true
@@ -280,6 +311,7 @@
 - index: 32
   airport: "Pittsburgh Intl. Airport"
   icao: "KPIT"
+  heatmap_src: "/assets/img/heatmap_airports/kpit_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data:
   raster_map: true
@@ -289,6 +321,7 @@
 - index: 33
   airport: "T.F. Green Airport"
   icao: "KPVD"
+  heatmap_src: "/assets/img/heatmap_airports/kpvd_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data:
   raster_map: true
@@ -298,6 +331,7 @@
 - index: 34
   airport: "San Diego Intl. Airport"
   icao: "KSAN"
+  heatmap_src: "/assets/img/heatmap_airports/ksan_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data:
   raster_map: true
@@ -307,6 +341,7 @@
 - index: 35
   airport: "Louisville Muhammad Ali Intl. Airport"
   icao: "KSDF"
+  heatmap_src: "/assets/img/heatmap_airports/ksdf_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data:
   raster_map: true
@@ -316,6 +351,7 @@
 - index: 36
   airport: "Seattle-Tacoma Intl. Airport"
   icao: "KSEA"
+  heatmap_src: "/assets/img/heatmap_airports/ksea_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data: true
   raster_map: true
@@ -325,6 +361,7 @@
 - index: 37
   airport: "San Francisco Intl. Airport"
   icao: "KSFO"
+  heatmap_src: "/assets/img/heatmap_airports/ksfo_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data: true
   raster_map: true
@@ -334,6 +371,7 @@
 - index: 38
   airport: "Salt Lake City Intl. Airport"
   icao: "KSLC"
+  heatmap_src: "/assets/img/heatmap_airports/kslc_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data:
   raster_map: true
@@ -343,6 +381,7 @@
 - index: 39
   airport: "John Wayne Airport"
   icao: "KSNA"
+  heatmap_src: "/assets/img/heatmap_airports/ksna_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data:
   raster_map: true
@@ -352,6 +391,7 @@
 - index: 40
   airport: "St. Louis Lambert Intl. Airport"
   icao: "KSTL"
+  heatmap_src: "/assets/img/heatmap_airports/kstl_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data:
   raster_map: true
@@ -361,6 +401,7 @@
 - index: 41
   airport: "Ted Stevens Anchorage Intl. Airport"
   icao: "PANC"
+  heatmap_src: "/assets/img/heatmap_airports/panc_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data: true
   raster_map: true
@@ -370,6 +411,7 @@
 - index: 42
   airport: "Daniel K. Inouye Intl. Airport"
   icao: "PHNL"
+  heatmap_src: "/assets/img/heatmap_airports/phnl_interp_aircraft_only_heatmap.png"
   raw_data: true
   processed_data:
   raster_map: true

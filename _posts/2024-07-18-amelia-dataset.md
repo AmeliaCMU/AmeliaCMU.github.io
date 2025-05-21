@@ -229,6 +229,52 @@ In order to download and convert raw data into CSV files, please follow instruct
 
 <hr>
 
+<div align="center">
+  <h1 class="title">Airport’s heatmap, representing the activity frequency per region</h1>
+  <div id="heatmap-carousel" style="max-width: 800px; margin: auto;">
+    <div style="position: relative; width: 100%; height: 420px; display: flex; align-items: center; justify-content: center; background: #f8f8f8;">
+      <img
+        src="assets/img/heatmap_airports/katl_interp_aircraft_only_heatmap.png"
+        alt="Heatmap 1"
+        id="carousel-image"
+        style="max-width:70%; max-height:400px; width:auto; height:auto; display:block; margin:auto; position: absolute; top: 0; bottom: 0; left: 0; right: 0;"
+      >
+    </div>
+    <div id="carousel-caption" style="margin-top: 8px; color: #888;">KATL</div>
+  </div>
+</div>
+
+<script>
+  // Load heatmaps from YAML data injected by Jekyll
+  const heatmaps = [
+    {% for h in site.data.data_tracker %}
+      {src: "{{ h.heatmap_src }}", caption: "{{ h.icao }}"}{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
+  let current = 0;
+  function showHeatmap(idx) {
+    const img = document.getElementById('carousel-image');
+    const cap = document.getElementById('carousel-caption');
+    img.src = heatmaps[idx].src;
+    img.alt = heatmaps[idx].caption;
+    cap.textContent = heatmaps[idx].caption;
+  }
+  function prevHeatmap() {
+    current = (current - 1 + heatmaps.length) % heatmaps.length;
+    showHeatmap(current);
+  }
+  function nextHeatmap() {
+    current = (current + 1) % heatmaps.length;
+    showHeatmap(current);
+  }
+  // Automatically change heatmap every 3 seconds
+  setInterval(function() {
+    nextHeatmap();
+  }, 3000);
+</script>
+
+<hr>
+
 # BibTeX
 
 If you find our work useful in your research, please cite us!

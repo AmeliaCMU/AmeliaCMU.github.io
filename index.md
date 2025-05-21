@@ -131,5 +131,3 @@ Zelin Ye, Jong Hoon Park, [Jean Oh](https://cmubig.github.io/team/jean_oh/) and 
   eprint = {https://arc.aiaa.org/doi/pdf/10.2514/6.2024-4251},
 }
 ```
-
-<hr>
