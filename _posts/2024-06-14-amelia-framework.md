@@ -4,7 +4,7 @@ author: Ingrid Navarro and Pablo Ortega-Kral
 permalink: /amelia-framework/
 title: Amelia Framework
 subtitle: A framework for airport surface movement
-image: /assets/posts/2024-06-14-amelia-framework/amelia_framework.png
+image: /assets/posts/2024-06-14-amelia-framework/amelia_framework_2.png
 link-new-tab: true
 categories: publication
 hero_image: /assets/posts/2024-06-14-amelia-framework/klax_header.gif
@@ -39,7 +39,7 @@ Our framework consists of 7 tools for processing, analyzing, visualizing and cha
 trajectory and map data for airport surface operations.
 
 <p align="center">
-  <img width="1280" src="/assets/posts/2024-06-14-amelia-framework/amelia_framework.png" >
+  <img width="1280" src="/assets/posts/2024-06-14-amelia-framework/amelia_framework_2.png" >
 </p>
 
 
