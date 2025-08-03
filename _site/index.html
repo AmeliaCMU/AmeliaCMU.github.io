@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+
+
+
+
+<html
+ dir="ltr"
+ lang="en"
+ >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content=#ffffff>
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="shortcut icon" type="image/png"
+           href="/assets/img/ac.png" 
+    />
+    <script defer src="https://unpkg.com/alpinejs@3.9.0/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css">
+    
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Amelia</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="Amelia" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Amelia" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","headline":"Amelia","url":"http://localhost:4000/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <!-- head scripts --></head>
+
+  <body>
+    <nav class="navbar is-primary " x-data="{ openNav: false }">
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/" class="navbar-item">
+                
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu" :class="{ 'is-active': openNav }" x-on:click="openNav = !openNav">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu" :class="{ 'is-active': openNav }">
+            <div class="navbar-start">
+                <a href="/" class="navbar-item is-active">Home</a>
+                
+                
+                    
+                    <a href="/amelia-framework/" class="navbar-item ">Amelia Framework</a>
+                    
+                
+                    
+                    <a href="/amelia-dataset/" class="navbar-item ">Amelia-42</a>
+                    
+                
+                    
+                    <a href="/amelia-model/" class="navbar-item ">Amelia-TF</a>
+                    
+                
+                
+            </div>
+
+            <div class="navbar-end">
+                
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+    
+        <section class="hero  is-large  is-bold is-primary"  style="background: url('/assets/posts/2024-06-14-amelia-framework/klax_header.gif') no-repeat center center; background-size: cover;" >
+    <div class="hero-body ">
+        <div class="container">
+            <h1 class="title is-2">Amelia</h1>
+            <p class="subtitle is-3">A Large-Scale Dataset and Benchmark for Airport Surface Movement Forecasting</p>
+            
+        </div>
+    </div>
+</section>
+    
+    
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns is-multiline">
+                
+                <div class="column is-12">
+                    
+                    
+
+                    
+                    
+                    
+<div class="content">
+    <div align="left"><img class="center" src="assets/img/logos/amelia.png" width="30%" alt="" /></div>
+
+<hr />
+
+<div align="center"><h1 class="title">Our Motivation</h1></div>
+
+<p>The growing demand for air travel requires technological advancements in air traffic management as well as mechanisms for monitoring and ensuring <strong>safe</strong> and <strong>efficient</strong> operations.</p>
+
+<h4 id="some-trends">Some trends…</h4>
+<div align="center">
+  <video width="800" autoplay="" loop="" muted="">
+    <source src="/assets/video/trends.mp4" type="video/mp4" />
+    <source src="/assets/video/trends.webm" type="video/webm" />
+  </video>
+</div>
+
+<h4 id="a-close-call">A close call…</h4>
+
+<!-- <div align="center">
+  <video width="1000" autoplay loop muted playsinline>
+  "/assets/video/sfo_incursion_red.webm"
+  "/assets/video/sfo_incursion_red.mp4"
+    <source src="" type="video/mp4" />
+    <source src="" type="video/webm" />
+  </video>
+  <h5>A triple runway incursion at San Francisco International Airport (4x speed) </h5>
+  <h7>July 11th, 2023 </h7>
+</div> -->
+
+<div align="center">
+  <img src="/assets/video/bos_incursion_red.gif" alt="BOS Incursion" width="100%" />
+  <h5>A runway incursion at Boston-Logan Intl. Airport (2x speed) </h5>
+  <h7>February 27, 2023</h7>
+</div>
+
+<p><br /></p>
+
+<p>To improve airport safety and efficiency and encourage further research in this direction we introduce <strong>Amelia</strong>, a large-scale dataset of airport surface movement and a toolkit for data analysis, visualization, benchmarking, and behavior modeling.</p>
+
+<p>Our dataset, <strong>Amelia-42</strong> comprises <strong>more than two year’s worth of data collection across 42 airports</strong> and TRACON facilities within the US National Airspace System, which is <strong>∼9.19TB</strong> of raw data. We also release <strong>Amelia42-Mini</strong>, a 15-day sample per airport, fully processed data on HuggingFace for ease of use.</p>
+
+<p>Additionally, inspired by the success of motion prediction models in the AV domain for safety monitoring and multi-agent coordination, we introduce <strong>Amelia-TF</strong>, a transformer-based large multi-agent multi-airport trajectory forecasting model. Trained on <strong>Amelia10-Bench</strong>, consisting on <strong>292 days or over 9B tokens</strong> of position data encompassing 10 different airports, available on HuggingFace.</p>
+
+<hr />
+
+<p><br /></p>
+
+<div align="center"><h1 class="title">Keywords</h1>
+<h3 class="title" style="color:#A1A4A8">
+  Aviation | Machine Learning | Deep Learning | Data Science
+</h3>
+<h5 class="title" style="color:#BDBFC2">
+  Trajectory Prediction | Anomaly Detection | And More…
+</h5>
+</div>
+
+<p><br /></p>
+
+<hr />
+
+<div align="center"><h1 class="title">Our Framework</h1></div>
+
+<p><br /></p>
+
+<div class="columns is-multiline">
+    
+        <div class="column is-6-desktop is-6-tablet">
+            <a href="/amelia-dataset/">
+    <div class="card" style="height: 100%; display: flex; flex-direction: column; align-items: center;">
+        
+            <div style="height: 200px;">
+                <img src="/assets/posts/2024-06-14-amelia-framework/klax.gif" alt="Amelia-42" style="object-fit: contain; height: 100%;" />
+            </div>
+        
+        <div class="card-content" style="flex-grow: 3;">
+            <div class="content">
+                
+                <div class="title is-2">Amelia-42</div>
+                
+                <p>A Large-Scale Dataset for Airport Surface Movement</p>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <p class="card-footer-item">Published: Jul 18, 2024</p>
+        </footer>
+    </div>
+</a>
+        </div>
+    
+        <div class="column is-6-desktop is-6-tablet">
+            <a href="/amelia-model/">
+    <div class="card" style="height: 100%; display: flex; flex-direction: column; align-items: center;">
+        
+            <div style="height: 200px;">
+                <img src="/assets/posts/2024-06-17-amelia-model/model.png" alt="Amelia-TF" style="object-fit: contain; height: 100%;" />
+            </div>
+        
+        <div class="card-content" style="flex-grow: 3;">
+            <div class="content">
+                
+                <div class="title is-2">Amelia-TF</div>
+                
+                <p>A large model for airport surface movement forecasting.</p>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <p class="card-footer-item">Published: Jun 17, 2024</p>
+        </footer>
+    </div>
+</a>
+        </div>
+    
+        <div class="column is-6-desktop is-6-tablet">
+            <a href="/amelia-framework/">
+    <div class="card" style="height: 100%; display: flex; flex-direction: column; align-items: center;">
+        
+            <div style="height: 200px;">
+                <img src="/assets/posts/2024-06-14-amelia-framework/amelia_framework_2.png" alt="Amelia Framework" style="object-fit: contain; height: 100%;" />
+            </div>
+        
+        <div class="card-content" style="flex-grow: 3;">
+            <div class="content">
+                
+                <div class="title is-2">Amelia Framework</div>
+                
+                <p>A framework for airport surface movement</p>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <p class="card-footer-item">Published: Jun 14, 2024</p>
+        </footer>
+    </div>
+</a>
+        </div>
+    
+</div>
+
+<p><br /></p>
+
+<hr />
+
+<link href="assets/css/card.css" rel="stylesheet" />
+
+<div align="center">
+  
+  <h1 class="title">Our Code</h1>
+  
+  <div class="section">
+    <div class="columns is-multiline">
+      
+      <div class="column is-one-third">
+        <a href="https://github.com/AmeliaCMU/AmeliaSWIM">
+          <div class="card" style="height: 100%; display: flex; flex-direction: column; align-items: center;">
+            <div style="height: 200px;">
+              <img src="assets/img/software/swim.png" alt="" style="object-fit: contain; height: 100%;" />
+            </div>
+            <div class="card-content has-text-centered">
+              <p class="title is-4"><b>Amelia-<span style="color:#e06666;">SWIM</span></b></p>
+              <p class="subtitle is-6">Airport surface movement data collection and pre-preprocessing tools</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      
+      <div class="column is-one-third">
+        <a href="https://github.com/AmeliaCMU/AmeliaMaps">
+          <div class="card" style="height: 100%; display: flex; flex-direction: column; align-items: center;">
+            <div style="height: 200px;">
+              <img src="assets/img/software/maps.png" alt="" style="object-fit: contain; height: 100%;" />
+            </div>
+            <div class="card-content has-text-centered">
+              <p class="title is-4"><b>Amelia-<span style="color:#20948b;">Maps</span></b></p>
+              <p class="subtitle is-6">Airport map data collection and processing tools</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      
+      <div class="column is-one-third">
+        <a href="https://github.com/AmeliaCMU/AmeliaDataTools">
+          <div class="card" style="height: 100%; display: flex; flex-direction: column; align-items: center;">
+            <div style="height: 200px;">
+              <img src="assets/img/software/data_tools.png" alt="" style="object-fit: contain; height: 100%;" />
+            </div>
+            <div class="card-content has-text-centered">
+              <p class="title is-4"><b>Amelia-<span style="color:#3c78d8;">DataTools</span></b></p>
+              <p class="subtitle is-6">Trajectory and map data analysis and verification tools </p>
+            </div>
+          </div>
+        </a>
+      </div>
+      
+      <div class="column is-one-third">
+        <a href="https://github.com/AmeliaCMU/AmeliaScenes">
+          <div class="card" style="height: 100%; display: flex; flex-direction: column; align-items: center;">
+            <div style="height: 200px;">
+              <img src="assets/img/software/scenes.png" alt="" style="object-fit: contain; height: 100%;" />
+            </div>
+            <div class="card-content has-text-centered">
+              <p class="title is-4"><b>Amelia-<span style="color:#e69138;">Scenes</span></b></p>
+              <p class="subtitle is-6">Scene post-processing and characterization tool</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      
+      <div class="column is-one-third">
+        <a href="https://github.com/AmeliaCMU/AmeliaTF">
+          <div class="card" style="height: 100%; display: flex; flex-direction: column; align-items: center;">
+            <div style="height: 200px;">
+              <img src="assets/img/software/tf.png" alt="" style="object-fit: contain; height: 100%;" />
+            </div>
+            <div class="card-content has-text-centered">
+              <p class="title is-4"><b>Amelia-<span style="color:#8e7cc3;">TF</span></b></p>
+              <p class="subtitle is-6">Trajectory forecasting model</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      
+      <div class="column is-one-third">
+        <a href="https://github.com/AmeliaCMU/AmeliaInference">
+          <div class="card" style="height: 100%; display: flex; flex-direction: column; align-items: center;">
+            <div style="height: 200px;">
+              <img src="assets/img/software/inference.png" alt="" style="object-fit: contain; height: 100%;" />
+            </div>
+            <div class="card-content has-text-centered">
+              <p class="title is-4"><b>Amelia-<span style="color:#ea738d;">Inference</span></b></p>
+              <p class="subtitle is-6">Standalone trajectory prediction tool</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+<hr />
+
+<link href="assets/css/card.css" rel="stylesheet" />
+
+<div align="center">
+  <h1 class="title">Principal investigators</h1>
+  <div class="section">
+    <div class="container">
+      <div class="columns is-multiline">
+        
+        <div class="column is-one-half">
+          <a href="https://cmubig.github.io/team/jean_oh/">
+            <div class="card">
+              <div class="card-image has-text-centered">
+                <figure class="image is-128x128" style="border-radius: 50%; overflow: hidden; margin: 0 auto;">
+                  <img src="assets/img/authors/jean_oh.jpeg" alt="Jean Oh" />
+                </figure>
+              </div>
+              <div class="card-content has-text-centered">
+                <p class="title is-4">Jean Oh</p>
+                <p class="subtitle is-6">Bot Intelligence Group (BIG), CMU</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="column is-one-half">
+          <a href="https://theairlab.org/team/sebastian/">
+            <div class="card">
+              <div class="card-image has-text-centered">
+                <figure class="image is-128x128" style="border-radius: 50%; overflow: hidden; margin: 0 auto;">
+                  <img src="assets/img/authors/basti_scherer.jpeg" alt="Sebastian Scherer" />
+                </figure>
+              </div>
+              <div class="card-content has-text-centered">
+                <p class="title is-4">Sebastian Scherer</p>
+                <p class="subtitle is-6">AirLab, CMU</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<link href="assets/css/card.css" rel="stylesheet" />
+
+<div align="center">
+  <h1 class="title">Team members</h1>
+  <div class="section">
+    <div class="container">
+      <div class="columns is-multiline">
+        
+        <div class="column is-one-third">
+          
+          <a href="https://navars.xyz">
+          
+          <div class="card">
+            <div class="card-image has-text-centered">
+              <figure class="image is-128x128" style="border-radius: 50%; overflow: hidden; margin: 0 auto;">
+                <img src="assets/img/authors/ingrid_navarro.jpg" alt="Ingrid Navarro" />
+              </figure>
+            </div>
+            <div class="card-content has-text-centered">
+              <p class="title is-4">Ingrid Navarro</p>
+              <p class="subtitle is-6">Bot Intelligence Group (BIG), CMU</p>
+            </div>
+          </div>
+          
+          </a>
+          
+      </div>
+      
+        <div class="column is-one-third">
+          
+          <a href="https://paok-2001.github.io">
+          
+          <div class="card">
+            <div class="card-image has-text-centered">
+              <figure class="image is-128x128" style="border-radius: 50%; overflow: hidden; margin: 0 auto;">
+                <img src="assets/img/authors/pablo_ortega.jpg" alt="Pablo Ortega-Kral" />
+              </figure>
+            </div>
+            <div class="card-content has-text-centered">
+              <p class="title is-4">Pablo Ortega-Kral</p>
+              <p class="subtitle is-6">Bot Intelligence Group (BIG), CMU</p>
+            </div>
+          </div>
+          
+          </a>
+          
+      </div>
+      
+        <div class="column is-one-third">
+          
+          <a href="https://www.jaypatrikar.me">
+          
+          <div class="card">
+            <div class="card-image has-text-centered">
+              <figure class="image is-128x128" style="border-radius: 50%; overflow: hidden; margin: 0 auto;">
+                <img src="assets/img/authors/jay_patrikar.webp" alt="Jay Patrikar" />
+              </figure>
+            </div>
+            <div class="card-content has-text-centered">
+              <p class="title is-4">Jay Patrikar</p>
+              <p class="subtitle is-6">The Airlab, CMU</p>
+            </div>
+          </div>
+          
+          </a>
+          
+      </div>
+      
+        <div class="column is-one-third">
+          
+          <a href="https://acanvil.com">
+          
+          <div class="card">
+            <div class="card-image has-text-centered">
+              <figure class="image is-128x128" style="border-radius: 50%; overflow: hidden; margin: 0 auto;">
+                <img src="assets/img/authors/alonso_cano.jpeg" alt="Alonso Cano" />
+              </figure>
+            </div>
+            <div class="card-content has-text-centered">
+              <p class="title is-4">Alonso Cano</p>
+              <p class="subtitle is-6">Bot Intelligence Group (BIG), CMU</p>
+            </div>
+          </div>
+          
+          </a>
+          
+      </div>
+      
+        <div class="column is-one-third">
+          
+          <a href="https://www.linkedin.com/in/hcwang1/">
+          
+          <div class="card">
+            <div class="card-image has-text-centered">
+              <figure class="image is-128x128" style="border-radius: 50%; overflow: hidden; margin: 0 auto;">
+                <img src="assets/img/authors/jack_wang.jpeg" alt="Haichuan (Jack) Wang" />
+              </figure>
+            </div>
+            <div class="card-content has-text-centered">
+              <p class="title is-4">Haichuan (Jack) Wang</p>
+              <p class="subtitle is-6">The Airlab, CMU</p>
+            </div>
+          </div>
+          
+          </a>
+          
+      </div>
+      
+    </div>
+  </div>
+</div>
+</div>
+
+<link href="assets/css/card.css" rel="stylesheet" />
+
+<div align="center">
+  <h1 class="title">Collaborators</h1>
+  <div class="section">
+    <div class="container">
+      <div class="columns is-multiline">
+        
+        <div class="column is-one-third">
+          
+          <a href="https://zeliny0109.github.io/">
+          
+          <div class="card">
+            <div class="card-image has-text-centered">
+              <figure class="image is-128x128" style="border-radius: 50%; overflow: hidden; margin: 0 auto;">
+                <img src="assets/img/authors/zelin_ye.jpg" alt="Zelin Ye" />
+              </figure>
+            </div>
+            <div class="card-content has-text-centered">
+              <p class="title is-4">Zelin Ye</p>
+              <p class="subtitle is-6">The Airlab, CMU</p>
+            </div>
+          </div>
+          
+          </a>
+          
+      </div>
+      
+        <div class="column is-one-third">
+          
+          <a href="https://sjhpark.github.io/">
+          
+          <div class="card">
+            <div class="card-image has-text-centered">
+              <figure class="image is-128x128" style="border-radius: 50%; overflow: hidden; margin: 0 auto;">
+                <img src="assets/img/authors/sam_park.png" alt="Jong Hoon Park" />
+              </figure>
+            </div>
+            <div class="card-content has-text-centered">
+              <p class="title is-4">Jong Hoon Park</p>
+              <p class="subtitle is-6">Bot Intelligence Group (BIG), CMU</p>
+            </div>
+          </div>
+          
+          </a>
+          
+      </div>
+      
+        <div class="column is-one-third">
+          
+          <a href="https://avi-amalanshu.github.io/">
+          
+          <div class="card">
+            <div class="card-image has-text-centered">
+              <figure class="image is-128x128" style="border-radius: 50%; overflow: hidden; margin: 0 auto;">
+                <img src="assets/img/authors/avi_avalanshu.png" alt="Avi Amalanshu" />
+              </figure>
+            </div>
+            <div class="card-content has-text-centered">
+              <p class="title is-4">Avi Amalanshu</p>
+              <p class="subtitle is-6">The Airlab, CMU</p>
+            </div>
+          </div>
+          
+          </a>
+          
+      </div>
+      
+    </div>
+  </div>
+</div>
+</div>
+
+<hr />
+
+<h1 id="papers">Papers</h1>
+
+<p><br /></p>
+
+<h4 id="-amelia-a-large-model-and-dataset-for-airport-surface-movement-forecasting-non-archival"><img title="plane" alt="plane" src="/assets/img/ac.png" width="20px" /> Amelia: A Large Model and Dataset for Airport Surface Movement Forecasting (non archival)</h4>
+
+<p><a href="https://navars.xyz">Ingrid Navarro</a> *, <a href="https://paok-2001.github.io">Pablo Ortega-Kral</a> *, <a href="https://www.jaypatrikar.me">Jay Patrikar</a> *, Haichuan Wang,
+Zelin Ye, Jong Hoon Park, <a href="https://cmubig.github.io/team/jean_oh/">Jean Oh</a> and <a href="https://theairlab.org/team/sebastian/">Sebastian Scherer</a></p>
+
+<p>*Denotes equal contribution</p>
+
+<p><span style="background: #ffe066; color: #222; padding: 0.3em 0.7em; border-radius: 0.5em; font-weight: bold; font-size: 1.1em; margin-right: 0.5em;">🏆 Best Student Paper Award</span></p>
+
+<p><a class="button" itemprop="code" href="https://github.com/AmeliaCMU" target="_blank">
+  <i class="fas fa-code fa-lg"></i>
+</a>
+<a class="button" itemprop="paper" href="https://arxiv.org/pdf/2407.21185" target="_blank">
+  <i class="fas fa-file fa-lg"></i>
+</a></p>
+
+<div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">@inbook</span><span class="p">{</span><span class="nl">navarro2024amelia</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Ingrid Navarro and Pablo Ortega and Jay Patrikar and Haichuan Wang and Zelin Ye and Jong Hoon Park and Jean Oh and Sebastian Scherer}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{AmeliaTF: A Large Model and Dataset for Airport Surface Movement Forecasting}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{AIAA AVIATION FORUM AND ASCEND 2024}</span><span class="p">,</span>
+  <span class="na">chapter</span> <span class="p">=</span> <span class="s">{}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.2514/6.2024-4251}</span><span class="p">,</span>
+  <span class="na">URL</span> <span class="p">=</span> <span class="s">{https://arc.aiaa.org/doi/abs/10.2514/6.2024-4251}</span><span class="p">,</span>
+  <span class="na">eprint</span> <span class="p">=</span> <span class="s">{https://arc.aiaa.org/doi/pdf/10.2514/6.2024-4251}</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+</div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+        <style>
+    footer {
+        background-color: #f8f9fa;
+        overflow: hidden;
+        padding: 40px 25px; 
+      }
+      
+      .footer-logos {
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+      }
+      
+      .footer-logos img {
+        max-width: 130px;;
+        width: 100%;
+        height: auto;
+        flex: 1;
+        padding-left: 20px; /* Reduced padding to make logos closer */
+        padding-right: 20px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+      }
+
+      @media (max-width: 768px) {
+        .footer-logos img {
+          max-width: 120px; /* Adjust max width for medium screens */
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .footer-logos img {
+          max-width: 75px; /* Adjust max width for small screens */
+        }
+      }
+      
+      
+</style>
+
+<footer>
+    <div class="footer-logos">
+      <img src="/assets/img/logos/carnegie-mellon-university-logo.png" alt="Logo 1">
+      <img src="/assets/img/logos/robotics_institute.jpg" alt="Logo 2">
+      <img src="/assets/img/logos/boeing.png" alt="Logo 3">
+      <img src="/assets/img/logos/logo_airlab.png" alt="Logo 4">
+      <img src="/assets/img/logos/biglab.png" alt="Logo 5">
+    </div>
+  </footer>
+  
+    
+    <script src="/assets/js/app.js" type="text/javascript"></script><!-- footer scripts --></body>
+</html>

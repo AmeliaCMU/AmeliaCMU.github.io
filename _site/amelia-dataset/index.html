@@ -1,0 +1,1584 @@
+<!DOCTYPE html>
+
+
+
+
+<html
+ dir="ltr"
+ lang="en"
+ >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content=#ffffff>
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="shortcut icon" type="image/png"
+           href="/assets/img/ac.png"
+    />
+    <script defer src="https://unpkg.com/alpinejs@3.9.0/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@1/bin/bulma-social.min.css">
+
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Amelia-42</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="Amelia-42" />
+<meta name="author" content="Ingrid Navarro and Pablo Ortega-Kral" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Amelia-42: An airport surface movement dataset" />
+<meta property="og:description" content="Amelia-42: An airport surface movement dataset" />
+<link rel="canonical" href="http://localhost:4000/amelia-dataset/" />
+<meta property="og:url" content="http://localhost:4000/amelia-dataset/" />
+<meta property="og:image" content="http://localhost:4000/assets/posts/2024-06-14-amelia-framework/klax.gif" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-07-18T00:00:00-04:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/assets/posts/2024-06-14-amelia-framework/klax.gif" />
+<meta property="twitter:title" content="Amelia-42" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Ingrid Navarro and Pablo Ortega-Kral"},"dateModified":"2024-07-18T00:00:00-04:00","datePublished":"2024-07-18T00:00:00-04:00","description":"Amelia-42: An airport surface movement dataset","headline":"Amelia-42","image":"http://localhost:4000/assets/posts/2024-06-14-amelia-framework/klax.gif","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/amelia-dataset/"},"url":"http://localhost:4000/amelia-dataset/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <!-- head scripts --></head>
+
+  <body>
+    <nav class="navbar is-primary " x-data="{ openNav: false }">
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/" class="navbar-item">
+
+            </a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu" :class="{ 'is-active': openNav }" x-on:click="openNav = !openNav">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="navMenu" :class="{ 'is-active': openNav }">
+            <div class="navbar-start">
+                <a href="/" class="navbar-item ">Home</a>
+
+
+
+                    <a href="/amelia-framework/" class="navbar-item ">Amelia Framework</a>
+
+
+
+                    <a href="/amelia-dataset/" class="navbar-item is-active">Amelia-42</a>
+
+
+
+                    <a href="/amelia-model/" class="navbar-item ">Amelia-TF</a>
+
+
+
+            </div>
+
+            <div class="navbar-end">
+
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns is-multiline">
+
+                <div class="column is-12">
+
+
+
+
+
+                    <style>
+    .button-slide {
+      background-color: #a09f9f;
+      border: none;
+      color: white;
+      padding: 15px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+</style>
+
+<div class="content">
+
+    <!-- <p>Published: Jul 18, 2024 by Ingrid Navarro and Pablo Ortega-Kral</p> -->
+
+
+
+    <h1>
+Amelia-42: An airport surface movement dataset
+</h1>
+
+<p><br /></p>
+
+<p><a class="button" itemprop="paper" href="https://huggingface.co/datasets/AmeliaCMU/Amelia42-Mini" target="_blank">
+  <img src="/assets/img/logos/huggingface-color.png" alt="Hugging Face" style="height:1.5em; vertical-align:middle; margin-right:0.5em;" />
+  Amelia42-Mini
+</a>
+<a class="button" itemprop="paper" href="https://huggingface.co/datasets/AmeliaCMU/Amelia-10" target="_blank">
+  <img src="/assets/img/logos/huggingface-color.png" alt="Hugging Face" style="height:1.5em; vertical-align:middle; margin-right:0.5em;" />
+  Amelia10-Bench
+</a></p>
+
+<hr />
+
+<p><strong>Amelia-42</strong> is a large-scale airport surface movement dataset collected using the System Wide Information Management (SWIM) Surface Movement Event Service (SMES). With data collection beginning in December 2022, the dataset is continuously expanding. It covers surface movement events across 42 airports and TRACON facilities within the US National Airspace System.</p>
+
+<p><b>NOTE:</b> We provide instructions on how to access the <b>processed</b> trajectory data. Additionally, Below we provide instructions on how to download and convert the <b>raw</b> dataset, which contains everything captured by the SWIM system for 42 airports in the United States.</p>
+
+<div align="center">
+  <img src="/assets/img/dataset.png" alt="The Amelia pipeline" width="70%" />
+  <h6>The Amelia data pipeline. </h6>
+</div>
+<div align="left">
+  <b>A)</b> Raw position reports from the FAA’s SWIM Terminal Data Distribution System are continuously logged and released as Amelia-42, from December 2nd, 2022, to the present.<br />
+  <b>B)</b> Airport-specific geofences are defined to delimit movement areas as well as take-off and landing extensions to runways.<br />
+  <b>C)</b> Data within the geo-fence is processed into clean tabular 1-Hz position reports.<br />
+  <b>D)</b> As additional context, semantic routing graphs are created for each airport.<br />
+  </div>
+
+<hr />
+
+<h1 id="processed-data">Processed Data</h1>
+
+<div align="center" style="margin: 2em 0;">
+  <img src="/assets/img/logos/huggingface-color.png" alt="Hugging Face" style="height:2.5em; vertical-align:middle; margin-right:0.5em;" />
+  <span style="font-size:1.5em; font-weight:bold; color:#ffb300;">
+    We are on <a href="https://huggingface.co/AmeliaCMU" target="_blank" style="color:#ffb300; text-decoration:underline;">HuggingFace</a> now!
+  </span>
+</div>
+
+<h2 id="amelia10-bench">Amelia10-Bench</h2>
+
+<p>Click on the link below to go to the processed dataset:</p>
+
+<p><a class="button" itemprop="paper" href="https://huggingface.co/datasets/AmeliaCMU/Amelia-10" target="_blank">
+  <img src="/assets/img/logos/huggingface-color.png" alt="Hugging Face" style="height:1.5em; vertical-align:middle; margin-right:0.5em;" />
+  Amelia10-Bench
+</a></p>
+
+<p>We provide the processed trajectory data used for our trajectory forecasting experiments, which contains <strong>1 month of data for each of the 10 airports</strong>:</p>
+
+<p>NOTE: The full dataset is significantly larger as described in the raw data section. The following 10 airports are selected to represent a diverse range of traffic levels and map topologies.</p>
+
+<ul>
+  <li>Boston-Logan Intl. Airport - Jan 2023</li>
+  <li>Newark Liberty Intl. Airport - Mar 2023</li>
+  <li>Ronald Reagan Washington Natl. Airport - April 2023</li>
+  <li>John F. Kennedy Intl. Airport - April 2023</li>
+  <li>Los Angeles Intl. Airport - May 2023</li>
+  <li>Chicago-Midway Intl. Airport - June 2023</li>
+  <li>Louis Armstrong New Orleans Intl. Airport - July 2023</li>
+  <li>Seattle-Tacoma Intl. Airport - Aug 2023</li>
+  <li>San Francisco Intl. Airport - Sept 2023</li>
+  <li>Ted Stevens Anchorage Intl. Airport - Nov 2023</li>
+</ul>
+
+<h2 id="amelia42-mini">Amelia42-Mini</h2>
+
+<p>We provide the processed trajectory data for <strong>15 days chosen randomly</strong> for each of the <strong>42 airports</strong>:</p>
+
+<p>NOTE: The full dataset is significantly larger as described in the raw data section.</p>
+
+<p>Click on the link below to go to the processed dataset:</p>
+
+<p><a class="button" itemprop="paper" href="https://huggingface.co/datasets/AmeliaCMU/Amelia42-Mini" target="_blank">
+  <img src="/assets/img/logos/huggingface-color.png" alt="Hugging Face" style="height:1.5em; vertical-align:middle; margin-right:0.5em;" />
+  Amelia42-Mini
+</a></p>
+
+<hr />
+
+<h2 id="dataset-structure">Dataset Structure</h2>
+
+<p>The dataset follows this structure:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>|-- amelia
+    |-- assets
+    |    | <span class="nt">--</span> airport_icao
+    |    |    | <span class="nt">--</span> bkg_map.png
+    |    |    | <span class="nt">--</span> limits.json
+    |    |    | <span class="nt">--</span> airport_code_from_net.osm
+    |    | ...
+    |-- graph_data_axxvxxos
+    |    | <span class="nt">--</span> airport_icao
+    |    |    | <span class="nt">--</span> semantic_graph.pkl
+    |    |    | <span class="nt">--</span> semantic_airport_icao.osm
+    |    |    | <span class="nt">--</span> semantic_graph.png
+    |    | ...
+    |-- traj_data_axxvxx
+    |    | <span class="nt">--</span> airport_icao
+    |    |    | <span class="nt">--</span> AIRPORT_ICAO_&lt;unix_timestamp&gt;.csv
+    |    |    | ...
+    |    |    | ...
+    |    | ...
+</code></pre></div></div>
+
+<h3 id="assets">Assets</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">assets</code> folder has a subfolder for each airport (uses the airport’s <a href="https://en.wikipedia.org/wiki/ICAO_airport_code">ICAO</a>) containing the following:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">bkg_map.png</code>: visual representation of the map, obtained using OpenStreetMap (OSM).</li>
+  <li><code class="language-plaintext highlighter-rouge">limits.json</code>: JSON file containing the Airport’s extents.</li>
+  <li><code class="language-plaintext highlighter-rouge">airport_icao.osm</code>: the airport’s map in OSM format.</li>
+</ul>
+
+<h3 id="graph-data-processed-map-information">Graph Data (Processed Map Information)</h3>
+
+<p>To generate the processed map information, we used <a href="https://github.com/AmeliaCMU/AmeliaMaps">AmeliaMaps</a>.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">graph_data_axxvxxos</code> folder has a subfolder for each airport containing semantic graphs representation obtained using <a href="https://github.com/AmeliaCMU/AmeliaMaps">AmeliaMaps</a>. Each sub-folder contains the following files:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">semantic_graph.pkl</code>: contains the vectorized map graph with semantic attributes.</li>
+  <li><code class="language-plaintext highlighter-rouge">semantic_airport_icao.osm</code>: the semantic representation of the graph in OSM format</li>
+  <li><code class="language-plaintext highlighter-rouge">semantic_graph.png</code>: visual representation of the graph. Just shown for reference.</li>
+</ul>
+
+<p><strong>NOTE</strong> this folder contains the graphs for the 10 airports used in our training experiments. The full set of 42 maps is in the folder <code class="language-plaintext highlighter-rouge">graph_data_axxvxxos</code>.</p>
+
+<h3 id="trajectory-data">Trajectory Data</h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">traj_data_axxvxx</code> folder has a subfolder for each airport containing the trajectory data in CSV format. Each file within an airport’s subfolder represents an hour of data.</p>
+
+<p>The files are named following the format <code class="language-plaintext highlighter-rouge">AIRPORT_ICAO_&lt;unix_timestamp&gt;.csv</code>. Each contains trajectory information in <strong>Table 1</strong>.
+<br /></p>
+
+<table align="center" style="width:70%">
+  <caption><b>Table 1. </b>Trajectory Data Fields</caption>
+  <tr>
+  <tr>
+    <td><b>Field</b></td>
+    <td><b>Unit</b></td>
+    <td><b>Description</b></td>
+  </tr><td>Frame</td><td>#</td><td>Timestamp</td></tr>
+  <tr><td>ID</td><td>#</td><td>STDDS Agent ID</td></tr>
+  <tr><td>Range</td><td>km</td><td>Distance from airport datum</td></tr>
+  <tr><td>Bearing</td><td>rads</td><td>Bearing angle w.r.t North</td></tr>
+  <tr><td>Altitude</td><td>feet</td><td>Agent altitude (Mean Sea Level)</td></tr>
+  <tr><td>Speed</td><td>knots</td><td>Agent speed</td></tr>
+  <tr><td>Heading</td><td>degrees</td><td>Agent heading</td></tr>
+  <tr><td>Type</td><td>int</td><td>Agent type: {0: aircraft 1: vehicle, 2: unknown}</td></tr>
+  <tr><td>Lat</td><td>decimal degrees</td><td>Agent's latitude</td></tr>
+  <tr><td>Lon</td><td>decimal degrees</td><td>Agent's longitude</td></tr>
+  <tr><td>x</td><td>km</td><td>Agent's local x Cartesian position</td></tr>
+  <tr><td>y</td><td>km</td><td>Agent's local y Cartesian position</td></tr>
+  <tr><td>Interp</td><td>boolean</td><td>Interpolated data point flag</td></tr>
+</table>
+
+<hr />
+
+<h2 id="downloading-the-dataset-from-hugging-face">Downloading the Dataset from Hugging Face</h2>
+
+<p>You can easily download the Amelia datasets using the <a href="https://huggingface.co/docs/hub/how-to-download-files">Hugging Face Hub</a> and the <code class="language-plaintext highlighter-rouge">datasets</code> library.</p>
+
+<p>First, install the required package:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>datasets
+</code></pre></div></div>
+
+<p>Then, load the dataset in Python:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">datasets</span> <span class="kn">import</span> <span class="n">load_dataset</span>
+
+<span class="c1"># For Amelia42-Mini
+</span><span class="n">ds</span> <span class="o">=</span> <span class="nf">load_dataset</span><span class="p">(</span><span class="sh">"</span><span class="s">AmeliaCMU/Amelia42-Mini</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="c1"># For Amelia10-Bench
+</span><span class="n">ds</span> <span class="o">=</span> <span class="nf">load_dataset</span><span class="p">(</span><span class="sh">"</span><span class="s">AmeliaCMU/Amelia-10</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Alternatively, you can download files directly from the Hugging Face website.</p>
+
+<p>Click the “Download” button or use the “Files and versions” tab to access specific files.</p>
+
+<hr />
+
+<h1 id="raw-data">Raw Data</h1>
+
+<p>The raw data contains everything captured by the SWIM system for 42 airports in the United States. A complete list of the airports is provided in <strong>Table 2</strong>.</p>
+
+<p>In order to download and convert raw data into CSV files, please follow instructions below:</p>
+
+<h4 id="downloading-and-converting-raw-data">Downloading and Converting raw data</h4>
+
+<ul>
+  <li>
+    <p>To <strong>download</strong> the raw data, please follow the instructions in <a href="https://github.com/AmeliaCMU/AmeliaSWIM">AmeliaSWIM</a> on how to use the <code class="language-plaintext highlighter-rouge">download_raw.py</code> script.</p>
+  </li>
+  <li>
+    <p>To <strong>convert</strong> the raw data into CSV files, please follow the instructions in <a href="https://github.com/AmeliaCMU/AmeliaSWIM">AmeliaSWIM</a> on how to use the <code class="language-plaintext highlighter-rouge">process.py</code> script. The resulting CSV files will contain the following information:</p>
+  </li>
+</ul>
+
+<h4 id="downloading-and-processing-map-data">Downloading and Processing map data</h4>
+
+<ul>
+  <li>To <strong>download</strong> and <strong>process</strong> the map data, please follow the instructions in <a href="https://github.com/AmeliaCMU/AmeliaMaps">AmeliaMaps</a> on how to use the processing scripts.</li>
+</ul>
+
+<hr />
+
+<h1 id="data-tracker">Data Tracker</h1>
+
+<link href="/assets/css/card.css" rel="stylesheet" />
+
+<p>For each of the following airports you can get the following data:</p>
+<ul>
+    <li><b>Raw Data</b>: Raw trajectory data.</li>
+    <li><b>Processed Data</b>: Processed trajectory data.</li>
+    <li><b>Airport Map</b>: Raster image of the airport's map.</li>
+    <li><b>Semantic Graph</b>: Semantic graph representation of the airport's map.</li>
+    <li><b>Fence</b>: GeoFence of the airport's map. GeoFence is used for capturing data within a region of interest.</li>
+    <li><b>Limits File</b>: Airport's extent information.</li>
+</ul>
+
+<p><br /></p>
+
+<table>
+    <caption><b>Table 2.</b> Airport tracker</caption>
+    <thead>
+      <tr>
+        <th scope="col" rowspan="2" style="text-align:center;"> </th>
+        <th scope="col" rowspan="2" style="text-align:center;">Airport</th>
+        <th scope="col" rowspan="2" style="text-align:center;">Airport ICAO</th>
+        <!-- <th scope="col" colspan="2" style="text-align:center;">Trajectory</th>
+        <th scope="col" colspan="4" style="text-align:center;">Map</th> -->
+      </tr>
+      <!-- <tr>
+        <td style="text-align:center;">Raw Data</td>
+        <td style="text-align:center;">Processed Data</td>
+        <td style="text-align:center;">Airport Map</td>
+        <td style="text-align:center;">Semantic Graph</td>
+        <td style="text-align:center;">Fence</td>
+        <td style="text-align:center;">Limits File</td>
+      </tr> -->
+    </thead>
+    <tbody>
+
+      <tr>
+        <td style="text-align:center;">1</td>
+        <td>Hartsfield-Jackson Atlanta Intl. Airport</td>
+        <td style="text-align:center;">KATL</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">2</td>
+        <td>Bradley Intl. Airport</td>
+        <td style="text-align:center;">KBDL</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">3</td>
+        <td>Boston-Logan Intl. Airport</td>
+        <td style="text-align:center;">KBOS</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">4</td>
+        <td>Baltimore/Washington Intl. Thurgood Marshall Airport</td>
+        <td style="text-align:center;">KBWI</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">5</td>
+        <td>Cleveland Hopkins Intl. Airport</td>
+        <td style="text-align:center;">KCLE</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">6</td>
+        <td>Charlotte Douglas Intl. Airport</td>
+        <td style="text-align:center;">KCLT</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">7</td>
+        <td>Ronald Reagan Washington Natl. Airport</td>
+        <td style="text-align:center;">KDCA</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">8</td>
+        <td>Denver Intl. Airport</td>
+        <td style="text-align:center;">KDEN</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">9</td>
+        <td>Dallas/Fort Worth Intl. Airport</td>
+        <td style="text-align:center;">KDFW</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">10</td>
+        <td>Detroit Metropolitan Wayne County Airport</td>
+        <td style="text-align:center;">KDTW</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">11</td>
+        <td>Newark Liberty Intl. Airport</td>
+        <td style="text-align:center;">KEWR</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">12</td>
+        <td>Fort Lauderdale-Hollywood Intl. Airport</td>
+        <td style="text-align:center;">KFLL</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">13</td>
+        <td>William P. Hobby Airport</td>
+        <td style="text-align:center;">KHOU</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">14</td>
+        <td>Washington Dulles Intl. Airport</td>
+        <td style="text-align:center;">KIAD</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">15</td>
+        <td>George Bush Intercontinental Airport</td>
+        <td style="text-align:center;">KIAH</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">16</td>
+        <td>John F. Kennedy Intl. Airport</td>
+        <td style="text-align:center;">KJFK</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">17</td>
+        <td>McCarran Intl. Airport</td>
+        <td style="text-align:center;">KLAS</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">18</td>
+        <td>Los Angeles Intl. Airport</td>
+        <td style="text-align:center;">KLAX</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">19</td>
+        <td>LaGuardia Airport</td>
+        <td style="text-align:center;">KLGA</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">20</td>
+        <td>Kansas City Intl. Airport</td>
+        <td style="text-align:center;">KMCI</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">21</td>
+        <td>Orlando Intl. Airport</td>
+        <td style="text-align:center;">KMCO</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">22</td>
+        <td>Chicago-Midway Intl. Airport</td>
+        <td style="text-align:center;">KMDW</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">23</td>
+        <td>Memphis Intl. Airport</td>
+        <td style="text-align:center;">KMEM</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">24</td>
+        <td>Miami Intl. Airport</td>
+        <td style="text-align:center;">KMIA</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">25</td>
+        <td>Milwaukee Mitchell Intl. Airport</td>
+        <td style="text-align:center;">KMKE</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">26</td>
+        <td>Minneapolis-Saint Paul Intl. Airport</td>
+        <td style="text-align:center;">KMSP</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">27</td>
+        <td>Louis Armstrong New Orleans Intl. Airport</td>
+        <td style="text-align:center;">KMSY</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">28</td>
+        <td>O'Hare Intl. Airport</td>
+        <td style="text-align:center;">KORD</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">29</td>
+        <td>Portland Intl. Airport</td>
+        <td style="text-align:center;">KPDX</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">30</td>
+        <td>Philadelphia Intl. Airport</td>
+        <td style="text-align:center;">KPHL</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">31</td>
+        <td>Phoenix Sky Harbor Intl. Airport</td>
+        <td style="text-align:center;">KPHX</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">32</td>
+        <td>Pittsburgh Intl. Airport</td>
+        <td style="text-align:center;">KPIT</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">33</td>
+        <td>T.F. Green Airport</td>
+        <td style="text-align:center;">KPVD</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">34</td>
+        <td>San Diego Intl. Airport</td>
+        <td style="text-align:center;">KSAN</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">35</td>
+        <td>Louisville Muhammad Ali Intl. Airport</td>
+        <td style="text-align:center;">KSDF</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">36</td>
+        <td>Seattle-Tacoma Intl. Airport</td>
+        <td style="text-align:center;">KSEA</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">37</td>
+        <td>San Francisco Intl. Airport</td>
+        <td style="text-align:center;">KSFO</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">38</td>
+        <td>Salt Lake City Intl. Airport</td>
+        <td style="text-align:center;">KSLC</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">39</td>
+        <td>John Wayne Airport</td>
+        <td style="text-align:center;">KSNA</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">40</td>
+        <td>St. Louis Lambert Intl. Airport</td>
+        <td style="text-align:center;">KSTL</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">41</td>
+        <td>Ted Stevens Anchorage Intl. Airport</td>
+        <td style="text-align:center;">PANC</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+      <tr>
+        <td style="text-align:center;">42</td>
+        <td>Daniel K. Inouye Intl. Airport</td>
+        <td style="text-align:center;">PHNL</td>
+        <!--
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+
+
+            <td style="text-align:center;"><img title="plane" alt="plane" src="/assets/img/ac.png" width="22px"></td>
+         -->
+      </tr>
+
+    </tbody>
+  </table>
+
+<hr />
+
+<div align="center">
+  <h1 class="title">Airport’s heatmap, representing the activity frequency per region</h1>
+  <div id="heatmap-carousel" style="max-width: 800px; margin: auto;">
+    <div style="position: relative; width: 100%; height: 420px; display: flex; align-items: center; justify-content: center; background: #f8f8f8;">
+      <img src="assets/img/heatmap_airports/katl_interp_aircraft_only_heatmap.png" alt="Heatmap 1" id="carousel-image" style="max-width:70%; max-height:400px; width:auto; height:auto; display:block; margin:auto; position: absolute; top: 0; bottom: 0; left: 0; right: 0;" />
+    </div>
+    <div id="carousel-caption" style="margin-top: 8px; color: #888;">KATL</div>
+  </div>
+</div>
+
+<script>
+  // Load heatmaps from YAML data injected by Jekyll
+  const heatmaps = [
+
+      {src: "/assets/img/heatmap_airports/katl_interp_aircraft_only_heatmap.png", caption: "KATL"},
+
+      {src: "/assets/img/heatmap_airports/kbdl_interp_aircraft_only_heatmap.png", caption: "KBDL"},
+
+      {src: "/assets/img/heatmap_airports/kbos_interp_aircraft_only_heatmap.png", caption: "KBOS"},
+
+      {src: "/assets/img/heatmap_airports/kbwi_interp_aircraft_only_heatmap.png", caption: "KBWI"},
+
+      {src: "/assets/img/heatmap_airports/kcle_interp_aircraft_only_heatmap.png", caption: "KCLE"},
+
+      {src: "/assets/img/heatmap_airports/kclt_interp_aircraft_only_heatmap.png", caption: "KCLT"},
+
+      {src: "/assets/img/heatmap_airports/kdca_interp_aircraft_only_heatmap.png", caption: "KDCA"},
+
+      {src: "/assets/img/heatmap_airports/kden_interp_aircraft_only_heatmap.png", caption: "KDEN"},
+
+      {src: "/assets/img/heatmap_airports/kdfw_interp_aircraft_only_heatmap.png", caption: "KDFW"},
+
+      {src: "/assets/img/heatmap_airports/kdtw_interp_aircraft_only_heatmap.png", caption: "KDTW"},
+
+      {src: "/assets/img/heatmap_airports/kewr_interp_aircraft_only_heatmap.png", caption: "KEWR"},
+
+      {src: "/assets/img/heatmap_airports/kfll_interp_aircraft_only_heatmap.png", caption: "KFLL"},
+
+      {src: "/assets/img/heatmap_airports/khou_interp_aircraft_only_heatmap.png", caption: "KHOU"},
+
+      {src: "/assets/img/heatmap_airports/kiad_interp_aircraft_only_heatmap.png", caption: "KIAD"},
+
+      {src: "/assets/img/heatmap_airports/kiah_interp_aircraft_only_heatmap.png", caption: "KIAH"},
+
+      {src: "/assets/img/heatmap_airports/kjfk_interp_aircraft_only_heatmap.png", caption: "KJFK"},
+
+      {src: "/assets/img/heatmap_airports/klas_interp_aircraft_only_heatmap.png", caption: "KLAS"},
+
+      {src: "/assets/img/heatmap_airports/klax_interp_aircraft_only_heatmap.png", caption: "KLAX"},
+
+      {src: "/assets/img/heatmap_airports/klga_interp_aircraft_only_heatmap.png", caption: "KLGA"},
+
+      {src: "/assets/img/heatmap_airports/kmci_interp_aircraft_only_heatmap.png", caption: "KMCI"},
+
+      {src: "/assets/img/heatmap_airports/kmco_interp_aircraft_only_heatmap.png", caption: "KMCO"},
+
+      {src: "/assets/img/heatmap_airports/kmdw_interp_aircraft_only_heatmap.png", caption: "KMDW"},
+
+      {src: "/assets/img/heatmap_airports/kmem_interp_aircraft_only_heatmap.png", caption: "KMEM"},
+
+      {src: "/assets/img/heatmap_airports/kmia_interp_aircraft_only_heatmap.png", caption: "KMIA"},
+
+      {src: "/assets/img/heatmap_airports/kmke_interp_aircraft_only_heatmap.png", caption: "KMKE"},
+
+      {src: "/assets/img/heatmap_airports/kmsp_interp_aircraft_only_heatmap.png", caption: "KMSP"},
+
+      {src: "/assets/img/heatmap_airports/kmsy_interp_aircraft_only_heatmap.png", caption: "KMSY"},
+
+      {src: "/assets/img/heatmap_airports/kord_interp_aircraft_only_heatmap.png", caption: "KORD"},
+
+      {src: "/assets/img/heatmap_airports/kpdx_interp_aircraft_only_heatmap.png", caption: "KPDX"},
+
+      {src: "/assets/img/heatmap_airports/kphl_interp_aircraft_only_heatmap.png", caption: "KPHL"},
+
+      {src: "/assets/img/heatmap_airports/kphx_interp_aircraft_only_heatmap.png", caption: "KPHX"},
+
+      {src: "/assets/img/heatmap_airports/kpit_interp_aircraft_only_heatmap.png", caption: "KPIT"},
+
+      {src: "/assets/img/heatmap_airports/kpvd_interp_aircraft_only_heatmap.png", caption: "KPVD"},
+
+      {src: "/assets/img/heatmap_airports/ksan_interp_aircraft_only_heatmap.png", caption: "KSAN"},
+
+      {src: "/assets/img/heatmap_airports/ksdf_interp_aircraft_only_heatmap.png", caption: "KSDF"},
+
+      {src: "/assets/img/heatmap_airports/ksea_interp_aircraft_only_heatmap.png", caption: "KSEA"},
+
+      {src: "/assets/img/heatmap_airports/ksfo_interp_aircraft_only_heatmap.png", caption: "KSFO"},
+
+      {src: "/assets/img/heatmap_airports/kslc_interp_aircraft_only_heatmap.png", caption: "KSLC"},
+
+      {src: "/assets/img/heatmap_airports/ksna_interp_aircraft_only_heatmap.png", caption: "KSNA"},
+
+      {src: "/assets/img/heatmap_airports/kstl_interp_aircraft_only_heatmap.png", caption: "KSTL"},
+
+      {src: "/assets/img/heatmap_airports/panc_interp_aircraft_only_heatmap.png", caption: "PANC"},
+
+      {src: "/assets/img/heatmap_airports/phnl_interp_aircraft_only_heatmap.png", caption: "PHNL"}
+
+  ];
+  let current = 0;
+  function showHeatmap(idx) {
+    const img = document.getElementById('carousel-image');
+    const cap = document.getElementById('carousel-caption');
+    img.src = heatmaps[idx].src;
+    img.alt = heatmaps[idx].caption;
+    cap.textContent = heatmaps[idx].caption;
+  }
+  function prevHeatmap() {
+    current = (current - 1 + heatmaps.length) % heatmaps.length;
+    showHeatmap(current);
+  }
+  function nextHeatmap() {
+    current = (current + 1) % heatmaps.length;
+    showHeatmap(current);
+  }
+  // Automatically change heatmap every 3 seconds
+  setInterval(function() {
+    nextHeatmap();
+  }, 3000);
+</script>
+
+<hr />
+
+<h2>Ethics Statement</h2>
+<p>Amelia is compliant with the FAA Terms of Service for data redistribution as well as the privacy and safety filters imposed by the FAA. Although the Amelia dataset is based on the FAA SWIM data, Amelia is NOT official FAA data and is not suitable for operational purposes. Amelia should only be used for research purposes. Our collection methodology comes with inherent limitations, such as noise in ground radar as well as noisy labelling of agents in the dataset.</p>
+
+<h1 id="bibtex">BibTeX</h1>
+
+<p>If you find our work useful in your research, please cite us!</p>
+
+<div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">@inbook</span><span class="p">{</span><span class="nl">navarro2024amelia</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Ingrid Navarro and Pablo Ortega and Jay Patrikar and Haichuan Wang and Zelin Ye and Jong Hoon Park and Jean Oh and Sebastian Scherer}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{AmeliaTF: A Large Model and Dataset for Airport Surface Movement Forecasting}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{AIAA AVIATION FORUM AND ASCEND 2024}</span><span class="p">,</span>
+  <span class="na">chapter</span> <span class="p">=</span> <span class="s">{}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.2514/6.2024-4251}</span><span class="p">,</span>
+  <span class="na">URL</span> <span class="p">=</span> <span class="s">{https://arc.aiaa.org/doi/abs/10.2514/6.2024-4251}</span><span class="p">,</span>
+  <span class="na">eprint</span> <span class="p">=</span> <span class="s">{https://arc.aiaa.org/doi/pdf/10.2514/6.2024-4251}</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+        <style>
+    footer {
+        background-color: #f8f9fa;
+        overflow: hidden;
+        padding: 40px 25px;
+      }
+
+      .footer-logos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .footer-logos img {
+        max-width: 130px;;
+        width: 100%;
+        height: auto;
+        flex: 1;
+        padding-left: 20px; /* Reduced padding to make logos closer */
+        padding-right: 20px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+      }
+
+      @media (max-width: 768px) {
+        .footer-logos img {
+          max-width: 120px; /* Adjust max width for medium screens */
+        }
+      }
+
+      @media (max-width: 480px) {
+        .footer-logos img {
+          max-width: 75px; /* Adjust max width for small screens */
+        }
+      }
+
+
+</style>
+
+<footer>
+    <div class="footer-logos">
+      <img src="/assets/img/logos/carnegie-mellon-university-logo.png" alt="Logo 1">
+      <img src="/assets/img/logos/robotics_institute.jpg" alt="Logo 2">
+      <img src="/assets/img/logos/boeing.png" alt="Logo 3">
+      <img src="/assets/img/logos/logo_airlab.png" alt="Logo 4">
+      <img src="/assets/img/logos/biglab.png" alt="Logo 5">
+    </div>
+  </footer>
+
+
+    <script src="/assets/js/app.js" type="text/javascript"></script><!-- footer scripts --></body>
+
+
+</html>
